@@ -44,10 +44,9 @@
             // 
             // tbsenha
             // 
-            this.tbsenha.Location = new System.Drawing.Point(42, 178);
-            this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbsenha.Location = new System.Drawing.Point(116, 231);
             this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(252, 23);
+            this.tbsenha.Size = new System.Drawing.Size(167, 27);
             this.tbsenha.TabIndex = 11;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
@@ -59,10 +58,9 @@
             this.btreload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btreload.ForeColor = System.Drawing.Color.Transparent;
             this.btreload.Image = ((System.Drawing.Image)(resources.GetObject("btreload.Image")));
-            this.btreload.Location = new System.Drawing.Point(294, 128);
-            this.btreload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btreload.Location = new System.Drawing.Point(284, 168);
             this.btreload.Name = "btreload";
-            this.btreload.Size = new System.Drawing.Size(30, 21);
+            this.btreload.Size = new System.Drawing.Size(34, 28);
             this.btreload.TabIndex = 9;
             this.btreload.UseVisualStyleBackColor = true;
             // 
@@ -73,12 +71,12 @@
             this.btversenha.FlatAppearance.BorderSize = 0;
             this.btversenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
-            this.btversenha.Location = new System.Drawing.Point(294, 176);
-            this.btversenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btversenha.Location = new System.Drawing.Point(284, 230);
             this.btversenha.Name = "btversenha";
-            this.btversenha.Size = new System.Drawing.Size(30, 22);
+            this.btversenha.Size = new System.Drawing.Size(34, 29);
             this.btversenha.TabIndex = 12;
             this.btversenha.UseVisualStyleBackColor = false;
+            this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
             // 
             // btsair
             // 
@@ -87,9 +85,10 @@
             this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsair.Image = ((System.Drawing.Image)(resources.GetObject("btsair.Image")));
-            this.btsair.Location = new System.Drawing.Point(283, 222);
+            this.btsair.Location = new System.Drawing.Point(271, 290);
+            this.btsair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsair.Name = "btsair";
-            this.btsair.Size = new System.Drawing.Size(41, 26);
+            this.btsair.Size = new System.Drawing.Size(47, 35);
             this.btsair.TabIndex = 14;
             this.btsair.UseVisualStyleBackColor = false;
             this.btsair.Click += new System.EventHandler(this.btsair_Click);
@@ -100,9 +99,10 @@
             this.btlogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlogin.Location = new System.Drawing.Point(42, 222);
+            this.btlogin.Location = new System.Drawing.Point(42, 290);
+            this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlogin.Name = "btlogin";
-            this.btlogin.Size = new System.Drawing.Size(235, 26);
+            this.btlogin.Size = new System.Drawing.Size(223, 35);
             this.btlogin.TabIndex = 13;
             this.btlogin.Text = "LOGIN";
             this.btlogin.UseVisualStyleBackColor = false;
@@ -112,9 +112,9 @@
             // 
             this.lbsenha.AutoSize = true;
             this.lbsenha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbsenha.Location = new System.Drawing.Point(42, 158);
+            this.lbsenha.Location = new System.Drawing.Point(42, 235);
             this.lbsenha.Name = "lbsenha";
-            this.lbsenha.Size = new System.Drawing.Size(46, 19);
+            this.lbsenha.Size = new System.Drawing.Size(57, 23);
             this.lbsenha.TabIndex = 10;
             this.lbsenha.Text = "Senha";
             // 
@@ -122,9 +122,9 @@
             // 
             this.lbusuario.AutoSize = true;
             this.lbusuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbusuario.Location = new System.Drawing.Point(42, 109);
+            this.lbusuario.Location = new System.Drawing.Point(42, 173);
             this.lbusuario.Name = "lbusuario";
-            this.lbusuario.Size = new System.Drawing.Size(56, 19);
+            this.lbusuario.Size = new System.Drawing.Size(68, 23);
             this.lbusuario.TabIndex = 8;
             this.lbusuario.Text = "Usuário";
             // 
@@ -134,9 +134,10 @@
             this.btprimeiroacesso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btprimeiroacesso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btprimeiroacesso.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btprimeiroacesso.Location = new System.Drawing.Point(42, 254);
+            this.btprimeiroacesso.Location = new System.Drawing.Point(42, 333);
+            this.btprimeiroacesso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btprimeiroacesso.Name = "btprimeiroacesso";
-            this.btprimeiroacesso.Size = new System.Drawing.Size(282, 26);
+            this.btprimeiroacesso.Size = new System.Drawing.Size(276, 35);
             this.btprimeiroacesso.TabIndex = 16;
             this.btprimeiroacesso.Text = "PRIMEIRO ACESSO";
             this.btprimeiroacesso.UseVisualStyleBackColor = false;
@@ -145,27 +146,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(316, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(357, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
             // mtbUsuario
             // 
-            this.mtbUsuario.Location = new System.Drawing.Point(42, 131);
+            this.mtbUsuario.Location = new System.Drawing.Point(116, 169);
+            this.mtbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbUsuario.Mask = "00-00000";
             this.mtbUsuario.Name = "mtbUsuario";
-            this.mtbUsuario.Size = new System.Drawing.Size(252, 23);
+            this.mtbUsuario.Size = new System.Drawing.Size(167, 27);
             this.mtbUsuario.TabIndex = 18;
+            this.mtbUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 314);
+            this.ClientSize = new System.Drawing.Size(359, 409);
             this.Controls.Add(this.mtbUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btprimeiroacesso);
@@ -177,7 +179,6 @@
             this.Controls.Add(this.lbsenha);
             this.Controls.Add(this.lbusuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
