@@ -21,5 +21,11 @@ namespace projeto_acg.View
         {
             Cursor.Current = Cursors.Hand;
         }
+
+        private void enviaracg_Click(object sender, EventArgs e)
+        {//enviar ACG
+            FormCadAcg Fca = new FormCadAcg();
+            Fca.ShowDialog();
+        }
     }
 }

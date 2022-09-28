@@ -56,8 +56,8 @@
             this.editaraluno});
             this.msmenu.Location = new System.Drawing.Point(0, 0);
             this.msmenu.Name = "msmenu";
-            this.msmenu.Padding = new System.Windows.Forms.Padding(30);
-            this.msmenu.Size = new System.Drawing.Size(311, 397);
+            this.msmenu.Padding = new System.Windows.Forms.Padding(34, 31, 34, 31);
+            this.msmenu.Size = new System.Drawing.Size(350, 417);
             this.msmenu.TabIndex = 0;
             this.msmenu.Text = "menuStrip1";
             // 
@@ -69,8 +69,9 @@
             this.enviaracg.Margin = new System.Windows.Forms.Padding(5);
             this.enviaracg.Name = "enviaracg";
             this.enviaracg.Padding = new System.Windows.Forms.Padding(10);
-            this.enviaracg.Size = new System.Drawing.Size(240, 47);
+            this.enviaracg.Size = new System.Drawing.Size(271, 47);
             this.enviaracg.Text = "ENVIAR ACG";
+            this.enviaracg.Click += new System.EventHandler(this.enviaracg_Click);
             this.enviaracg.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
             // verificarsituacao
@@ -81,7 +82,7 @@
             this.verificarsituacao.Margin = new System.Windows.Forms.Padding(5);
             this.verificarsituacao.Name = "verificarsituacao";
             this.verificarsituacao.Padding = new System.Windows.Forms.Padding(10);
-            this.verificarsituacao.Size = new System.Drawing.Size(240, 47);
+            this.verificarsituacao.Size = new System.Drawing.Size(271, 47);
             this.verificarsituacao.Text = "VERIFICAR SITUAÇÃO";
             this.verificarsituacao.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
@@ -93,7 +94,7 @@
             this.cadastraracg.Margin = new System.Windows.Forms.Padding(5);
             this.cadastraracg.Name = "cadastraracg";
             this.cadastraracg.Padding = new System.Windows.Forms.Padding(10);
-            this.cadastraracg.Size = new System.Drawing.Size(240, 47);
+            this.cadastraracg.Size = new System.Drawing.Size(271, 47);
             this.cadastraracg.Text = "CADASTRAR ACG";
             this.cadastraracg.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
@@ -105,7 +106,7 @@
             this.listaracgs.Margin = new System.Windows.Forms.Padding(5);
             this.listaracgs.Name = "listaracgs";
             this.listaracgs.Padding = new System.Windows.Forms.Padding(10);
-            this.listaracgs.Size = new System.Drawing.Size(240, 47);
+            this.listaracgs.Size = new System.Drawing.Size(271, 47);
             this.listaracgs.Text = "LISTAR ACGs";
             this.listaracgs.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
@@ -117,7 +118,7 @@
             this.editaracgs.Margin = new System.Windows.Forms.Padding(5);
             this.editaracgs.Name = "editaracgs";
             this.editaracgs.Padding = new System.Windows.Forms.Padding(10);
-            this.editaracgs.Size = new System.Drawing.Size(240, 47);
+            this.editaracgs.Size = new System.Drawing.Size(271, 47);
             this.editaracgs.Text = "EDITAR ACGs";
             this.editaracgs.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
@@ -129,7 +130,7 @@
             this.editaraluno.Margin = new System.Windows.Forms.Padding(5);
             this.editaraluno.Name = "editaraluno";
             this.editaraluno.Padding = new System.Windows.Forms.Padding(10);
-            this.editaraluno.Size = new System.Drawing.Size(240, 47);
+            this.editaraluno.Size = new System.Drawing.Size(271, 47);
             this.editaraluno.Text = "EDITAR ALUNO";
             this.editaraluno.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
@@ -137,23 +138,23 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(314, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(353, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(385, 350);
+            this.pictureBox1.Size = new System.Drawing.Size(433, 367);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 397);
+            this.ClientSize = new System.Drawing.Size(808, 417);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.msmenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msmenu;
-            this.MinimumSize = new System.Drawing.Size(736, 444);
+            this.MinimumSize = new System.Drawing.Size(826, 464);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
