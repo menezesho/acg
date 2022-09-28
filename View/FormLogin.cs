@@ -12,12 +12,14 @@ namespace projeto_acg
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            mtbmatricula.BackColor = Color.White;
+            if (mtbmatricula.Text == "  -")
+                mtbmatricula.Mask = "";
         }
 
         private void btlogin_Click(object sender, EventArgs e)
         {//btlogin
-            if (mtbusuario.Text == "12-34567" && tbsenha.Text == "123456")
+            if (mtbmatricula.Text == "12-34567" && tbsenha.Text == "123456")
                     MessageBox.Show("Acesso como Administrador!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -41,5 +43,23 @@ namespace projeto_acg
                 Application.Exit();
             //padrão de confirmação de saída 
         }
+
+        #region MaskedTextBox (Matrícula)
+
+        //mascara to textbox só aparece quando clicado sobre ele
+
+        private void mtbmatricula_Enter(object sender, EventArgs e)
+        {
+            mtbmatricula.Mask = "00-00000";
+        }
+
+        private void mtbmatricula_Leave(object sender, EventArgs e)
+        {
+            mtbmatricula.BackColor = Color.White;
+            if (mtbmatricula.Text == "  -")
+                mtbmatricula.Mask = "";
+        }
+
+        #endregion
     }
 }

@@ -46,12 +46,10 @@
             this.lbcadastro = new System.Windows.Forms.Label();
             this.btlimpar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btcancelar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -59,12 +57,12 @@
             this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(44, 92);
+            this.tabControl1.Location = new System.Drawing.Point(49, 93);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(368, 253);
-            this.tabControl1.TabIndex = 16;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -89,7 +87,7 @@
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
-            this.mtbcpf.TabIndex = 3;
+            this.mtbcpf.TabIndex = 1;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
@@ -100,7 +98,7 @@
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(269, 27);
-            this.tbnome.TabIndex = 2;
+            this.tbnome.TabIndex = 0;
             // 
             // lbcpf
             // 
@@ -151,7 +149,7 @@
             this.btversenha.Location = new System.Drawing.Point(286, 162);
             this.btversenha.Name = "btversenha";
             this.btversenha.Size = new System.Drawing.Size(34, 29);
-            this.btversenha.TabIndex = 13;
+            this.btversenha.TabIndex = 5;
             this.btversenha.UseVisualStyleBackColor = false;
             this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
             // 
@@ -162,7 +160,7 @@
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(240, 27);
-            this.tbsenha.TabIndex = 9;
+            this.tbsenha.TabIndex = 4;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // lbsenha
@@ -182,8 +180,8 @@
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
-            this.mtbmatricula.Size = new System.Drawing.Size(114, 27);
-            this.mtbmatricula.TabIndex = 7;
+            this.mtbmatricula.Size = new System.Drawing.Size(97, 27);
+            this.mtbmatricula.TabIndex = 3;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
@@ -194,7 +192,7 @@
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(269, 27);
-            this.tbemail.TabIndex = 6;
+            this.tbemail.TabIndex = 2;
             // 
             // label1
             // 
@@ -220,84 +218,85 @@
             // 
             this.lbcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcadastro.AutoSize = true;
-            this.lbcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 14.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbcadastro.Location = new System.Drawing.Point(152, 44);
+            this.lbcadastro.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbcadastro.Location = new System.Drawing.Point(144, 34);
             this.lbcadastro.Name = "lbcadastro";
-            this.lbcadastro.Size = new System.Drawing.Size(146, 35);
+            this.lbcadastro.Size = new System.Drawing.Size(186, 38);
             this.lbcadastro.TabIndex = 19;
-            this.lbcadastro.Text = "CADASTRO";
+            this.lbcadastro.Text = "REGISTRE-SE";
             // 
             // btlimpar
             // 
             this.btlimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btlimpar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btlimpar.BackColor = System.Drawing.Color.GhostWhite;
             this.btlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlimpar.Location = new System.Drawing.Point(48, 353);
+            this.btlimpar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btlimpar.Location = new System.Drawing.Point(236, 354);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
-            this.btlimpar.Size = new System.Drawing.Size(177, 29);
-            this.btlimpar.TabIndex = 17;
+            this.btlimpar.Size = new System.Drawing.Size(177, 35);
+            this.btlimpar.TabIndex = 7;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
+            this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
             // 
             // btsalvar
             // 
             this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btsalvar.BackColor = System.Drawing.Color.SteelBlue;
             this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(231, 353);
+            this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btsalvar.ForeColor = System.Drawing.Color.White;
+            this.btsalvar.Location = new System.Drawing.Point(53, 397);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(177, 29);
-            this.btsalvar.TabIndex = 18;
+            this.btsalvar.Size = new System.Drawing.Size(360, 35);
+            this.btsalvar.TabIndex = 8;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             // 
-            // menuStrip1
+            // btcancelar
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.retornarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(451, 28);
-            this.menuStrip1.TabIndex = 20;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // retornarToolStripMenuItem
-            // 
-            this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
-            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
-            this.retornarToolStripMenuItem.Text = "Retornar";
-            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
+            this.btcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btcancelar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btcancelar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btcancelar.Location = new System.Drawing.Point(53, 354);
+            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btcancelar.Name = "btcancelar";
+            this.btcancelar.Size = new System.Drawing.Size(177, 35);
+            this.btcancelar.TabIndex = 6;
+            this.btcancelar.Text = "CANCELAR";
+            this.btcancelar.UseVisualStyleBackColor = false;
+            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
             // 
             // FormCadAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 424);
+            this.ClientSize = new System.Drawing.Size(464, 471);
+            this.Controls.Add(this.btcancelar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lbcadastro);
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btsalvar);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(469, 471);
+            this.MinimumSize = new System.Drawing.Size(482, 518);
             this.Name = "FormCadAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.FormCadAluno_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,10 +318,9 @@
         private TextBox tbemail;
         private Label label1;
         private Label label3;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem retornarToolStripMenuItem;
         private TextBox tbsenha;
         private Label lbsenha;
         private Button btversenha;
+        private Button btcancelar;
     }
 }
