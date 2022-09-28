@@ -1,3 +1,6 @@
+using projeto_acg.View;
+using System.Windows.Forms;
+
 namespace projeto_acg
 {
     public partial class FormLogin : Form
@@ -14,20 +17,14 @@ namespace projeto_acg
 
         private void btlogin_Click(object sender, EventArgs e)
         {//btlogin
-            if (mtbUsuario.Text == "12-34567" && tbsenha.Text == "123456")
+            if (mtbusuario.Text == "12-34567" && tbsenha.Text == "123456")
                     MessageBox.Show("Acesso como Administrador!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btsair_Click(object sender, EventArgs e)
-        {//btsair
-            if(MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)==DialogResult.Yes);
-                Application.Exit();
-            //padrão de confirmação de retorno 
         }
 
         private void btprimeiroacesso_Click(object sender, EventArgs e)
         {//btprimeiroacesso
-            
+            FormCadAluno Fca = new FormCadAluno();
+            Fca.ShowDialog();
         }
 
         private void btversenha_Click(object sender, EventArgs e)
@@ -36,6 +33,13 @@ namespace projeto_acg
                 tbsenha.UseSystemPasswordChar =false;
             else
                 tbsenha.UseSystemPasswordChar = true;
+        }
+
+        private void btsair_Click(object sender, EventArgs e)
+        {//btsair
+            if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+            //padrão de confirmação de saída 
         }
     }
 }
