@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace projeto_acg.View
 {
-    public partial class FormPrimeiroAcesso : Form
+    public partial class FormPrincipal : Form
     {
-        public FormPrimeiroAcesso()
+        public FormPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void todosToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
         }
     }
 }

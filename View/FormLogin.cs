@@ -20,7 +20,12 @@ namespace projeto_acg
         private void btlogin_Click(object sender, EventArgs e)
         {//btlogin
             if (mtbmatricula.Text == "12-34567" && tbsenha.Text == "123456")
-                    MessageBox.Show("Acesso como Administrador!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                MessageBox.Show("Login de administrador efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            FormPrincipal Fp = new FormPrincipal();
+            Fp.ShowDialog();
         }
 
         private void btprimeiroacesso_Click(object sender, EventArgs e)
