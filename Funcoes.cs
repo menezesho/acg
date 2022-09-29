@@ -14,11 +14,11 @@ namespace projeto_acg
 {
     public class Funcoes
     {
-        bool achouCpf = false;
+        bool achouMatricula = false;
 
         #region Aluno
 
-        public void verificarMatricula(string matricula, Aluno alunos)
+        public void validarMatricula(string matricula, Aluno alunos)
         {//ok
             try
             {
@@ -33,7 +33,7 @@ namespace projeto_acg
                 SqlDataReader dados = comando.ExecuteReader();
                 if (dados.Read())
                 {
-                    MessageBox.Show("Você já possui cadastro, retorne e acesse com seu número de matrícula e senha!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Você já possui cadastro!\nRetorne e acesse com seu número de matrícula e senha!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     conexao.Close();
                 }
                 else
@@ -80,13 +80,13 @@ namespace projeto_acg
             {
                 string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"UPDATE aluno SET nome=@nome, email=@email, matricula=@matricula WHERE id=@id";
+                string sql = @"UPDATE aluno SET nome=@nome, email=@email, matricula=@matricula, senha=@senha WHERE id=@id";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
                 comando.Parameters.AddWithValue("@nome", alunos.nome);
                 comando.Parameters.AddWithValue("@email", alunos.email);
-                comando.Parameters.AddWithValue("@peso", alunos.matricula);
-                comando.Parameters.AddWithValue("@altura", alunos.senha);
+                comando.Parameters.AddWithValue("@matricula", alunos.matricula);
+                comando.Parameters.AddWithValue("@senha", alunos.senha);
 
                 comando.Parameters.AddWithValue("@id", alunos.id);
 
@@ -103,18 +103,11 @@ namespace projeto_acg
             }
         }
 
-
-
-
-
-
-
-
         public DataTable listarAlunos()
-        {
-            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+        {//ok
+            string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
+            string sql = @"SELECT id AS ID, nome AS Nome, email AS 'E-mail', matricula AS Matrícula, senha AS Senha  FROM aluno";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
@@ -126,15 +119,15 @@ namespace projeto_acg
         }
 
         public void excluirAluno(Aluno alunos)
-        {
+        {//ok
             try
             {
-                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"DELETE FROM aluno WHERE matricula=@matricula";
+                string sql = @"DELETE FROM aluno WHERE id=@id";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@matricula", alunos.matricula);
+                comando.Parameters.AddWithValue("@id", alunos.id);
 
                 conexao.Open();
                 comando.CommandText = sql;
@@ -151,10 +144,12 @@ namespace projeto_acg
 
         #endregion
 
+        /*
 
         #region Professor
 
-        public void verificarCpfProfessor(string cpf, Professor profs)
+        
+        public void validarCpfProfessor(string cpf, Professor profs)
         {
             try
             {
@@ -170,7 +165,7 @@ namespace projeto_acg
                 if (dados.Read())
                 {
                     MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    achouCpf = true;
+                    achouMatricula = true;
                     conexao.Close();
                 }
                 else
@@ -248,7 +243,7 @@ namespace projeto_acg
             }
         }
 
-        public void verificarCpfEditProf(string cpf, Professor profs)
+        public void validarCpfEditProf(string cpf, Professor profs)
         {
             try
             {
@@ -264,7 +259,7 @@ namespace projeto_acg
                 if (dados.Read())
                 {
                     MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    achouCpf = true;
+                    achouMatricula = true;
                     conexao.Close();
                 }
                 else
@@ -320,34 +315,31 @@ namespace projeto_acg
 
         #endregion
 
+        */
+
+
         #region Validação de CPF e Telefone
 
-        public static bool validarCpf(string cpf)
+        public static bool validarMatricula(string matricula)
         {
-            var regExp = new Regex(@"^\d{11}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
-            return regExp.IsMatch(cpf);
-        }
-
-        public static bool validarCelular(string celular)
-        {
-            var regExp = new Regex(@"^\d{11}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
-            return regExp.IsMatch(celular);
+            var regExp = new Regex(@"^\d{7}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
+            return regExp.IsMatch(matricula);
         }
 
         #endregion
 
         #region Login
 
-        public void loginProf(string usuario, string senha)
+        public void loginProf(string matricula, string senha)
         {
             try
             {
-                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"SELECT * FROM professor WHERE usuario=@usuario AND senha=@senha";
+                string sql = @"SELECT * FROM aluno WHERE matricula=@matricula AND senha=@senha";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@usuario", usuario);
+                comando.Parameters.AddWithValue("@matricula", matricula);
                 comando.Parameters.AddWithValue("@senha", senha);
 
                 conexao.Open();
@@ -360,7 +352,7 @@ namespace projeto_acg
                 }
                 else
                 {
-                    MessageBox.Show("Usuário ou senha incorretos, tente novamente!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Matrícula ou senha incorretos, tente novamente!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     conexao.Close();
                 }
             }
@@ -371,5 +363,6 @@ namespace projeto_acg
         }
 
         #endregion
+
     }
 }

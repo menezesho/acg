@@ -19,18 +19,16 @@ namespace projeto_acg
 
         private void FormEditAluno_Load(object sender, EventArgs e)
         {//load
-            //Funcoes funcoes = new Funcoes();
-            //dgalunos.DataSource = funcoes.listarAlunos();
+            Funcoes funcoes = new Funcoes();
+            dgalunos.DataSource = funcoes.listarAlunos();
 
             tbid.Clear();
             tbnome.Clear();
-            mtbcpf.Clear();
             tbemail.Clear();
             mtbmatricula.Clear();
             tbsenha.Clear();
                
             tbnome.Enabled = false;
-            mtbcpf.Enabled = false;
             tbemail.Enabled = false;
             mtbmatricula.Enabled = false;
             
@@ -45,13 +43,11 @@ namespace projeto_acg
         {//cellclick datagrid
             tbid.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
             tbnome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
-            mtbcpf.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
-            tbemail.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
-            mtbmatricula.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
-            tbsenha.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
+            tbemail.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
+            mtbmatricula.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
+            tbsenha.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
 
             tbnome.Enabled = false;
-            mtbcpf.Enabled = false;
             tbemail.Enabled = false;
             mtbmatricula.Enabled = false;
             tbsenha.Enabled = false;
@@ -86,7 +82,6 @@ namespace projeto_acg
             if (mtbmatricula.Text != "")
             {
                 tbnome.Enabled = true;
-                mtbcpf.Enabled = true;
                 tbemail.Enabled = true;
                 tbsenha.Enabled = true;
                 
@@ -102,23 +97,21 @@ namespace projeto_acg
         private void btcancelar_Click_1(object sender, EventArgs e)
         {//btcancelar
             tbnome.Enabled = false;
-            mtbcpf.Enabled = false;
             tbemail.Enabled = false;
             mtbmatricula.Enabled = false;
             tbsenha.Enabled = false;
 
-            //bteditar.Enabled = true;
-            //btsalvar.Enabled = false;
-            //btcancelar.Enabled = false;
+            bteditar.Enabled = true;
+            btsalvar.Enabled = false;
+            btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
             //btbuscar.Enabled = true;
 
             tbid.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
             tbnome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
-            mtbcpf.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
-            tbemail.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
-            mtbmatricula.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
-            tbsenha.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
+            tbemail.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
+            mtbmatricula.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
+            tbsenha.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void btexcluir_Click(object sender, EventArgs e)
@@ -127,21 +120,19 @@ namespace projeto_acg
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    /*
                     Aluno alunos = new Aluno();
-                    alunos.matricula = int.Parse(tbmatricula.Text);
+                    alunos.id = int.Parse(tbid.Text);
                     Funcoes funcoes = new Funcoes();
                     funcoes.excluirAluno(alunos);
                     dgalunos.DataSource = funcoes.listarAlunos();
-                    */
 
                     tbid.Clear();
                     tbnome.Clear();
-                    mtbcpf.Clear();
                     tbemail.Clear();
+                    mtbmatricula.Clear();
+                    tbsenha.Clear();
 
                     tbnome.Enabled = false;
-                    mtbcpf.Enabled = false;
                     tbemail.Enabled = false;
                     mtbmatricula.Enabled = false;
                     tbsenha.Enabled = false;
@@ -163,61 +154,44 @@ namespace projeto_acg
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                /*
-                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
-                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
-                if (cpfValido)
+                var matriculaValida = Funcoes.validarMatricula(mtbmatricula.Text);
+                if (matriculaValida)
                 {
-                    if (celularValido)
-                    {
-                        Aluno alunos = new Aluno();
+                    Aluno alunos = new Aluno();
 
-                        alunos.matricula = int.Parse(tbmatricula.Text);
-                        alunos.nome = tbnome.Text;
-                        alunos.cpf = mtbcpf.Text;
-                        alunos.idade = int.Parse(tbidade.Text);
-                        alunos.endereco = tbendereco.Text;
-                        alunos.celular = mtbcelular.Text;
-                        alunos.email = tbemail.Text;
-                        alunos.peso = float.Parse(tbpeso.Text);
-                        alunos.altura = float.Parse(tbaltura.Text);
+                    alunos.id = int.Parse(tbid.Text);
+                    alunos.nome = tbnome.Text;
+                    alunos.email = tbemail.Text;
+                    alunos.matricula = mtbmatricula.Text;
+                    alunos.senha = tbsenha.Text;
 
-                        Funcoes funcoes = new Funcoes();
+                    Funcoes funcoes = new Funcoes();
+                    funcoes.editarAluno(alunos);
+                    dgalunos.DataSource = funcoes.listarAlunos();
 
-                        string cpf = mtbcpf.Text;
-                        funcoes.verificarCpfEditAluno(cpf, alunos);
-
-                        dgalunos.DataSource = funcoes.listarAlunos();
-                        */
-
-                        tbid.Clear();
-                        tbnome.Clear();
-                        mtbcpf.Clear();
-                        tbemail.Clear();
-                        mtbmatricula.Clear();
-                        tbsenha.Clear();
-                        tbemail.Clear();
-
-                        tbnome.Enabled = false;
-                        mtbcpf.Enabled = false;
-                        tbemail.Enabled = false;
-                        mtbmatricula.Enabled = false;
-                        tbsenha.Enabled = false;
-
-                        bteditar.Enabled = true;
-                        btcancelar.Enabled = false;
-                        tabControl1.SelectedTab = tabPage1;
-                        btsalvar.Enabled = false;
-                        //btbuscar.Enabled = true;
-
-                /*
-                    }
-                    else
-                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControl1.SelectedTab = tabPage1;
                 }
                 else
-                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                */
+                    MessageBox.Show("Insira a mátrícula corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+                tbid.Clear();
+                tbnome.Clear();
+                tbemail.Clear();
+                mtbmatricula.Clear();
+                tbsenha.Clear();
+                tbemail.Clear();
+
+                tbnome.Enabled = false;
+                tbemail.Enabled = false;
+                mtbmatricula.Enabled = false;
+                tbsenha.Enabled = false;
+
+                bteditar.Enabled = true;
+                btcancelar.Enabled = false;
+                tabControl1.SelectedTab = tabPage1;
+                btsalvar.Enabled = false;
+                //btbuscar.Enabled = true;
             }
         }
     }

@@ -31,22 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadAluno));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.tbnome = new System.Windows.Forms.TextBox();
-            this.lbcpf = new System.Windows.Forms.Label();
             this.lbnome = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btversenha = new System.Windows.Forms.Button();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.lbsenha = new System.Windows.Forms.Label();
             this.mtbmatricula = new System.Windows.Forms.MaskedTextBox();
-            this.tbemail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbcadastro = new System.Windows.Forms.Label();
             this.btlimpar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
             this.btcancelar = new System.Windows.Forms.Button();
+            this.tbemail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -57,64 +55,42 @@
             this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(55, 98);
+            this.tabControl1.Location = new System.Drawing.Point(54, 99);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(414, 266);
+            this.tabControl1.Size = new System.Drawing.Size(414, 202);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage1.Controls.Add(this.mtbcpf);
+            this.tabPage1.Controls.Add(this.tbemail);
+            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.tbnome);
-            this.tabPage1.Controls.Add(this.lbcpf);
             this.tabPage1.Controls.Add(this.lbnome);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(406, 232);
+            this.tabPage1.Size = new System.Drawing.Size(406, 168);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Pessoais";
-            // 
-            // mtbcpf
-            // 
-            this.mtbcpf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtbcpf.Location = new System.Drawing.Point(52, 143);
-            this.mtbcpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mtbcpf.Mask = "000,000,000-00";
-            this.mtbcpf.Name = "mtbcpf";
-            this.mtbcpf.Size = new System.Drawing.Size(145, 29);
-            this.mtbcpf.TabIndex = 1;
-            this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbnome
             // 
             this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbnome.Location = new System.Drawing.Point(52, 85);
+            this.tbnome.Location = new System.Drawing.Point(52, 52);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(300, 29);
             this.tbnome.TabIndex = 0;
             // 
-            // lbcpf
-            // 
-            this.lbcpf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbcpf.AutoSize = true;
-            this.lbcpf.Location = new System.Drawing.Point(52, 118);
-            this.lbcpf.Name = "lbcpf";
-            this.lbcpf.Size = new System.Drawing.Size(37, 21);
-            this.lbcpf.TabIndex = 1;
-            this.lbcpf.Text = "CPF";
-            // 
             // lbnome
             // 
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
-            this.lbnome.Location = new System.Drawing.Point(52, 60);
+            this.lbnome.Location = new System.Drawing.Point(52, 27);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
             this.lbnome.TabIndex = 0;
@@ -127,14 +103,12 @@
             this.tabPage2.Controls.Add(this.tbsenha);
             this.tabPage2.Controls.Add(this.lbsenha);
             this.tabPage2.Controls.Add(this.mtbmatricula);
-            this.tabPage2.Controls.Add(this.tbemail);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(406, 232);
+            this.tabPage2.Size = new System.Drawing.Size(406, 168);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Institucional";
             // 
@@ -146,7 +120,7 @@
             this.btversenha.FlatAppearance.BorderSize = 0;
             this.btversenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
-            this.btversenha.Location = new System.Drawing.Point(322, 170);
+            this.btversenha.Location = new System.Drawing.Point(321, 109);
             this.btversenha.Name = "btversenha";
             this.btversenha.Size = new System.Drawing.Size(38, 30);
             this.btversenha.TabIndex = 5;
@@ -156,7 +130,7 @@
             // tbsenha
             // 
             this.tbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbsenha.Location = new System.Drawing.Point(52, 171);
+            this.tbsenha.Location = new System.Drawing.Point(51, 110);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(270, 29);
@@ -167,7 +141,7 @@
             // 
             this.lbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbsenha.AutoSize = true;
-            this.lbsenha.Location = new System.Drawing.Point(52, 146);
+            this.lbsenha.Location = new System.Drawing.Point(51, 85);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(53, 21);
             this.lbsenha.TabIndex = 8;
@@ -176,7 +150,7 @@
             // mtbmatricula
             // 
             this.mtbmatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtbmatricula.Location = new System.Drawing.Point(52, 113);
+            this.mtbmatricula.Location = new System.Drawing.Point(51, 52);
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
@@ -185,34 +159,15 @@
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
-            // tbemail
-            // 
-            this.tbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbemail.Location = new System.Drawing.Point(52, 56);
-            this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbemail.Name = "tbemail";
-            this.tbemail.Size = new System.Drawing.Size(300, 29);
-            this.tbemail.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 88);
+            this.label1.Location = new System.Drawing.Point(51, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Matrícula";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "E-mail Institucional";
             // 
             // lbcadastro
             // 
@@ -220,7 +175,7 @@
             this.lbcadastro.AutoSize = true;
             this.lbcadastro.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbcadastro.Location = new System.Drawing.Point(162, 36);
+            this.lbcadastro.Location = new System.Drawing.Point(161, 37);
             this.lbcadastro.Name = "lbcadastro";
             this.lbcadastro.Size = new System.Drawing.Size(186, 38);
             this.lbcadastro.TabIndex = 19;
@@ -234,7 +189,7 @@
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlimpar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btlimpar.Location = new System.Drawing.Point(60, 368);
+            this.btlimpar.Location = new System.Drawing.Point(59, 305);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(199, 37);
@@ -251,7 +206,7 @@
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.ForeColor = System.Drawing.Color.White;
-            this.btsalvar.Location = new System.Drawing.Point(60, 417);
+            this.btsalvar.Location = new System.Drawing.Point(59, 354);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(405, 37);
@@ -268,7 +223,7 @@
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcancelar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btcancelar.Location = new System.Drawing.Point(266, 368);
+            this.btcancelar.Location = new System.Drawing.Point(265, 305);
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(199, 37);
@@ -277,18 +232,36 @@
             this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
             // 
+            // tbemail
+            // 
+            this.tbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbemail.Location = new System.Drawing.Point(52, 111);
+            this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbemail.Name = "tbemail";
+            this.tbemail.Size = new System.Drawing.Size(300, 29);
+            this.tbemail.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "E-mail Institucional";
+            // 
             // FormCadAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 495);
+            this.ClientSize = new System.Drawing.Size(522, 439);
             this.Controls.Add(this.btcancelar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lbcadastro);
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btsalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(540, 542);
             this.Name = "FormCadAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
@@ -307,21 +280,19 @@
 
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private MaskedTextBox mtbcpf;
         private TextBox tbnome;
-        private Label lbcpf;
         private Label lbnome;
         private TabPage tabPage2;
         private Label lbcadastro;
         private Button btlimpar;
         private Button btsalvar;
         private MaskedTextBox mtbmatricula;
-        private TextBox tbemail;
         private Label label1;
-        private Label label3;
         private TextBox tbsenha;
         private Label lbsenha;
         private Button btversenha;
         private Button btcancelar;
+        private TextBox tbemail;
+        private Label label3;
     }
 }

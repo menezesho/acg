@@ -20,7 +20,6 @@ namespace projeto_acg.View
         private void FormCadAluno_Load(object sender, EventArgs e)
         {
             tbnome.Clear();
-            mtbcpf.Clear();
             tbemail.Clear();
             mtbmatricula.Clear();
             tbsenha.Clear();
@@ -47,9 +46,8 @@ namespace projeto_acg.View
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
-        {
+        {//btlimpar
             tbnome.Clear();
-            mtbcpf.Clear();
             tbemail.Clear();
             mtbmatricula.Clear();
             tbsenha.Clear();
@@ -62,32 +60,24 @@ namespace projeto_acg.View
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
-                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                var matriculaValida = Funcoes.validarMatricula(mtbmatricula.Text);
                 if (matriculaValida)
                 {
-                    if (celularValido)
-                    {
-                        Aluno alunos = new Aluno();
+                    Aluno alunos = new Aluno();
 
-                        alunos.nome = tbnome.Text;
-                        alunos.email = tbemail.Text;
-                        alunos.matricula = mtbmatricula.Text;
-                        alunos.senha = tbsenha.Text;
+                    alunos.nome = tbnome.Text;
+                    alunos.email = tbemail.Text;
+                    alunos.matricula = mtbmatricula.Text;
+                    alunos.senha = tbsenha.Text;
 
-                        //Funcoes funcoes = new Funcoes();
+                    Funcoes funcoes = new Funcoes();
 
-                        //string cpf = mtbcpf.Text;
-                        //funcoes.verificarCpfAluno(cpf, alunos);
-                        tabControl1.SelectedTab = tabPage1;
-                    }
-                    else
-                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    string matricula = mtbmatricula.Text;
+                    funcoes.validarMatricula(matricula, alunos);
+                    tabControl1.SelectedTab = tabPage1;
                 }
-
                 else
-                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Insira a matrícula corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
