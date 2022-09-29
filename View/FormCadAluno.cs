@@ -53,6 +53,42 @@ namespace projeto_acg.View
             tbemail.Clear();
             mtbmatricula.Clear();
             tbsenha.Clear();
+            MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btsalvar_Click(object sender, EventArgs e)
+        {//btsalvar
+            if (tbnome.Text == "" || tbemail.Text == "" || mtbmatricula.Text == "_______" || tbsenha.Text == "")
+                MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                if (matriculaValida)
+                {
+                    if (celularValido)
+                    {
+                        Aluno alunos = new Aluno();
+
+                        alunos.nome = tbnome.Text;
+                        alunos.email = tbemail.Text;
+                        alunos.matricula = mtbmatricula.Text;
+                        alunos.senha = tbsenha.Text;
+
+                        //Funcoes funcoes = new Funcoes();
+
+                        //string cpf = mtbcpf.Text;
+                        //funcoes.verificarCpfAluno(cpf, alunos);
+                        tabControl1.SelectedTab = tabPage1;
+                    }
+                    else
+                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+                else
+                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

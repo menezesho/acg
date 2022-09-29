@@ -258,6 +258,7 @@
             this.btsalvar.TabIndex = 8;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
+            this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
             // 
             // btcancelar
             // 
