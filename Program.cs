@@ -1,4 +1,4 @@
-namespace projeto_acg.Class
+namespace projeto_acg
 {
     internal static class Program
     {

@@ -27,5 +27,11 @@ namespace projeto_acg.View
             FormCadAcg Fca = new FormCadAcg();
             Fca.ShowDialog();
         }
+
+        private void editaraluno_Click(object sender, EventArgs e)
+        {
+            FormEditAluno Fea = new FormEditAluno();
+            Fea.ShowDialog();
+        }
     }
 }

@@ -132,6 +132,7 @@
             this.editaraluno.Padding = new System.Windows.Forms.Padding(10);
             this.editaraluno.Size = new System.Drawing.Size(271, 47);
             this.editaraluno.Text = "EDITAR ALUNO";
+            this.editaraluno.Click += new System.EventHandler(this.editaraluno_Click);
             this.editaraluno.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
             // pictureBox1
