@@ -38,6 +38,7 @@
             this.Name = "FormCadAcg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de ACG";
+            this.Load += new System.EventHandler(this.FormCadAcg_Load);
             this.ResumeLayout(false);
 
         }

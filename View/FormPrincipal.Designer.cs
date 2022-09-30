@@ -29,111 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            this.msmenu = new System.Windows.Forms.MenuStrip();
-            this.enviaracg = new System.Windows.Forms.ToolStripMenuItem();
-            this.verificarsituacao = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastraracg = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaracgs = new System.Windows.Forms.ToolStripMenuItem();
-            this.editaracgs = new System.Windows.Forms.ToolStripMenuItem();
-            this.editaraluno = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.msmenu.SuspendLayout();
+            this.btenviaracg = new System.Windows.Forms.Button();
+            this.bteditaraluno = new System.Windows.Forms.Button();
+            this.bteditaracgs = new System.Windows.Forms.Button();
+            this.btlistaracgs = new System.Windows.Forms.Button();
+            this.btcadastraracg = new System.Windows.Forms.Button();
+            this.btverificarsituacao = new System.Windows.Forms.Button();
+            this.btsair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // msmenu
-            // 
-            this.msmenu.AutoSize = false;
-            this.msmenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.msmenu.GripMargin = new System.Windows.Forms.Padding(2);
-            this.msmenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.msmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enviaracg,
-            this.verificarsituacao,
-            this.cadastraracg,
-            this.listaracgs,
-            this.editaracgs,
-            this.editaraluno});
-            this.msmenu.Location = new System.Drawing.Point(0, 0);
-            this.msmenu.Name = "msmenu";
-            this.msmenu.Padding = new System.Windows.Forms.Padding(34, 31, 34, 31);
-            this.msmenu.Size = new System.Drawing.Size(350, 417);
-            this.msmenu.TabIndex = 0;
-            this.msmenu.Text = "menuStrip1";
-            // 
-            // enviaracg
-            // 
-            this.enviaracg.BackColor = System.Drawing.Color.SteelBlue;
-            this.enviaracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.enviaracg.ForeColor = System.Drawing.Color.GhostWhite;
-            this.enviaracg.Margin = new System.Windows.Forms.Padding(5);
-            this.enviaracg.Name = "enviaracg";
-            this.enviaracg.Padding = new System.Windows.Forms.Padding(10);
-            this.enviaracg.Size = new System.Drawing.Size(271, 47);
-            this.enviaracg.Text = "ENVIAR ACG";
-            this.enviaracg.Click += new System.EventHandler(this.enviaracg_Click);
-            this.enviaracg.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
-            // 
-            // verificarsituacao
-            // 
-            this.verificarsituacao.BackColor = System.Drawing.Color.SteelBlue;
-            this.verificarsituacao.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.verificarsituacao.ForeColor = System.Drawing.Color.GhostWhite;
-            this.verificarsituacao.Margin = new System.Windows.Forms.Padding(5);
-            this.verificarsituacao.Name = "verificarsituacao";
-            this.verificarsituacao.Padding = new System.Windows.Forms.Padding(10);
-            this.verificarsituacao.Size = new System.Drawing.Size(271, 47);
-            this.verificarsituacao.Text = "VERIFICAR SITUAÇÃO";
-            this.verificarsituacao.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
-            // 
-            // cadastraracg
-            // 
-            this.cadastraracg.BackColor = System.Drawing.Color.SteelBlue;
-            this.cadastraracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cadastraracg.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cadastraracg.Margin = new System.Windows.Forms.Padding(5);
-            this.cadastraracg.Name = "cadastraracg";
-            this.cadastraracg.Padding = new System.Windows.Forms.Padding(10);
-            this.cadastraracg.Size = new System.Drawing.Size(271, 47);
-            this.cadastraracg.Text = "CADASTRAR ACG";
-            this.cadastraracg.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
-            // 
-            // listaracgs
-            // 
-            this.listaracgs.BackColor = System.Drawing.Color.SteelBlue;
-            this.listaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.listaracgs.ForeColor = System.Drawing.Color.GhostWhite;
-            this.listaracgs.Margin = new System.Windows.Forms.Padding(5);
-            this.listaracgs.Name = "listaracgs";
-            this.listaracgs.Padding = new System.Windows.Forms.Padding(10);
-            this.listaracgs.Size = new System.Drawing.Size(271, 47);
-            this.listaracgs.Text = "LISTAR ACGs";
-            this.listaracgs.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
-            // 
-            // editaracgs
-            // 
-            this.editaracgs.BackColor = System.Drawing.Color.SteelBlue;
-            this.editaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.editaracgs.ForeColor = System.Drawing.Color.GhostWhite;
-            this.editaracgs.Margin = new System.Windows.Forms.Padding(5);
-            this.editaracgs.Name = "editaracgs";
-            this.editaracgs.Padding = new System.Windows.Forms.Padding(10);
-            this.editaracgs.Size = new System.Drawing.Size(271, 47);
-            this.editaracgs.Text = "EDITAR ACGs";
-            this.editaracgs.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
-            // 
-            // editaraluno
-            // 
-            this.editaraluno.BackColor = System.Drawing.Color.SteelBlue;
-            this.editaraluno.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.editaraluno.ForeColor = System.Drawing.Color.GhostWhite;
-            this.editaraluno.Margin = new System.Windows.Forms.Padding(5);
-            this.editaraluno.Name = "editaraluno";
-            this.editaraluno.Padding = new System.Windows.Forms.Padding(10);
-            this.editaraluno.Size = new System.Drawing.Size(271, 47);
-            this.editaraluno.Text = "EDITAR ALUNO";
-            this.editaraluno.Click += new System.EventHandler(this.editaraluno_Click);
-            this.editaraluno.MouseMove += new System.Windows.Forms.MouseEventHandler(this.todosToolStripMenuItem_MouseMove);
             // 
             // pictureBox1
             // 
@@ -146,35 +51,152 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // btenviaracg
+            // 
+            this.btenviaracg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btenviaracg.BackColor = System.Drawing.Color.SteelBlue;
+            this.btenviaracg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btenviaracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btenviaracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btenviaracg.ForeColor = System.Drawing.Color.White;
+            this.btenviaracg.Location = new System.Drawing.Point(42, 49);
+            this.btenviaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btenviaracg.Name = "btenviaracg";
+            this.btenviaracg.Size = new System.Drawing.Size(270, 47);
+            this.btenviaracg.TabIndex = 24;
+            this.btenviaracg.Text = "ENVIAR ACG";
+            this.btenviaracg.UseVisualStyleBackColor = false;
+            this.btenviaracg.Click += new System.EventHandler(this.btenviaracg_Click);
+            // 
+            // bteditaraluno
+            // 
+            this.bteditaraluno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bteditaraluno.BackColor = System.Drawing.Color.SteelBlue;
+            this.bteditaraluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bteditaraluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bteditaraluno.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bteditaraluno.ForeColor = System.Drawing.Color.White;
+            this.bteditaraluno.Location = new System.Drawing.Point(42, 324);
+            this.bteditaraluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bteditaraluno.Name = "bteditaraluno";
+            this.bteditaraluno.Size = new System.Drawing.Size(270, 47);
+            this.bteditaraluno.TabIndex = 26;
+            this.bteditaraluno.Text = "EDITAR ALUNO";
+            this.bteditaraluno.UseVisualStyleBackColor = false;
+            this.bteditaraluno.Click += new System.EventHandler(this.bteditaraluno_Click);
+            // 
+            // bteditaracgs
+            // 
+            this.bteditaracgs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bteditaracgs.BackColor = System.Drawing.Color.SteelBlue;
+            this.bteditaracgs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bteditaracgs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bteditaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bteditaracgs.ForeColor = System.Drawing.Color.White;
+            this.bteditaracgs.Location = new System.Drawing.Point(42, 269);
+            this.bteditaracgs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bteditaracgs.Name = "bteditaracgs";
+            this.bteditaracgs.Size = new System.Drawing.Size(270, 47);
+            this.bteditaracgs.TabIndex = 27;
+            this.bteditaracgs.Text = "EDITAR ACGs";
+            this.bteditaracgs.UseVisualStyleBackColor = false;
+            // 
+            // btlistaracgs
+            // 
+            this.btlistaracgs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btlistaracgs.BackColor = System.Drawing.Color.SteelBlue;
+            this.btlistaracgs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btlistaracgs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btlistaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btlistaracgs.ForeColor = System.Drawing.Color.White;
+            this.btlistaracgs.Location = new System.Drawing.Point(42, 214);
+            this.btlistaracgs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btlistaracgs.Name = "btlistaracgs";
+            this.btlistaracgs.Size = new System.Drawing.Size(270, 47);
+            this.btlistaracgs.TabIndex = 28;
+            this.btlistaracgs.Text = "LISTAR ACGs";
+            this.btlistaracgs.UseVisualStyleBackColor = false;
+            // 
+            // btcadastraracg
+            // 
+            this.btcadastraracg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btcadastraracg.BackColor = System.Drawing.Color.SteelBlue;
+            this.btcadastraracg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btcadastraracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcadastraracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btcadastraracg.ForeColor = System.Drawing.Color.White;
+            this.btcadastraracg.Location = new System.Drawing.Point(42, 159);
+            this.btcadastraracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btcadastraracg.Name = "btcadastraracg";
+            this.btcadastraracg.Size = new System.Drawing.Size(270, 47);
+            this.btcadastraracg.TabIndex = 29;
+            this.btcadastraracg.Text = "CADASTRAR ACG";
+            this.btcadastraracg.UseVisualStyleBackColor = false;
+            // 
+            // btverificarsituacao
+            // 
+            this.btverificarsituacao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btverificarsituacao.BackColor = System.Drawing.Color.SteelBlue;
+            this.btverificarsituacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btverificarsituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btverificarsituacao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btverificarsituacao.ForeColor = System.Drawing.Color.White;
+            this.btverificarsituacao.Location = new System.Drawing.Point(42, 104);
+            this.btverificarsituacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btverificarsituacao.Name = "btverificarsituacao";
+            this.btverificarsituacao.Size = new System.Drawing.Size(270, 47);
+            this.btverificarsituacao.TabIndex = 30;
+            this.btverificarsituacao.Text = "VERIFICAR SITUAÇÃO";
+            this.btverificarsituacao.UseVisualStyleBackColor = false;
+            // 
+            // btsair
+            // 
+            this.btsair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btsair.BackColor = System.Drawing.Color.GhostWhite;
+            this.btsair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btsair.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btsair.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btsair.Location = new System.Drawing.Point(667, 334);
+            this.btsair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btsair.Name = "btsair";
+            this.btsair.Size = new System.Drawing.Size(94, 37);
+            this.btsair.TabIndex = 31;
+            this.btsair.Text = "SAIR";
+            this.btsair.UseVisualStyleBackColor = false;
+            this.btsair.Click += new System.EventHandler(this.btsair_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 417);
+            this.Controls.Add(this.btsair);
+            this.Controls.Add(this.btverificarsituacao);
+            this.Controls.Add(this.btcadastraracg);
+            this.Controls.Add(this.btlistaracgs);
+            this.Controls.Add(this.bteditaracgs);
+            this.Controls.Add(this.bteditaraluno);
+            this.Controls.Add(this.btenviaracg);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.msmenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.msmenu;
             this.MinimumSize = new System.Drawing.Size(826, 464);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
-            this.msmenu.ResumeLayout(false);
-            this.msmenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MenuStrip msmenu;
-        private ToolStripMenuItem enviaracg;
-        private ToolStripMenuItem editaraluno;
         private PictureBox pictureBox1;
-        private ToolStripMenuItem verificarsituacao;
-        private ToolStripMenuItem cadastraracg;
-        private ToolStripMenuItem listaracgs;
-        private ToolStripMenuItem editaracgs;
+        internal Button btenviaracg;
+        internal Button bteditaraluno;
+        internal Button bteditaracgs;
+        internal Button btlistaracgs;
+        internal Button btcadastraracg;
+        internal Button btverificarsituacao;
+        private Button btsair;
     }
 }

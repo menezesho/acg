@@ -16,5 +16,10 @@ namespace projeto_acg.View
         {
             InitializeComponent();
         }
+
+        private void FormCadAcg_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

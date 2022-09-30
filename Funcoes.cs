@@ -330,7 +330,7 @@ namespace projeto_acg
 
         #region Login
 
-        public void loginProf(string matricula, string senha)
+        public void realizarLogin(string matricula, string senha)
         {
             try
             {
@@ -347,6 +347,13 @@ namespace projeto_acg
                 if (dados.Read())
                 {
                     FormPrincipal Fp = new FormPrincipal();
+                    Fp.btcadastraracg.Visible = false;
+                    Fp.btlistaracgs.Visible = false;
+                    Fp.bteditaracgs.Visible = false;
+                    Fp.bteditaraluno.Visible = false;
+                    Fp.btenviaracg.Location = new Point(42, 159);
+                    Fp.btverificarsituacao.Location = new Point(42, 214);
+                    MessageBox.Show("Login de aluno efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Fp.ShowDialog();
                     conexao.Close();
                 }

@@ -17,21 +17,22 @@ namespace projeto_acg.View
             InitializeComponent();
         }
 
-        private void todosToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
-        {
-            Cursor.Current = Cursors.Hand;
+        private void bteditaraluno_Click(object sender, EventArgs e)
+        {//bteditaraluno
+            FormEditAluno Fea = new FormEditAluno();
+            Fea.ShowDialog();
         }
 
-        private void enviaracg_Click(object sender, EventArgs e)
-        {//enviar ACG
+        private void btenviaracg_Click(object sender, EventArgs e)
+        {//btenviar ACG
             FormCadAcg Fca = new FormCadAcg();
             Fca.ShowDialog();
         }
 
-        private void editaraluno_Click(object sender, EventArgs e)
-        {
-            FormEditAluno Fea = new FormEditAluno();
-            Fea.ShowDialog();
+        private void btsair_Click(object sender, EventArgs e)
+        {//btsair
+            if (MessageBox.Show("Deseja mesmo sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
         }
     }
 }
