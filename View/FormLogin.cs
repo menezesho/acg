@@ -12,7 +12,7 @@ namespace projeto_acg
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            mtbmatricula.Mask = "";
+
         }
 
         private void btlogin_Click(object sender, EventArgs e)
@@ -22,17 +22,11 @@ namespace projeto_acg
                 MessageBox.Show("Login de administrador efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormPrincipal Fp = new FormPrincipal();
 
-                //Fp.btenviaracg.Enabled = false;
-                //Fp.btenviaracg.BackColor = Color.LightGray;
-                //Fp.btverificarsituacao.Enabled = false;
-                //Fp.btverificarsituacao.BackColor = Color.LightGray;
+                Fp.btenviaracg.Enabled = false;
+                Fp.btenviaracg.BackColor = Color.LightGray;
+                Fp.btverificarsituacao.Enabled = false;
+                Fp.btverificarsituacao.BackColor = Color.LightGray;
 
-                Fp.btenviaracg.Visible = false;
-                Fp.btverificarsituacao.Visible = false;
-                Fp.btcadastraracg.Location = new Point(42, 104);
-                Fp.btlistaracgs.Location = new Point(42, 159);
-                Fp.bteditaracgs.Location = new Point(42, 214);
-                Fp.bteditaraluno.Location = new Point(42, 269);
                 Fp.ShowDialog();
             }
             else
@@ -60,12 +54,6 @@ namespace projeto_acg
                 tbsenha.UseSystemPasswordChar = true;
         }
 
-        private void btreload_Click(object sender, EventArgs e)
-        {//btreload
-            mtbmatricula.Clear();
-            tbsenha.Clear();
-        }
-
         private void btsair_Click(object sender, EventArgs e)
         {//btsair
             if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -73,19 +61,10 @@ namespace projeto_acg
             //padrão de confirmação de saída 
         }
 
-        #region Mask Matrícula
-        private void mtbmatricula_Click(object sender, EventArgs e)
-        {
-            mtbmatricula.Mask = "00-00000";
+        private void lbcadastrese_Click(object sender, EventArgs e)
+        {//lbcadastrese (primeiro acesso)
+            FormCadAluno Fca = new FormCadAluno();
+            Fca.ShowDialog();
         }
-
-
-        private void mtbmatricula_Leave(object sender, EventArgs e)
-        {
-            if (mtbmatricula.Text == "  -")
-                mtbmatricula.Mask = "";
-        }
-
-        #endregion
     }
 }

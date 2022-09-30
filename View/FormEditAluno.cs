@@ -35,6 +35,13 @@ namespace projeto_acg
             bteditar.Enabled = true;
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
+
+            bteditar.BackColor = Color.GhostWhite;
+            bteditar.ForeColor = Color.SteelBlue;
+            btcancelar.BackColor = Color.Gainsboro;
+            btcancelar.ForeColor = Color.GhostWhite;
+            btsalvar.BackColor = Color.Gainsboro;
+            btsalvar.ForeColor = Color.GhostWhite;
             //btbuscar.Enabled = true;
             //tbbusca.Clear();
         }
@@ -55,6 +62,13 @@ namespace projeto_acg
             bteditar.Enabled = true;
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
+
+            bteditar.BackColor = Color.GhostWhite;
+            bteditar.ForeColor = Color.SteelBlue;
+            btcancelar.BackColor = Color.Gainsboro;
+            btcancelar.ForeColor = Color.GhostWhite;
+            btsalvar.BackColor = Color.Gainsboro;
+            btsalvar.ForeColor = Color.GhostWhite;
             //btbuscar.Enabled = true;
         }
 
@@ -79,7 +93,7 @@ namespace projeto_acg
 
         private void bteditar_Click_1(object sender, EventArgs e)
         {//bteditar
-            if (mtbmatricula.Text != "")
+            if (tbid.Text != "")
             {
                 tbnome.Enabled = true;
                 tbemail.Enabled = true;
@@ -88,6 +102,13 @@ namespace projeto_acg
                 bteditar.Enabled = false;
                 btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
+
+                bteditar.BackColor = Color.Gainsboro;
+                bteditar.ForeColor = Color.GhostWhite;
+                btcancelar.BackColor = Color.GhostWhite;
+                btcancelar.ForeColor = Color.SteelBlue;
+                btsalvar.BackColor = Color.SteelBlue;
+                btsalvar.ForeColor = Color.White;
                 //btbuscar.Enabled = false;
             }
             else
@@ -102,8 +123,16 @@ namespace projeto_acg
             tbsenha.Enabled = false;
 
             bteditar.Enabled = true;
-            btsalvar.Enabled = false;
             btcancelar.Enabled = false;
+            btsalvar.Enabled = false;
+
+            bteditar.BackColor = Color.GhostWhite;
+            bteditar.ForeColor = Color.SteelBlue;
+            btcancelar.BackColor = Color.Gainsboro;
+            btcancelar.ForeColor = Color.GhostWhite;
+            btsalvar.BackColor = Color.Gainsboro;
+            btsalvar.ForeColor = Color.GhostWhite;
+
             tabControl1.SelectedTab = tabPage1;
             //btbuscar.Enabled = true;
 
@@ -140,6 +169,14 @@ namespace projeto_acg
                     bteditar.Enabled = true;
                     btsalvar.Enabled = false;
                     btcancelar.Enabled = false;
+
+                    bteditar.BackColor = Color.GhostWhite;
+                    bteditar.ForeColor = Color.SteelBlue;
+                    btcancelar.BackColor = Color.Gainsboro;
+                    btcancelar.ForeColor = Color.GhostWhite;
+                    btsalvar.BackColor = Color.Gainsboro;
+                    btsalvar.ForeColor = Color.GhostWhite;
+
                     tabControl1.SelectedTab = tabPage1;
                     //btbuscar.Enabled = true;
                 }
@@ -189,8 +226,16 @@ namespace projeto_acg
 
                 bteditar.Enabled = true;
                 btcancelar.Enabled = false;
-                tabControl1.SelectedTab = tabPage1;
                 btsalvar.Enabled = false;
+
+                bteditar.BackColor = Color.GhostWhite;
+                bteditar.ForeColor = Color.SteelBlue;
+                btcancelar.BackColor = Color.Gainsboro;
+                btcancelar.ForeColor = Color.GhostWhite;
+                btsalvar.BackColor = Color.Gainsboro;
+                btsalvar.ForeColor = Color.GhostWhite;
+
+                tabControl1.SelectedTab = tabPage1;
                 //btbuscar.Enabled = true;
             }
         }

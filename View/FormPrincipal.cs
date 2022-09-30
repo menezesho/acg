@@ -17,21 +17,46 @@ namespace projeto_acg.View
             InitializeComponent();
         }
 
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btenviaracg_Click(object sender, EventArgs e)
+        {//btenviaracg
+            
+        }
+
+        private void btverificarsituacao_Click(object sender, EventArgs e)
+        {//btverificarsituacao
+
+        }
+
+        private void btcadastraracg_Click(object sender, EventArgs e)
+        {//btcadastraracg
+            FormCadAcg Fcacg = new FormCadAcg();
+            Fcacg.ShowDialog();
+        }
+
+        private void btlistaracgs_Click(object sender, EventArgs e)
+        {//btlistaracgs
+
+        }
+
+        private void bteditaracgs_Click(object sender, EventArgs e)
+        {//bteditaracgs
+
+        }
+
         private void bteditaraluno_Click(object sender, EventArgs e)
         {//bteditaraluno
             FormEditAluno Fea = new FormEditAluno();
             Fea.ShowDialog();
         }
 
-        private void btenviaracg_Click(object sender, EventArgs e)
-        {//btenviar ACG
-            FormCadAcg Fca = new FormCadAcg();
-            Fca.ShowDialog();
-        }
-
-        private void btsair_Click(object sender, EventArgs e)
-        {//btsair
-            if (MessageBox.Show("Deseja mesmo sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+        private void lbsair_Click(object sender, EventArgs e)
+        {//lbsair
+            if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
         }
     }

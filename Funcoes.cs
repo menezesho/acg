@@ -347,12 +347,18 @@ namespace projeto_acg
                 if (dados.Read())
                 {
                     FormPrincipal Fp = new FormPrincipal();
-                    Fp.btcadastraracg.Visible = false;
-                    Fp.btlistaracgs.Visible = false;
-                    Fp.bteditaracgs.Visible = false;
-                    Fp.bteditaraluno.Visible = false;
-                    Fp.btenviaracg.Location = new Point(42, 159);
-                    Fp.btverificarsituacao.Location = new Point(42, 214);
+                    Fp.btcadastraracg.Enabled = false;
+                    Fp.btlistaracgs.Enabled = false;
+                    Fp.bteditaracgs.Enabled = false;
+                    Fp.bteditaraluno.Enabled = false;
+                    Fp.btcadastraracg.BackColor = Color.LightGray;
+                    Fp.btlistaracgs.BackColor = Color.LightGray;
+                    Fp.bteditaracgs.BackColor = Color.LightGray;
+                    Fp.bteditaraluno.BackColor = Color.LightGray;
+                    Fp.btcadastraracg.ForeColor = Color.GhostWhite;
+                    Fp.btlistaracgs.ForeColor = Color.GhostWhite;
+                    Fp.bteditaracgs.ForeColor = Color.GhostWhite;
+                    Fp.bteditaraluno.ForeColor = Color.GhostWhite;
                     MessageBox.Show("Login de aluno efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Fp.ShowDialog();
                     conexao.Close();

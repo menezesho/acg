@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadAluno));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbemail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tbnome = new System.Windows.Forms.TextBox();
             this.lbnome = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -43,8 +45,6 @@
             this.btlimpar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
             this.btcancelar = new System.Windows.Forms.Button();
-            this.tbemail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,6 +76,25 @@
             this.tabPage1.Size = new System.Drawing.Size(406, 168);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Pessoais";
+            // 
+            // tbemail
+            // 
+            this.tbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbemail.Location = new System.Drawing.Point(52, 111);
+            this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbemail.Name = "tbemail";
+            this.tbemail.Size = new System.Drawing.Size(300, 29);
+            this.tbemail.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "E-mail Institucional";
             // 
             // tbnome
             // 
@@ -150,6 +169,7 @@
             // mtbmatricula
             // 
             this.mtbmatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbmatricula.HidePromptOnLeave = true;
             this.mtbmatricula.Location = new System.Drawing.Point(51, 52);
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
@@ -157,7 +177,7 @@
             this.mtbmatricula.Size = new System.Drawing.Size(109, 29);
             this.mtbmatricula.TabIndex = 3;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label1
             // 
@@ -177,9 +197,9 @@
             this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
             this.lbcadastro.Location = new System.Drawing.Point(161, 37);
             this.lbcadastro.Name = "lbcadastro";
-            this.lbcadastro.Size = new System.Drawing.Size(186, 38);
+            this.lbcadastro.Size = new System.Drawing.Size(202, 38);
             this.lbcadastro.TabIndex = 19;
-            this.lbcadastro.Text = "REGISTRE-SE";
+            this.lbcadastro.Text = "CADASTRE-SE";
             // 
             // btlimpar
             // 
@@ -231,25 +251,6 @@
             this.btcancelar.Text = "CANCELAR";
             this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
-            // 
-            // tbemail
-            // 
-            this.tbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbemail.Location = new System.Drawing.Point(52, 111);
-            this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbemail.Name = "tbemail";
-            this.tbemail.Size = new System.Drawing.Size(300, 29);
-            this.tbemail.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "E-mail Institucional";
             // 
             // FormCadAluno
             // 

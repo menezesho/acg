@@ -1,3 +1,5 @@
+using projeto_acg.View;
+
 namespace projeto_acg
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace projeto_acg
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormLogin());
+            Application.Run(new FormPrincipal());
         }
     }
 }
