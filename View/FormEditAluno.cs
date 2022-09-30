@@ -239,5 +239,11 @@ namespace projeto_acg
                 //btbuscar.Enabled = true;
             }
         }
+
+        private void lbsair_Click(object sender, EventArgs e)
+        {//lbsair
+            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
+        }
     }
 }

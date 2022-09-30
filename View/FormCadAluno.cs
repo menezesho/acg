@@ -27,7 +27,7 @@ namespace projeto_acg.View
 
         private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
         {//strip >> retornar
-            if (MessageBox.Show("Os dados não salvos serão perdidos. Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
         }
 
