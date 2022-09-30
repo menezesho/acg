@@ -19,7 +19,7 @@ namespace projeto_acg
         #region Aluno
 
         public void validarMatricula(string matricula, Aluno alunos)
-        {//ok
+        {
             try
             {
                 string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
@@ -49,7 +49,7 @@ namespace projeto_acg
         }
 
         public void cadastrarAluno(Aluno alunos)
-        {//ok
+        {
             try
             {
                 string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
@@ -75,7 +75,7 @@ namespace projeto_acg
         }
 
         public void editarAluno(Aluno alunos)
-        {//ok
+        {
             try
             {
                 string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
@@ -104,7 +104,7 @@ namespace projeto_acg
         }
 
         public DataTable listarAlunos()
-        {//ok
+        {
             string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
             string sql = @"SELECT id AS ID, nome AS Nome, email AS 'E-mail', matricula AS Matrícula, senha AS Senha  FROM aluno";
@@ -119,7 +119,7 @@ namespace projeto_acg
         }
 
         public void excluirAluno(Aluno alunos)
-        {//ok
+        {
             try
             {
                 string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
@@ -135,6 +135,36 @@ namespace projeto_acg
                 conexao.Close();
 
                 MessageBox.Show("Cadastro excluido com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Envio de ACG
+
+        public void cadastrarAcg(Acg acg)
+        {
+            try
+            {
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"INSERT INTO acg (nome, modalidade, tipo, horas) VALUES (@nome, @modalidade, @tipo, @horas)";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@nome", acg.nome);
+                comando.Parameters.AddWithValue("@horas", acg.horas.ToString());
+                comando.Parameters.AddWithValue("@modalidade", acg.modalidade);
+                comando.Parameters.AddWithValue("@tipo", acg.tipo);
+
+                conexao.Open();
+                comando.CommandText = sql;
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception erro)
             {
@@ -318,7 +348,7 @@ namespace projeto_acg
         */
 
 
-        #region Validação de CPF e Telefone
+        #region Validação de Matrícula
 
         public static bool validarMatricula(string matricula)
         {

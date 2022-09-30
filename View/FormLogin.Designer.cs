@@ -123,7 +123,6 @@
             this.mtbmatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbmatricula.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.mtbmatricula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtbmatricula.HidePromptOnLeave = true;
             this.mtbmatricula.Location = new System.Drawing.Point(117, 241);
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
@@ -132,6 +131,8 @@
             this.mtbmatricula.TabIndex = 2;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbmatricula.Enter += new System.EventHandler(this.mtbmatricula_Enter);
+            this.mtbmatricula.Leave += new System.EventHandler(this.mtbmatricula_Leave);
             // 
             // lbinfo
             // 

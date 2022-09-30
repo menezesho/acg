@@ -12,7 +12,7 @@ namespace projeto_acg
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            mtbmatricula.Mask = "";
         }
 
         private void btlogin_Click(object sender, EventArgs e)
@@ -26,7 +26,6 @@ namespace projeto_acg
                 Fp.btenviaracg.BackColor = Color.LightGray;
                 Fp.btverificarsituacao.Enabled = false;
                 Fp.btverificarsituacao.BackColor = Color.LightGray;
-
                 Fp.ShowDialog();
             }
             else
@@ -65,6 +64,17 @@ namespace projeto_acg
         {//lbcadastrese (primeiro acesso)
             FormCadAluno Fca = new FormCadAluno();
             Fca.ShowDialog();
+        }
+
+        private void mtbmatricula_Enter(object sender, EventArgs e)
+        {
+            mtbmatricula.Mask = "00-00000";
+        }
+
+        private void mtbmatricula_Leave(object sender, EventArgs e)
+        {
+            if(mtbmatricula.Text == "")
+                mtbmatricula.Mask = "";
         }
     }
 }
