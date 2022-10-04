@@ -24,7 +24,8 @@ namespace projeto_acg.View
 
         private void btenviaracg_Click(object sender, EventArgs e)
         {//btenviaracg
-            
+            FormEnviarAcg Feacg = new FormEnviarAcg();
+            Feacg.ShowDialog();
         }
 
         private void btverificarsituacao_Click(object sender, EventArgs e)

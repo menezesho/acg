@@ -37,7 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mtbmatricula = new System.Windows.Forms.MaskedTextBox();
             this.lbinfo = new System.Windows.Forms.Label();
-            this.lbcadastrese = new System.Windows.Forms.Label();
+            this.lbprimeiroacesso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,19 +146,19 @@
             this.lbinfo.Text = "Ainda não possui um cadastro?";
             this.lbinfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbcadastrese
+            // lbprimeiroacesso
             // 
-            this.lbcadastrese.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbcadastrese.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbcadastrese.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbcadastrese.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbcadastrese.Location = new System.Drawing.Point(176, 451);
-            this.lbcadastrese.Name = "lbcadastrese";
-            this.lbcadastrese.Size = new System.Drawing.Size(120, 23);
-            this.lbcadastrese.TabIndex = 1;
-            this.lbcadastrese.Text = "Cadastre-se!";
-            this.lbcadastrese.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbcadastrese.Click += new System.EventHandler(this.lbcadastrese_Click);
+            this.lbprimeiroacesso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbprimeiroacesso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbprimeiroacesso.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbprimeiroacesso.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbprimeiroacesso.Location = new System.Drawing.Point(117, 451);
+            this.lbprimeiroacesso.Name = "lbprimeiroacesso";
+            this.lbprimeiroacesso.Size = new System.Drawing.Size(236, 23);
+            this.lbprimeiroacesso.TabIndex = 1;
+            this.lbprimeiroacesso.Text = "Primeiro acesso!";
+            this.lbprimeiroacesso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbprimeiroacesso.Click += new System.EventHandler(this.lbcadastrese_Click);
             // 
             // FormLogin
             // 
@@ -166,7 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 587);
             this.Controls.Add(this.btversenha);
-            this.Controls.Add(this.lbcadastrese);
+            this.Controls.Add(this.lbprimeiroacesso);
             this.Controls.Add(this.lbinfo);
             this.Controls.Add(this.mtbmatricula);
             this.Controls.Add(this.pictureBox1);
@@ -196,6 +196,6 @@
         private PictureBox pictureBox1;
         private MaskedTextBox mtbmatricula;
         private Label lbinfo;
-        private Label lbcadastrese;
+        private Label lbprimeiroacesso;
     }
 }

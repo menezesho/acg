@@ -33,7 +33,6 @@
             this.btenviaracg = new System.Windows.Forms.Button();
             this.bteditaraluno = new System.Windows.Forms.Button();
             this.bteditaracgs = new System.Windows.Forms.Button();
-            this.btlistaracgs = new System.Windows.Forms.Button();
             this.btcadastraracg = new System.Windows.Forms.Button();
             this.btverificarsituacao = new System.Windows.Forms.Button();
             this.lbsair = new System.Windows.Forms.Label();
@@ -44,9 +43,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(504, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(500, 63);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(579, 460);
+            this.pictureBox1.Size = new System.Drawing.Size(579, 382);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -59,7 +58,7 @@
             this.btenviaracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btenviaracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btenviaracg.ForeColor = System.Drawing.Color.White;
-            this.btenviaracg.Location = new System.Drawing.Point(87, 67);
+            this.btenviaracg.Location = new System.Drawing.Point(83, 63);
             this.btenviaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btenviaracg.Name = "btenviaracg";
             this.btenviaracg.Size = new System.Drawing.Size(346, 70);
@@ -76,7 +75,7 @@
             this.bteditaraluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditaraluno.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditaraluno.ForeColor = System.Drawing.Color.White;
-            this.bteditaraluno.Location = new System.Drawing.Point(87, 457);
+            this.bteditaraluno.Location = new System.Drawing.Point(83, 375);
             this.bteditaraluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditaraluno.Name = "bteditaraluno";
             this.bteditaraluno.Size = new System.Drawing.Size(346, 70);
@@ -93,7 +92,7 @@
             this.bteditaracgs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditaracgs.ForeColor = System.Drawing.Color.White;
-            this.bteditaracgs.Location = new System.Drawing.Point(87, 379);
+            this.bteditaracgs.Location = new System.Drawing.Point(83, 297);
             this.bteditaracgs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditaracgs.Name = "bteditaracgs";
             this.bteditaracgs.Size = new System.Drawing.Size(346, 70);
@@ -101,23 +100,6 @@
             this.bteditaracgs.Text = "EDITAR ACGs";
             this.bteditaracgs.UseVisualStyleBackColor = false;
             this.bteditaracgs.Click += new System.EventHandler(this.bteditaracgs_Click);
-            // 
-            // btlistaracgs
-            // 
-            this.btlistaracgs.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btlistaracgs.BackColor = System.Drawing.Color.SteelBlue;
-            this.btlistaracgs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlistaracgs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btlistaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlistaracgs.ForeColor = System.Drawing.Color.White;
-            this.btlistaracgs.Location = new System.Drawing.Point(87, 301);
-            this.btlistaracgs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btlistaracgs.Name = "btlistaracgs";
-            this.btlistaracgs.Size = new System.Drawing.Size(346, 70);
-            this.btlistaracgs.TabIndex = 28;
-            this.btlistaracgs.Text = "LISTAR ACGs";
-            this.btlistaracgs.UseVisualStyleBackColor = false;
-            this.btlistaracgs.Click += new System.EventHandler(this.btlistaracgs_Click);
             // 
             // btcadastraracg
             // 
@@ -127,7 +109,7 @@
             this.btcadastraracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcadastraracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcadastraracg.ForeColor = System.Drawing.Color.White;
-            this.btcadastraracg.Location = new System.Drawing.Point(87, 223);
+            this.btcadastraracg.Location = new System.Drawing.Point(83, 219);
             this.btcadastraracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcadastraracg.Name = "btcadastraracg";
             this.btcadastraracg.Size = new System.Drawing.Size(346, 70);
@@ -144,7 +126,7 @@
             this.btverificarsituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btverificarsituacao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btverificarsituacao.ForeColor = System.Drawing.Color.White;
-            this.btverificarsituacao.Location = new System.Drawing.Point(87, 145);
+            this.btverificarsituacao.Location = new System.Drawing.Point(83, 141);
             this.btverificarsituacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btverificarsituacao.Name = "btverificarsituacao";
             this.btverificarsituacao.Size = new System.Drawing.Size(346, 70);
@@ -160,7 +142,7 @@
             this.lbsair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbsair.ForeColor = System.Drawing.SystemColors.Control;
             this.lbsair.Image = ((System.Drawing.Image)(resources.GetObject("lbsair.Image")));
-            this.lbsair.Location = new System.Drawing.Point(1021, 491);
+            this.lbsair.Location = new System.Drawing.Point(1015, 409);
             this.lbsair.Name = "lbsair";
             this.lbsair.Size = new System.Drawing.Size(32, 36);
             this.lbsair.TabIndex = 32;
@@ -171,17 +153,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 598);
+            this.ClientSize = new System.Drawing.Size(1136, 509);
             this.Controls.Add(this.lbsair);
             this.Controls.Add(this.btverificarsituacao);
             this.Controls.Add(this.btcadastraracg);
-            this.Controls.Add(this.btlistaracgs);
             this.Controls.Add(this.bteditaracgs);
             this.Controls.Add(this.bteditaraluno);
             this.Controls.Add(this.btenviaracg);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(826, 464);
+            this.MinimumSize = new System.Drawing.Size(1154, 556);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
@@ -196,7 +177,6 @@
         internal Button btenviaracg;
         internal Button bteditaraluno;
         internal Button bteditaracgs;
-        internal Button btlistaracgs;
         internal Button btcadastraracg;
         internal Button btverificarsituacao;
         private Label lbsair;

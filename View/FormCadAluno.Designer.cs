@@ -192,14 +192,14 @@
             // lbcadastro
             // 
             this.lbcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbcadastro.AutoSize = true;
             this.lbcadastro.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbcadastro.Location = new System.Drawing.Point(161, 37);
+            this.lbcadastro.Location = new System.Drawing.Point(59, 36);
             this.lbcadastro.Name = "lbcadastro";
-            this.lbcadastro.Size = new System.Drawing.Size(202, 38);
+            this.lbcadastro.Size = new System.Drawing.Size(405, 38);
             this.lbcadastro.TabIndex = 19;
             this.lbcadastro.Text = "CADASTRE-SE";
+            this.lbcadastro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btlimpar
             // 
@@ -273,7 +273,6 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

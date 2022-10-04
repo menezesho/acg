@@ -28,20 +28,217 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEnviarAcg));
+            this.tbtipo = new System.Windows.Forms.TextBox();
+            this.lbtipo = new System.Windows.Forms.Label();
+            this.mtbhoras = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbnome = new System.Windows.Forms.ComboBox();
+            this.btcancelar = new System.Windows.Forms.Button();
+            this.lbmodalidade = new System.Windows.Forms.Label();
+            this.tbmodalidade = new System.Windows.Forms.TextBox();
+            this.lbnome = new System.Windows.Forms.Label();
+            this.lbcadastro = new System.Windows.Forms.Label();
+            this.btlimpar = new System.Windows.Forms.Button();
+            this.btsalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // tbtipo
+            // 
+            this.tbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbtipo.Enabled = false;
+            this.tbtipo.ForeColor = System.Drawing.Color.DimGray;
+            this.tbtipo.Location = new System.Drawing.Point(84, 322);
+            this.tbtipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbtipo.Name = "tbtipo";
+            this.tbtipo.Size = new System.Drawing.Size(300, 29);
+            this.tbtipo.TabIndex = 42;
+            // 
+            // lbtipo
+            // 
+            this.lbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbtipo.AutoSize = true;
+            this.lbtipo.ForeColor = System.Drawing.Color.DimGray;
+            this.lbtipo.Location = new System.Drawing.Point(86, 297);
+            this.lbtipo.Name = "lbtipo";
+            this.lbtipo.Size = new System.Drawing.Size(40, 21);
+            this.lbtipo.TabIndex = 41;
+            this.lbtipo.Text = "Tipo";
+            // 
+            // mtbhoras
+            // 
+            this.mtbhoras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbhoras.Enabled = false;
+            this.mtbhoras.ForeColor = System.Drawing.Color.DimGray;
+            this.mtbhoras.HidePromptOnLeave = true;
+            this.mtbhoras.Location = new System.Drawing.Point(84, 209);
+            this.mtbhoras.Mask = "00";
+            this.mtbhoras.Name = "mtbhoras";
+            this.mtbhoras.Size = new System.Drawing.Size(51, 29);
+            this.mtbhoras.TabIndex = 40;
+            this.mtbhoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbhoras.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(84, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 21);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Horas";
+            // 
+            // cbnome
+            // 
+            this.cbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbnome.ForeColor = System.Drawing.Color.DimGray;
+            this.cbnome.FormattingEnabled = true;
+            this.cbnome.Items.AddRange(new object[] {
+            "Selecione"});
+            this.cbnome.Location = new System.Drawing.Point(84, 151);
+            this.cbnome.Name = "cbnome";
+            this.cbnome.Size = new System.Drawing.Size(300, 29);
+            this.cbnome.TabIndex = 38;
+            // 
+            // btcancelar
+            // 
+            this.btcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btcancelar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btcancelar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btcancelar.Location = new System.Drawing.Point(237, 388);
+            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btcancelar.Name = "btcancelar";
+            this.btcancelar.Size = new System.Drawing.Size(147, 37);
+            this.btcancelar.TabIndex = 34;
+            this.btcancelar.Text = "CANCELAR";
+            this.btcancelar.UseVisualStyleBackColor = false;
+            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
+            // 
+            // lbmodalidade
+            // 
+            this.lbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbmodalidade.AutoSize = true;
+            this.lbmodalidade.ForeColor = System.Drawing.Color.DimGray;
+            this.lbmodalidade.Location = new System.Drawing.Point(84, 241);
+            this.lbmodalidade.Name = "lbmodalidade";
+            this.lbmodalidade.Size = new System.Drawing.Size(92, 21);
+            this.lbmodalidade.TabIndex = 33;
+            this.lbmodalidade.Text = "Modalidade";
+            // 
+            // tbmodalidade
+            // 
+            this.tbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbmodalidade.Enabled = false;
+            this.tbmodalidade.ForeColor = System.Drawing.Color.DimGray;
+            this.tbmodalidade.Location = new System.Drawing.Point(84, 264);
+            this.tbmodalidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbmodalidade.Name = "tbmodalidade";
+            this.tbmodalidade.Size = new System.Drawing.Size(300, 29);
+            this.tbmodalidade.TabIndex = 31;
+            // 
+            // lbnome
+            // 
+            this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbnome.AutoSize = true;
+            this.lbnome.ForeColor = System.Drawing.Color.DimGray;
+            this.lbnome.Location = new System.Drawing.Point(84, 127);
+            this.lbnome.Name = "lbnome";
+            this.lbnome.Size = new System.Drawing.Size(53, 21);
+            this.lbnome.TabIndex = 32;
+            this.lbnome.Text = "Nome";
+            // 
+            // lbcadastro
+            // 
+            this.lbcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbcadastro.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbcadastro.Location = new System.Drawing.Point(84, 61);
+            this.lbcadastro.Name = "lbcadastro";
+            this.lbcadastro.Size = new System.Drawing.Size(300, 38);
+            this.lbcadastro.TabIndex = 37;
+            this.lbcadastro.Text = "ENVIAR ACG";
+            this.lbcadastro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btlimpar
+            // 
+            this.btlimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btlimpar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btlimpar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btlimpar.Location = new System.Drawing.Point(84, 388);
+            this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btlimpar.Name = "btlimpar";
+            this.btlimpar.Size = new System.Drawing.Size(147, 37);
+            this.btlimpar.TabIndex = 35;
+            this.btlimpar.Text = "LIMPAR";
+            this.btlimpar.UseVisualStyleBackColor = false;
+            this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
+            // 
+            // btsalvar
+            // 
+            this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btsalvar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btsalvar.ForeColor = System.Drawing.Color.White;
+            this.btsalvar.Location = new System.Drawing.Point(84, 433);
+            this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btsalvar.Name = "btsalvar";
+            this.btsalvar.Size = new System.Drawing.Size(300, 37);
+            this.btsalvar.TabIndex = 36;
+            this.btsalvar.Text = "SALVAR";
+            this.btsalvar.UseVisualStyleBackColor = false;
+            this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
             // 
             // FormEnviarAcg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 503);
+            this.ClientSize = new System.Drawing.Size(472, 539);
+            this.Controls.Add(this.tbtipo);
+            this.Controls.Add(this.lbtipo);
+            this.Controls.Add(this.mtbhoras);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbnome);
+            this.Controls.Add(this.btcancelar);
+            this.Controls.Add(this.lbmodalidade);
+            this.Controls.Add(this.tbmodalidade);
+            this.Controls.Add(this.lbnome);
+            this.Controls.Add(this.lbcadastro);
+            this.Controls.Add(this.btlimpar);
+            this.Controls.Add(this.btsalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(490, 586);
             this.Name = "FormEnviarAcg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEnviarAcg";
+            this.Load += new System.EventHandler(this.FormEnviarAcg_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private TextBox tbtipo;
+        private Label lbtipo;
+        private MaskedTextBox mtbhoras;
+        private Label label1;
+        private ComboBox cbnome;
+        private Button btcancelar;
+        private Label lbmodalidade;
+        private TextBox tbmodalidade;
+        private Label lbnome;
+        private Label lbcadastro;
+        private Button btlimpar;
+        private Button btsalvar;
     }
 }

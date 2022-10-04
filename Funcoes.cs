@@ -172,6 +172,36 @@ namespace projeto_acg
             }
         }
 
+
+        public DataTable listarAcg()
+        {
+            string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
+            SqlConnection conexao = new SqlConnection(strConexao);
+            string sql = @"SELECT nome AS 'Nome', horas AS 'Horas', modalidade AS 'Modalidade', tipo AS 'Tipo' FROM acg";
+            SqlCommand comando = new SqlCommand(sql, conexao);
+            conexao.Open();
+            comando.ExecuteNonQuery();
+            DataTable tabelaAcg = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            da.Fill(tabelaAcg);
+            conexao.Close();
+            return tabelaAcg;
+        }
+
+        public void enviarAcg(Acg acg)
+        {
+            try
+            {
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"Select (NOME, HORAS, MODALIDADE, TIPO) FROM ACG";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+            }
+            catch(Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         /*
@@ -378,15 +408,12 @@ namespace projeto_acg
                 {
                     FormPrincipal Fp = new FormPrincipal();
                     Fp.btcadastraracg.Enabled = false;
-                    Fp.btlistaracgs.Enabled = false;
                     Fp.bteditaracgs.Enabled = false;
                     Fp.bteditaraluno.Enabled = false;
                     Fp.btcadastraracg.BackColor = Color.LightGray;
-                    Fp.btlistaracgs.BackColor = Color.LightGray;
                     Fp.bteditaracgs.BackColor = Color.LightGray;
                     Fp.bteditaraluno.BackColor = Color.LightGray;
                     Fp.btcadastraracg.ForeColor = Color.GhostWhite;
-                    Fp.btlistaracgs.ForeColor = Color.GhostWhite;
                     Fp.bteditaracgs.ForeColor = Color.GhostWhite;
                     Fp.bteditaraluno.ForeColor = Color.GhostWhite;
                     MessageBox.Show("Login de aluno efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
