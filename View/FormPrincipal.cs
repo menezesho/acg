@@ -39,14 +39,10 @@ namespace projeto_acg.View
             Fcacg.ShowDialog();
         }
 
-        private void btlistaracgs_Click(object sender, EventArgs e)
-        {//btlistaracgs
-
-        }
-
         private void bteditaracgs_Click(object sender, EventArgs e)
         {//bteditaracgs
-
+            FormEditAcg Feacg = new FormEditAcg();
+            Feacg.ShowDialog();
         }
 
         private void bteditaraluno_Click(object sender, EventArgs e)

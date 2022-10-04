@@ -62,7 +62,7 @@ namespace projeto_acg.View
                 acg.tipo = tbtipo.Text;
 
                 Funcoes funcoes = new Funcoes();
-                funcoes.cadastrarAcg(acg);
+                funcoes.validarAcg(acg.nome, acg);
             }
         }
 

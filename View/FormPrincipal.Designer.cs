@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btenviaracg = new System.Windows.Forms.Button();
             this.bteditaraluno = new System.Windows.Forms.Button();
-            this.bteditaracgs = new System.Windows.Forms.Button();
+            this.bteditaracg = new System.Windows.Forms.Button();
             this.btcadastraracg = new System.Windows.Forms.Button();
             this.btverificarsituacao = new System.Windows.Forms.Button();
             this.lbsair = new System.Windows.Forms.Label();
@@ -84,22 +84,22 @@
             this.bteditaraluno.UseVisualStyleBackColor = false;
             this.bteditaraluno.Click += new System.EventHandler(this.bteditaraluno_Click);
             // 
-            // bteditaracgs
+            // bteditaracg
             // 
-            this.bteditaracgs.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bteditaracgs.BackColor = System.Drawing.Color.SteelBlue;
-            this.bteditaracgs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bteditaracgs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bteditaracgs.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bteditaracgs.ForeColor = System.Drawing.Color.White;
-            this.bteditaracgs.Location = new System.Drawing.Point(83, 297);
-            this.bteditaracgs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bteditaracgs.Name = "bteditaracgs";
-            this.bteditaracgs.Size = new System.Drawing.Size(346, 70);
-            this.bteditaracgs.TabIndex = 27;
-            this.bteditaracgs.Text = "EDITAR ACGs";
-            this.bteditaracgs.UseVisualStyleBackColor = false;
-            this.bteditaracgs.Click += new System.EventHandler(this.bteditaracgs_Click);
+            this.bteditaracg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bteditaracg.BackColor = System.Drawing.Color.SteelBlue;
+            this.bteditaracg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bteditaracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bteditaracg.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bteditaracg.ForeColor = System.Drawing.Color.White;
+            this.bteditaracg.Location = new System.Drawing.Point(83, 297);
+            this.bteditaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bteditaracg.Name = "bteditaracg";
+            this.bteditaracg.Size = new System.Drawing.Size(346, 70);
+            this.bteditaracg.TabIndex = 27;
+            this.bteditaracg.Text = "EDITAR ACG";
+            this.bteditaracg.UseVisualStyleBackColor = false;
+            this.bteditaracg.Click += new System.EventHandler(this.bteditaracgs_Click);
             // 
             // btcadastraracg
             // 
@@ -157,7 +157,7 @@
             this.Controls.Add(this.lbsair);
             this.Controls.Add(this.btverificarsituacao);
             this.Controls.Add(this.btcadastraracg);
-            this.Controls.Add(this.bteditaracgs);
+            this.Controls.Add(this.bteditaracg);
             this.Controls.Add(this.bteditaraluno);
             this.Controls.Add(this.btenviaracg);
             this.Controls.Add(this.pictureBox1);
@@ -176,7 +176,7 @@
         private PictureBox pictureBox1;
         internal Button btenviaracg;
         internal Button bteditaraluno;
-        internal Button bteditaracgs;
+        internal Button bteditaracg;
         internal Button btcadastraracg;
         internal Button btverificarsituacao;
         private Label lbsair;

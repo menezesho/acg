@@ -177,7 +177,7 @@ namespace projeto_acg
         {
             string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT nome AS 'Nome', horas AS 'Horas', modalidade AS 'Modalidade', tipo AS 'Tipo' FROM acg";
+            string sql = @"SELECT id AS 'ID', nome AS 'Nome', horas AS 'Horas', modalidade AS 'Modalidade', tipo AS 'Tipo' FROM acg";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
@@ -202,6 +202,37 @@ namespace projeto_acg
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void validarAcg(string nome, Acg acg)
+        {
+            try
+            {
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM acg WHERE nome=@nome";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@nome", nome);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("ACG de mesmo nome já cadastrada!\nCadastre com um nome diferente ou adicione um complemento!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexao.Close();
+                }
+                else
+                {
+                    cadastrarAcg(acg);
+                    conexao.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         /*
@@ -408,13 +439,13 @@ namespace projeto_acg
                 {
                     FormPrincipal Fp = new FormPrincipal();
                     Fp.btcadastraracg.Enabled = false;
-                    Fp.bteditaracgs.Enabled = false;
+                    Fp.bteditaracg.Enabled = false;
                     Fp.bteditaraluno.Enabled = false;
                     Fp.btcadastraracg.BackColor = Color.LightGray;
-                    Fp.bteditaracgs.BackColor = Color.LightGray;
+                    Fp.bteditaracg.BackColor = Color.LightGray;
                     Fp.bteditaraluno.BackColor = Color.LightGray;
                     Fp.btcadastraracg.ForeColor = Color.GhostWhite;
-                    Fp.bteditaracgs.ForeColor = Color.GhostWhite;
+                    Fp.bteditaracg.ForeColor = Color.GhostWhite;
                     Fp.bteditaraluno.ForeColor = Color.GhostWhite;
                     MessageBox.Show("Login de aluno efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Fp.ShowDialog();

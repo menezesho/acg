@@ -51,7 +51,7 @@
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcancelar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btcancelar.Location = new System.Drawing.Point(240, 390);
+            this.btcancelar.Location = new System.Drawing.Point(240, 388);
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(147, 37);
@@ -65,7 +65,7 @@
             this.lbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbmodalidade.AutoSize = true;
             this.lbmodalidade.ForeColor = System.Drawing.Color.DimGray;
-            this.lbmodalidade.Location = new System.Drawing.Point(87, 244);
+            this.lbmodalidade.Location = new System.Drawing.Point(87, 242);
             this.lbmodalidade.Name = "lbmodalidade";
             this.lbmodalidade.Size = new System.Drawing.Size(92, 21);
             this.lbmodalidade.TabIndex = 6;
@@ -75,8 +75,9 @@
             // 
             this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbnome.ForeColor = System.Drawing.Color.DimGray;
-            this.tbnome.Location = new System.Drawing.Point(87, 155);
+            this.tbnome.Location = new System.Drawing.Point(87, 153);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbnome.MaxLength = 100;
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(300, 29);
             this.tbnome.TabIndex = 0;
@@ -86,7 +87,7 @@
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
             this.lbnome.ForeColor = System.Drawing.Color.DimGray;
-            this.lbnome.Location = new System.Drawing.Point(87, 130);
+            this.lbnome.Location = new System.Drawing.Point(87, 128);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
             this.lbnome.TabIndex = 0;
@@ -97,7 +98,7 @@
             this.lbcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcadastro.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbcadastro.Location = new System.Drawing.Point(87, 64);
+            this.lbcadastro.Location = new System.Drawing.Point(87, 62);
             this.lbcadastro.Name = "lbcadastro";
             this.lbcadastro.Size = new System.Drawing.Size(300, 38);
             this.lbcadastro.TabIndex = 24;
@@ -112,7 +113,7 @@
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlimpar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btlimpar.Location = new System.Drawing.Point(87, 390);
+            this.btlimpar.Location = new System.Drawing.Point(87, 388);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(147, 37);
@@ -129,12 +130,12 @@
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.ForeColor = System.Drawing.Color.White;
-            this.btsalvar.Location = new System.Drawing.Point(87, 435);
+            this.btsalvar.Location = new System.Drawing.Point(87, 433);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(300, 37);
             this.btsalvar.TabIndex = 23;
-            this.btsalvar.Text = "SALVAR";
+            this.btsalvar.Text = "CADASTRAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
             // 
@@ -151,7 +152,7 @@
             "Ensino",
             "Políticas",
             "Empreendedorismo e Inovação"});
-            this.cbmodalidade.Location = new System.Drawing.Point(87, 268);
+            this.cbmodalidade.Location = new System.Drawing.Point(87, 266);
             this.cbmodalidade.Name = "cbmodalidade";
             this.cbmodalidade.Size = new System.Drawing.Size(300, 29);
             this.cbmodalidade.TabIndex = 25;
@@ -162,7 +163,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(87, 188);
+            this.label1.Location = new System.Drawing.Point(87, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 21);
             this.label1.TabIndex = 27;
@@ -173,7 +174,7 @@
             this.mtbhoras.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbhoras.ForeColor = System.Drawing.Color.DimGray;
             this.mtbhoras.HidePromptOnLeave = true;
-            this.mtbhoras.Location = new System.Drawing.Point(87, 212);
+            this.mtbhoras.Location = new System.Drawing.Point(87, 210);
             this.mtbhoras.Mask = "00";
             this.mtbhoras.Name = "mtbhoras";
             this.mtbhoras.Size = new System.Drawing.Size(51, 29);
@@ -186,7 +187,7 @@
             this.lbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbtipo.AutoSize = true;
             this.lbtipo.ForeColor = System.Drawing.Color.DimGray;
-            this.lbtipo.Location = new System.Drawing.Point(87, 300);
+            this.lbtipo.Location = new System.Drawing.Point(87, 298);
             this.lbtipo.Name = "lbtipo";
             this.lbtipo.Size = new System.Drawing.Size(40, 21);
             this.lbtipo.TabIndex = 29;
@@ -196,7 +197,7 @@
             // 
             this.tbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbtipo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbtipo.Location = new System.Drawing.Point(87, 325);
+            this.tbtipo.Location = new System.Drawing.Point(87, 323);
             this.tbtipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbtipo.Name = "tbtipo";
             this.tbtipo.Size = new System.Drawing.Size(300, 29);
