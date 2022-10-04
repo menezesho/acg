@@ -233,6 +233,57 @@ namespace projeto_acg
             }
         }
 
+        public void excluirAcg(Acg acg, int id)
+        {
+            try
+            {
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"DELETE FROM acg WHERE id=@id";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@id", id);
+
+                conexao.Open();
+                comando.CommandText = sql;
+                comando.ExecuteNonQuery();
+                conexao.Close();
+
+                MessageBox.Show("ACG excluida com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void editarAcg(Acg acg, int id)
+        {
+            try
+            {
+                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"UPDATE acg SET modalidade=@modalidade, tipo=@tipo, horas=@horas WHERE id=@id";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@modalidade", acg.modalidade);
+                comando.Parameters.AddWithValue("@tipo", acg.tipo);
+                comando.Parameters.AddWithValue("@horas", acg.horas);
+
+                comando.Parameters.AddWithValue("@id", id);
+
+                conexao.Open();
+                comando.CommandText = sql;
+                comando.ExecuteNonQuery();
+                conexao.Close();
+
+                MessageBox.Show("Dados alterados com sucesso!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         /*

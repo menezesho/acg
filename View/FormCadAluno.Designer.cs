@@ -80,6 +80,7 @@
             // tbemail
             // 
             this.tbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbemail.Location = new System.Drawing.Point(52, 111);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
@@ -90,6 +91,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(52, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 21);
@@ -99,6 +101,7 @@
             // tbnome
             // 
             this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbnome.Location = new System.Drawing.Point(52, 52);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
@@ -109,6 +112,7 @@
             // 
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
+            this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbnome.Location = new System.Drawing.Point(52, 27);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
@@ -149,6 +153,7 @@
             // tbsenha
             // 
             this.tbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbsenha.Location = new System.Drawing.Point(51, 110);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
@@ -160,6 +165,7 @@
             // 
             this.lbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbsenha.AutoSize = true;
+            this.lbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbsenha.Location = new System.Drawing.Point(51, 85);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(53, 21);
@@ -169,6 +175,7 @@
             // mtbmatricula
             // 
             this.mtbmatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbmatricula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mtbmatricula.HidePromptOnLeave = true;
             this.mtbmatricula.Location = new System.Drawing.Point(51, 52);
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -183,6 +190,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(51, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);

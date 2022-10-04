@@ -64,7 +64,7 @@
             // 
             this.lbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbmodalidade.AutoSize = true;
-            this.lbmodalidade.ForeColor = System.Drawing.Color.DimGray;
+            this.lbmodalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbmodalidade.Location = new System.Drawing.Point(87, 242);
             this.lbmodalidade.Name = "lbmodalidade";
             this.lbmodalidade.Size = new System.Drawing.Size(92, 21);
@@ -74,7 +74,7 @@
             // tbnome
             // 
             this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbnome.ForeColor = System.Drawing.Color.DimGray;
+            this.tbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbnome.Location = new System.Drawing.Point(87, 153);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.MaxLength = 100;
@@ -86,7 +86,7 @@
             // 
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
-            this.lbnome.ForeColor = System.Drawing.Color.DimGray;
+            this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbnome.Location = new System.Drawing.Point(87, 128);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
@@ -142,7 +142,7 @@
             // cbmodalidade
             // 
             this.cbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbmodalidade.ForeColor = System.Drawing.Color.DimGray;
+            this.cbmodalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbmodalidade.FormattingEnabled = true;
             this.cbmodalidade.Items.AddRange(new object[] {
             "Selecione",
@@ -162,7 +162,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(87, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 21);
@@ -172,7 +172,7 @@
             // mtbhoras
             // 
             this.mtbhoras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtbhoras.ForeColor = System.Drawing.Color.DimGray;
+            this.mtbhoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mtbhoras.HidePromptOnLeave = true;
             this.mtbhoras.Location = new System.Drawing.Point(87, 210);
             this.mtbhoras.Mask = "00";
@@ -186,7 +186,7 @@
             // 
             this.lbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbtipo.AutoSize = true;
-            this.lbtipo.ForeColor = System.Drawing.Color.DimGray;
+            this.lbtipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbtipo.Location = new System.Drawing.Point(87, 298);
             this.lbtipo.Name = "lbtipo";
             this.lbtipo.Size = new System.Drawing.Size(40, 21);
@@ -196,7 +196,7 @@
             // tbtipo
             // 
             this.tbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbtipo.ForeColor = System.Drawing.Color.DimGray;
+            this.tbtipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbtipo.Location = new System.Drawing.Point(87, 323);
             this.tbtipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbtipo.Name = "tbtipo";

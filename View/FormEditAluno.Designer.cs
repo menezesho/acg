@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAluno));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btcancelar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -111,7 +111,7 @@
             // tbemail
             // 
             this.tbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbemail.ForeColor = System.Drawing.Color.DimGray;
+            this.tbemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbemail.Location = new System.Drawing.Point(53, 174);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
@@ -122,7 +122,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(53, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 21);
@@ -133,7 +133,7 @@
             // 
             this.tbid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbid.Enabled = false;
-            this.tbid.ForeColor = System.Drawing.Color.DimGray;
+            this.tbid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbid.Location = new System.Drawing.Point(186, 57);
             this.tbid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbid.Name = "tbid";
@@ -145,7 +145,7 @@
             // 
             this.lbid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbid.AutoSize = true;
-            this.lbid.ForeColor = System.Drawing.Color.DimGray;
+            this.lbid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbid.Location = new System.Drawing.Point(197, 32);
             this.lbid.Name = "lbid";
             this.lbid.Size = new System.Drawing.Size(25, 21);
@@ -155,7 +155,7 @@
             // tbnome
             // 
             this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbnome.ForeColor = System.Drawing.Color.DimGray;
+            this.tbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbnome.Location = new System.Drawing.Point(53, 115);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
@@ -166,7 +166,7 @@
             // 
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
-            this.lbnome.ForeColor = System.Drawing.Color.DimGray;
+            this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbnome.Location = new System.Drawing.Point(53, 90);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
@@ -206,7 +206,7 @@
             // tbsenha
             // 
             this.tbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbsenha.ForeColor = System.Drawing.Color.DimGray;
+            this.tbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbsenha.Location = new System.Drawing.Point(52, 146);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
@@ -218,7 +218,7 @@
             // 
             this.lbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbsenha.AutoSize = true;
-            this.lbsenha.ForeColor = System.Drawing.Color.DimGray;
+            this.lbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbsenha.Location = new System.Drawing.Point(52, 121);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(53, 21);
@@ -228,7 +228,7 @@
             // mtbmatricula
             // 
             this.mtbmatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtbmatricula.ForeColor = System.Drawing.Color.DimGray;
+            this.mtbmatricula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mtbmatricula.Location = new System.Drawing.Point(52, 88);
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
@@ -242,7 +242,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(52, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
@@ -319,35 +319,35 @@
             this.dgalunos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgalunos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgalunos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgalunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgalunos.Location = new System.Drawing.Point(559, 135);
             this.dgalunos.MultiSelect = false;
             this.dgalunos.Name = "dgalunos";
             this.dgalunos.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgalunos.RowHeadersVisible = false;
             this.dgalunos.RowHeadersWidth = 51;
             this.dgalunos.RowTemplate.Height = 29;
