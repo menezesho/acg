@@ -208,7 +208,7 @@ namespace projeto_acg
 
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT nome as Nome, modalidade as Modalidade, tipo as Tipo, horas as Horas FROM acg WHERE nome LIKE @nome ORDER BY nome";
+            string sql = @"SELECT id AS ID, nome as Nome, modalidade as Modalidade, tipo as Tipo, horas as Horas FROM acg WHERE nome LIKE @nome ORDER BY nome";
             SqlCommand comando = new SqlCommand(sql, conexao);
 
             comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
