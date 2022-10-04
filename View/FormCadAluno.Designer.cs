@@ -271,7 +271,9 @@
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btsalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(578, 569);
             this.Name = "FormCadAluno";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
             this.Load += new System.EventHandler(this.FormCadAluno_Load);
