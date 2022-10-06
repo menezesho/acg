@@ -11,8 +11,8 @@ namespace projeto_acg.DAO
         public string conexaoBD()
         {
 
-            string strConexao = @"Data Source = LAPTOP-GE998OMN; Initial Catalog = BD_ACG; Integrated Security = True"; //Mateus
-          //string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True"; //Henrique
+          //  string strConexao = @"Data Source = LAPTOP-GE998OMN; Initial Catalog = BD_ACG; Integrated Security = True"; //Mateus
+          string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True"; //Henrique
             return strConexao;
         }
     }
