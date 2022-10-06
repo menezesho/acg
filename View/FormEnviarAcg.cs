@@ -41,8 +41,15 @@ namespace projeto_acg
 
         private void btcancelar_Click(object sender, EventArgs e)
         {//btcancelar
-            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (cbnome.Text == "Selecione" && mtbhoras.Text == "" && tbmodalidade.Text == "" && tbtipo.Text == "")
+            {
                 Close();
+            }
+            else
+            {
+                if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
+            }
         }
 
         private void cbnome_SelectedIndexChanged(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace projeto_acg
 {
     public partial class FormEditAcg : Form
     {
+        Conexao conec = new Conexao();
         public FormEditAcg()
         {
             InitializeComponent();
@@ -177,8 +179,15 @@ namespace projeto_acg
 
         private void lbsair_Click(object sender, EventArgs e)
         {//lbsair
-            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (tbnome.Text == "" || cbmodalidade.Text == "" || mtbhoras.Text == "" || tbtipo.Text == "")
+            {
                 Close();
+            }
+            else
+            {
+                if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
+            }
         }
 
         private void dgacg_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -208,8 +217,7 @@ namespace projeto_acg
         private void lbbusca_Click(object sender, EventArgs e)
         {//lbbuscar
 
-            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
-            SqlConnection conexao = new SqlConnection(strConexao);
+            SqlConnection conexao = new SqlConnection(conec.conexaoBD());
             string sql = @"SELECT id AS ID, nome as Nome, modalidade as Modalidade, tipo as Tipo, horas as Horas FROM acg WHERE nome LIKE @nome ORDER BY nome";
             SqlCommand comando = new SqlCommand(sql, conexao);
 

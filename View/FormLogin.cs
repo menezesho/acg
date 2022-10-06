@@ -18,7 +18,7 @@ namespace projeto_acg
 
         private void btlogin_Click(object sender, EventArgs e)
         {//btlogin
-            if (mtbmatricula.Text == "1234567" && tbsenha.Text == "1234567")
+            if (mtbmatricula.Text == "1234567" && tbsenha.Text == "123")
             {
                 MessageBox.Show("Login de administrador efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormPrincipal Fp = new FormPrincipal();

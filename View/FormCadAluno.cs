@@ -39,8 +39,15 @@ namespace projeto_acg.View
 
         private void btcancelar_Click(object sender, EventArgs e)
         {//btcancelar
-            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar para o menu principal?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (tbnome.Text == "" || tbemail.Text == "" || mtbmatricula.Text == "_______" || tbsenha.Text == "")
+            {
                 Close();
+            }
+            else
+            {
+                if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar para o menu principal?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
+            }
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
