@@ -25,6 +25,11 @@ namespace projeto_acg
 
             AlunoDAO alunoDAO = new AlunoDAO();
             dgalunos.DataSource = alunoDAO.listarAlunos();
+            dgalunos.Columns["ID"].Width = 40;
+            dgalunos.Columns["Nome"].Width = 230;
+            dgalunos.Columns["E-mail"].Width = 270;
+            dgalunos.Columns["Matrícula"].Width = 90;
+            dgalunos.Columns["Senha"].Visible = false;
 
             tbid.Clear();
             tbnome.Clear();
