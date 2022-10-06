@@ -111,8 +111,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgacg.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgacg.Location = new System.Drawing.Point(425, 110);
-            this.dgacg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgacg.Location = new System.Drawing.Point(543, 154);
             this.dgacg.MultiSelect = false;
             this.dgacg.Name = "dgacg";
             this.dgacg.ReadOnly = true;
@@ -128,7 +127,7 @@
             this.dgacg.RowHeadersWidth = 51;
             this.dgacg.RowTemplate.Height = 29;
             this.dgacg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgacg.Size = new System.Drawing.Size(490, 284);
+            this.dgacg.Size = new System.Drawing.Size(630, 397);
             this.dgacg.TabIndex = 40;
             this.dgacg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgacg_CellClick);
             // 
@@ -320,11 +319,11 @@
             // 
             this.tbbusca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbbusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbbusca.Location = new System.Drawing.Point(425, 78);
-            this.tbbusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbbusca.Location = new System.Drawing.Point(543, 109);
+            this.tbbusca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbbusca.MaxLength = 100;
             this.tbbusca.Name = "tbbusca";
-            this.tbbusca.Size = new System.Drawing.Size(461, 23);
+            this.tbbusca.Size = new System.Drawing.Size(596, 29);
             this.tbbusca.TabIndex = 51;
             this.tbbusca.TextChanged += new System.EventHandler(this.lbbusca_Click);
             this.tbbusca.Enter += new System.EventHandler(this.tbbusca_Enter);

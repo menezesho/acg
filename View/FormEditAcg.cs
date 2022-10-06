@@ -28,6 +28,11 @@ namespace projeto_acg
 
             AcgDAO acgDAO = new AcgDAO();
             dgacg.DataSource = acgDAO.listarAcg();
+            dgacg.Columns["ID"].Width = 40;
+            dgacg.Columns["Nome"].Width = 240;
+            dgacg.Columns["Modalidade"].Width = 200;
+            dgacg.Columns["Tipo"].Width = 90;
+            dgacg.Columns["Horas"].Width = 60;
 
             tbnome.Clear();
             mtbhoras.Clear();
