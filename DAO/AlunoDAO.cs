@@ -1,4 +1,5 @@
-﻿using projeto_acg.View;
+﻿using projeto_acg.Class;
+using projeto_acg.View;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace projeto_acg
+namespace projeto_acg.DAO
 {
     public class AlunoDAO
     {

@@ -1,17 +1,14 @@
 ﻿using projeto_acg.View;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Reflection.Metadata;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace projeto_acg
+namespace projeto_acg.DAO
 {
-    public class Login
+    public class LoginDAO
     {
         Conexao conec = new Conexao();
         public void realizarLogin(string matricula, string senha)

@@ -1,6 +1,6 @@
 using projeto_acg.View;
 
-namespace projeto_acg
+namespace projeto_acg.Class
 {
     internal static class Program
     {

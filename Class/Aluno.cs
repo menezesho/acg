@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace projeto_acg
+namespace projeto_acg.Class
 {
     public class Aluno
     {

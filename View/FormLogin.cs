@@ -1,3 +1,4 @@
+using projeto_acg.DAO;
 using projeto_acg.View;
 using System.Windows.Forms;
 
@@ -34,8 +35,8 @@ namespace projeto_acg
 
                 matricula = mtbmatricula.Text;
                 senha = tbsenha.Text;
-                Login funcoes = new Login();
-                funcoes.realizarLogin(matricula, senha);
+                LoginDAO loginDAO = new LoginDAO();
+                loginDAO.realizarLogin(matricula, senha);
             }
         }
 
