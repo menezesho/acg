@@ -34,7 +34,7 @@ namespace projeto_acg
 
                 matricula = mtbmatricula.Text;
                 senha = tbsenha.Text;
-                Funcoes funcoes = new Funcoes();
+                Login funcoes = new Login();
                 funcoes.realizarLogin(matricula, senha);
             }
         }
@@ -66,6 +66,8 @@ namespace projeto_acg
             Fca.ShowDialog();
         }
 
+        #region Máscara
+
         private void mtbmatricula_Enter(object sender, EventArgs e)
         {
             mtbmatricula.Mask = "00-00000";
@@ -76,5 +78,7 @@ namespace projeto_acg
             if(mtbmatricula.Text == "")
                 mtbmatricula.Mask = "";
         }
+
+        #endregion
     }
 }

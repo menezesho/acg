@@ -13,7 +13,6 @@ namespace projeto_acg
 {
     public partial class FormEnviarAcg : Form
     {
-        Funcoes funcoes = new Funcoes();
         public FormEnviarAcg()
         {
             InitializeComponent();
@@ -21,8 +20,8 @@ namespace projeto_acg
 
         private void FormEnviarAcg_Load(object sender, EventArgs e)
         {
-            
-            cbnome.DataSource = funcoes.listarAcg();
+            AcgDAO acgDAO = new AcgDAO();
+            cbnome.DataSource = acgDAO.listarAcg();
             cbnome.DisplayMember = "Nome";
             cbnome.ValueMember = "id";
             cbnome.Text = "Selecione";
@@ -49,8 +48,8 @@ namespace projeto_acg
         {
             try
             {
-                string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACG;Integrated Security=True";
-                SqlConnection conexao = new SqlConnection(strConexao);
+                Conexao conec = new Conexao();
+                SqlConnection conexao = new SqlConnection(conec.conexaoBD());
                 string sql = @"SELECT * FROM acg WHERE nome=@nome";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 

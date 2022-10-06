@@ -19,16 +19,12 @@ namespace projeto_acg.View
 
         private void FormCadAluno_Load(object sender, EventArgs e)
         {
+            mtbmatricula.Mask = "";
+
             tbnome.Clear();
             tbemail.Clear();
             mtbmatricula.Clear();
             tbsenha.Clear();
-        }
-
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> retornar
-            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
         }
 
         private void btversenha_Click(object sender, EventArgs e)
@@ -60,7 +56,7 @@ namespace projeto_acg.View
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var matriculaValida = Funcoes.validarMatricula(mtbmatricula.Text);
+                var matriculaValida = AlunoDAO.verificarMatricula(mtbmatricula.Text);
                 if (matriculaValida)
                 {
                     Aluno alunos = new Aluno();
@@ -70,15 +66,30 @@ namespace projeto_acg.View
                     alunos.matricula = mtbmatricula.Text;
                     alunos.senha = tbsenha.Text;
 
-                    Funcoes funcoes = new Funcoes();
+                    AlunoDAO alunoDAO = new AlunoDAO();
 
                     string matricula = mtbmatricula.Text;
-                    funcoes.validarMatricula(matricula, alunos);
+                    alunoDAO.validarMatricula(matricula, alunos);
                     tabControl1.SelectedTab = tabPage1;
                 }
                 else
                     MessageBox.Show("Insira a matrícula corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        #region Máscara
+
+        private void mtbmatricula_Enter(object sender, EventArgs e)
+        {
+            mtbmatricula.Mask = "00-00000";
+        }
+
+        private void mtbmatricula_Leave(object sender, EventArgs e)
+        {
+            if (mtbmatricula.Text == "")
+                mtbmatricula.Mask = "";
+        }
+
+        #endregion
     }
 }

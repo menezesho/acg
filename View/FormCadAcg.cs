@@ -61,10 +61,12 @@ namespace projeto_acg.View
                 acg.modalidade = cbmodalidade.Text;
                 acg.tipo = tbtipo.Text;
 
-                Funcoes funcoes = new Funcoes();
-                funcoes.validarAcg(acg.nome, acg);
+                AcgDAO acgDAO = new AcgDAO();
+                acgDAO.validarAcg(acg.nome, acg);
             }
         }
+
+        #region Máscaras
 
         private void tbtipo_Enter(object sender, EventArgs e)
         {
@@ -88,5 +90,7 @@ namespace projeto_acg.View
             if (cbmodalidade.Text == "")
                 cbmodalidade.SelectedIndex = 0;
         }
+
+        #endregion
     }
 }

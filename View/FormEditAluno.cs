@@ -19,8 +19,10 @@ namespace projeto_acg
 
         private void FormEditAluno_Load(object sender, EventArgs e)
         {//load
-            Funcoes funcoes = new Funcoes();
-            dgalunos.DataSource = funcoes.listarAlunos();
+            mtbmatricula.Mask = "";
+
+            AlunoDAO alunoDAO = new AlunoDAO();
+            dgalunos.DataSource = alunoDAO.listarAlunos();
 
             tbid.Clear();
             tbnome.Clear();
@@ -151,9 +153,10 @@ namespace projeto_acg
                 {
                     Aluno alunos = new Aluno();
                     alunos.id = int.Parse(tbid.Text);
-                    Funcoes funcoes = new Funcoes();
-                    funcoes.excluirAluno(alunos);
-                    dgalunos.DataSource = funcoes.listarAlunos();
+
+                    AlunoDAO alunoDAO = new AlunoDAO();
+                    alunoDAO.excluirAluno(alunos);
+                    dgalunos.DataSource = alunoDAO.listarAlunos();
 
                     tbid.Clear();
                     tbnome.Clear();
@@ -191,7 +194,7 @@ namespace projeto_acg
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var matriculaValida = Funcoes.validarMatricula(mtbmatricula.Text);
+                var matriculaValida = AlunoDAO.verificarMatricula(mtbmatricula.Text);
                 if (matriculaValida)
                 {
                     Aluno alunos = new Aluno();
@@ -202,9 +205,9 @@ namespace projeto_acg
                     alunos.matricula = mtbmatricula.Text;
                     alunos.senha = tbsenha.Text;
 
-                    Funcoes funcoes = new Funcoes();
-                    funcoes.editarAluno(alunos);
-                    dgalunos.DataSource = funcoes.listarAlunos();
+                    AlunoDAO alunoDAO = new AlunoDAO();
+                    alunoDAO.editarAluno(alunos);
+                    dgalunos.DataSource = alunoDAO.listarAlunos();
 
                     tabControl1.SelectedTab = tabPage1;
                 }
@@ -245,5 +248,20 @@ namespace projeto_acg
             if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
         }
+
+        #region Máscara
+
+        private void mtbmatricula_Enter(object sender, EventArgs e)
+        {
+            mtbmatricula.Mask = "00-00000";
+        }
+
+        private void mtbmatricula_Leave(object sender, EventArgs e)
+        {
+            if (mtbmatricula.Text == "")
+                mtbmatricula.Mask = "";
+        }
+
+        #endregion
     }
 }

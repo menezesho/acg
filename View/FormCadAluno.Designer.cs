@@ -185,6 +185,8 @@
             this.mtbmatricula.TabIndex = 3;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbmatricula.Enter += new System.EventHandler(this.mtbmatricula_Enter);
+            this.mtbmatricula.Leave += new System.EventHandler(this.mtbmatricula_Leave);
             // 
             // label1
             // 

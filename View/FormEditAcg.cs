@@ -22,8 +22,8 @@ namespace projeto_acg
         {
             tbbusca.Text = "Busca...";
 
-            Funcoes funcoes = new Funcoes();
-            dgacg.DataSource = funcoes.listarAcg();
+            AcgDAO acgDAO = new AcgDAO();
+            dgacg.DataSource = acgDAO.listarAcg();
 
             tbnome.Clear();
             mtbhoras.Clear();
@@ -77,9 +77,9 @@ namespace projeto_acg
                 {
                     int id = int.Parse(tbid.Text);
                     Acg acg = new Acg();
-                    Funcoes funcoes = new Funcoes();
-                    funcoes.excluirAcg(acg, id);
-                    dgacg.DataSource = funcoes.listarAcg();
+                    AcgDAO acgDAO = new AcgDAO();
+                    acgDAO.excluirAcg(acg, id);
+                    dgacg.DataSource = acgDAO.listarAcg();
 
                     tbnome.Clear();
                     mtbhoras.Clear();
@@ -144,9 +144,9 @@ namespace projeto_acg
                 acg.horas = int.Parse(mtbhoras.Text);
                 acg.tipo = tbtipo.Text;
 
-                Funcoes funcoes = new Funcoes();
-                funcoes.editarAcg(acg, id);
-                dgacg.DataSource = funcoes.listarAcg();
+                AcgDAO acgDAO = new AcgDAO();
+                acgDAO.editarAcg(acg, id);
+                dgacg.DataSource = acgDAO.listarAcg();
 
                 tbid.Clear();
                 tbnome.Clear();
