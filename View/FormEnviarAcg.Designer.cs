@@ -50,9 +50,10 @@
             this.tbtipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbtipo.Location = new System.Drawing.Point(84, 320);
             this.tbtipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbtipo.MaxLength = 50;
             this.tbtipo.Name = "tbtipo";
             this.tbtipo.Size = new System.Drawing.Size(300, 29);
-            this.tbtipo.TabIndex = 42;
+            this.tbtipo.TabIndex = 3;
             // 
             // lbtipo
             // 
@@ -75,7 +76,7 @@
             this.mtbhoras.Mask = "00";
             this.mtbhoras.Name = "mtbhoras";
             this.mtbhoras.Size = new System.Drawing.Size(51, 29);
-            this.mtbhoras.TabIndex = 40;
+            this.mtbhoras.TabIndex = 1;
             this.mtbhoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbhoras.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -100,7 +101,7 @@
             this.cbnome.Location = new System.Drawing.Point(84, 149);
             this.cbnome.Name = "cbnome";
             this.cbnome.Size = new System.Drawing.Size(300, 29);
-            this.cbnome.TabIndex = 38;
+            this.cbnome.TabIndex = 0;
             this.cbnome.SelectedIndexChanged += new System.EventHandler(this.cbnome_SelectedIndexChanged);
             // 
             // btcancelar
@@ -115,7 +116,7 @@
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(147, 37);
-            this.btcancelar.TabIndex = 34;
+            this.btcancelar.TabIndex = 5;
             this.btcancelar.Text = "CANCELAR";
             this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
@@ -138,9 +139,10 @@
             this.tbmodalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbmodalidade.Location = new System.Drawing.Point(84, 262);
             this.tbmodalidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbmodalidade.MaxLength = 50;
             this.tbmodalidade.Name = "tbmodalidade";
             this.tbmodalidade.Size = new System.Drawing.Size(300, 29);
-            this.tbmodalidade.TabIndex = 31;
+            this.tbmodalidade.TabIndex = 2;
             // 
             // lbnome
             // 
@@ -177,7 +179,7 @@
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(147, 37);
-            this.btlimpar.TabIndex = 35;
+            this.btlimpar.TabIndex = 4;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
@@ -194,7 +196,7 @@
             this.btenviar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btenviar.Name = "btenviar";
             this.btenviar.Size = new System.Drawing.Size(300, 37);
-            this.btenviar.TabIndex = 36;
+            this.btenviar.TabIndex = 6;
             this.btenviar.Text = "ENVIAR";
             this.btenviar.UseVisualStyleBackColor = false;
             this.btenviar.Click += new System.EventHandler(this.btenviar_Click);

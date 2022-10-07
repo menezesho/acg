@@ -36,7 +36,7 @@
             this.tbnome = new System.Windows.Forms.TextBox();
             this.lbnome = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btversenha = new System.Windows.Forms.Button();
+            this.btversenha = new System.Windows.Forms.Label();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.lbsenha = new System.Windows.Forms.Label();
             this.mtbmatricula = new System.Windows.Forms.MaskedTextBox();
@@ -83,9 +83,10 @@
             this.tbemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbemail.Location = new System.Drawing.Point(52, 111);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbemail.MaxLength = 50;
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(300, 29);
-            this.tbemail.TabIndex = 5;
+            this.tbemail.TabIndex = 1;
             // 
             // label3
             // 
@@ -104,6 +105,7 @@
             this.tbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbnome.Location = new System.Drawing.Point(52, 52);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbnome.MaxLength = 50;
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(300, 29);
             this.tbnome.TabIndex = 0;
@@ -138,17 +140,16 @@
             // btversenha
             // 
             this.btversenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btversenha.BackColor = System.Drawing.Color.Transparent;
             this.btversenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btversenha.FlatAppearance.BorderSize = 0;
-            this.btversenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btversenha.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btversenha.ForeColor = System.Drawing.SystemColors.Control;
             this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
-            this.btversenha.Location = new System.Drawing.Point(321, 109);
+            this.btversenha.Location = new System.Drawing.Point(327, 110);
             this.btversenha.Name = "btversenha";
-            this.btversenha.Size = new System.Drawing.Size(38, 30);
-            this.btversenha.TabIndex = 5;
-            this.btversenha.UseVisualStyleBackColor = false;
-            this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
+            this.btversenha.Size = new System.Drawing.Size(33, 28);
+            this.btversenha.TabIndex = 9;
+            this.btversenha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btversenha.MouseCaptureChanged += new System.EventHandler(this.btversenha_Click);
             // 
             // tbsenha
             // 
@@ -156,9 +157,10 @@
             this.tbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbsenha.Location = new System.Drawing.Point(51, 110);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbsenha.MaxLength = 30;
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(270, 29);
-            this.tbsenha.TabIndex = 4;
+            this.tbsenha.TabIndex = 3;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // lbsenha
@@ -182,7 +184,7 @@
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
             this.mtbmatricula.Size = new System.Drawing.Size(109, 29);
-            this.mtbmatricula.TabIndex = 3;
+            this.mtbmatricula.TabIndex = 2;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mtbmatricula.Enter += new System.EventHandler(this.mtbmatricula_Enter);
@@ -223,7 +225,7 @@
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(199, 37);
-            this.btlimpar.TabIndex = 7;
+            this.btlimpar.TabIndex = 5;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
@@ -240,7 +242,7 @@
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(405, 37);
-            this.btsalvar.TabIndex = 8;
+            this.btsalvar.TabIndex = 7;
             this.btsalvar.Text = "CADASTRAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -302,9 +304,9 @@
         private Label label1;
         private TextBox tbsenha;
         private Label lbsenha;
-        private Button btversenha;
         private Button btcancelar;
         private TextBox tbemail;
         private Label label3;
+        private Label btversenha;
     }
 }

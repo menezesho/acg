@@ -81,6 +81,14 @@ namespace projeto_acg
             //btbuscar.Enabled = true;
         }
 
+        private void btversenha_Click(object sender, EventArgs e)
+        {//btversenha
+            if (tbsenha.UseSystemPasswordChar.Equals(true))
+                tbsenha.UseSystemPasswordChar = false;
+            else
+                tbsenha.UseSystemPasswordChar = true;
+        }
+
         private void btbuscar_Click(object sender, EventArgs e)
         {//btbuscar
             /*
@@ -278,5 +286,6 @@ namespace projeto_acg
         }
 
         #endregion
+
     }
 }

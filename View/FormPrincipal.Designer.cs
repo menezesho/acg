@@ -62,7 +62,7 @@
             this.btenviaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btenviaracg.Name = "btenviaracg";
             this.btenviaracg.Size = new System.Drawing.Size(346, 70);
-            this.btenviaracg.TabIndex = 24;
+            this.btenviaracg.TabIndex = 1;
             this.btenviaracg.Text = "ENVIAR ACG";
             this.btenviaracg.UseVisualStyleBackColor = false;
             this.btenviaracg.Click += new System.EventHandler(this.btenviaracg_Click);
@@ -79,7 +79,7 @@
             this.bteditaraluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditaraluno.Name = "bteditaraluno";
             this.bteditaraluno.Size = new System.Drawing.Size(346, 70);
-            this.bteditaraluno.TabIndex = 26;
+            this.bteditaraluno.TabIndex = 5;
             this.bteditaraluno.Text = "EDITAR ALUNO";
             this.bteditaraluno.UseVisualStyleBackColor = false;
             this.bteditaraluno.Click += new System.EventHandler(this.bteditaraluno_Click);
@@ -96,7 +96,7 @@
             this.bteditaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditaracg.Name = "bteditaracg";
             this.bteditaracg.Size = new System.Drawing.Size(346, 70);
-            this.bteditaracg.TabIndex = 27;
+            this.bteditaracg.TabIndex = 4;
             this.bteditaracg.Text = "EDITAR ACG";
             this.bteditaracg.UseVisualStyleBackColor = false;
             this.bteditaracg.Click += new System.EventHandler(this.bteditaracgs_Click);
@@ -113,7 +113,7 @@
             this.btcadastraracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcadastraracg.Name = "btcadastraracg";
             this.btcadastraracg.Size = new System.Drawing.Size(346, 70);
-            this.btcadastraracg.TabIndex = 29;
+            this.btcadastraracg.TabIndex = 3;
             this.btcadastraracg.Text = "CADASTRAR ACG";
             this.btcadastraracg.UseVisualStyleBackColor = false;
             this.btcadastraracg.Click += new System.EventHandler(this.btcadastraracg_Click);
@@ -130,7 +130,7 @@
             this.btverificarsituacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btverificarsituacao.Name = "btverificarsituacao";
             this.btverificarsituacao.Size = new System.Drawing.Size(346, 70);
-            this.btverificarsituacao.TabIndex = 30;
+            this.btverificarsituacao.TabIndex = 2;
             this.btverificarsituacao.Text = "VERIFICAR SITUAÇÃO";
             this.btverificarsituacao.UseVisualStyleBackColor = false;
             this.btverificarsituacao.Click += new System.EventHandler(this.btverificarsituacao_Click);
@@ -145,7 +145,7 @@
             this.lbsair.Location = new System.Drawing.Point(1015, 448);
             this.lbsair.Name = "lbsair";
             this.lbsair.Size = new System.Drawing.Size(32, 36);
-            this.lbsair.TabIndex = 32;
+            this.lbsair.TabIndex = 6;
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
             // 

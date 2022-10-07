@@ -55,7 +55,7 @@
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(147, 37);
-            this.btcancelar.TabIndex = 21;
+            this.btcancelar.TabIndex = 5;
             this.btcancelar.Text = "CANCELAR";
             this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
@@ -117,7 +117,7 @@
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(147, 37);
-            this.btlimpar.TabIndex = 22;
+            this.btlimpar.TabIndex = 4;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
@@ -134,7 +134,7 @@
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(300, 37);
-            this.btsalvar.TabIndex = 23;
+            this.btsalvar.TabIndex = 6;
             this.btsalvar.Text = "CADASTRAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -155,7 +155,7 @@
             this.cbmodalidade.Location = new System.Drawing.Point(87, 266);
             this.cbmodalidade.Name = "cbmodalidade";
             this.cbmodalidade.Size = new System.Drawing.Size(300, 29);
-            this.cbmodalidade.TabIndex = 25;
+            this.cbmodalidade.TabIndex = 2;
             this.cbmodalidade.Leave += new System.EventHandler(this.cbmodalidade_Leave);
             // 
             // label1
@@ -178,7 +178,7 @@
             this.mtbhoras.Mask = "00";
             this.mtbhoras.Name = "mtbhoras";
             this.mtbhoras.Size = new System.Drawing.Size(51, 29);
-            this.mtbhoras.TabIndex = 28;
+            this.mtbhoras.TabIndex = 1;
             this.mtbhoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbhoras.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -199,9 +199,10 @@
             this.tbtipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbtipo.Location = new System.Drawing.Point(87, 323);
             this.tbtipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbtipo.MaxLength = 50;
             this.tbtipo.Name = "tbtipo";
             this.tbtipo.Size = new System.Drawing.Size(300, 29);
-            this.tbtipo.TabIndex = 30;
+            this.tbtipo.TabIndex = 3;
             this.tbtipo.Enter += new System.EventHandler(this.tbtipo_Enter);
             this.tbtipo.Leave += new System.EventHandler(this.tbtipo_Leave);
             // 

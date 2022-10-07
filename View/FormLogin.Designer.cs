@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.tbsenha = new System.Windows.Forms.TextBox();
-            this.btversenha = new System.Windows.Forms.Button();
             this.btlogin = new System.Windows.Forms.Button();
             this.lbsenha = new System.Windows.Forms.Label();
             this.lbmatricula = new System.Windows.Forms.Label();
@@ -38,6 +37,7 @@
             this.mtbmatricula = new System.Windows.Forms.MaskedTextBox();
             this.lbinfo = new System.Windows.Forms.Label();
             this.lbprimeiroacesso = new System.Windows.Forms.Label();
+            this.btversenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,25 +46,11 @@
             this.tbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbsenha.Location = new System.Drawing.Point(117, 312);
+            this.tbsenha.MaxLength = 30;
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(236, 29);
             this.tbsenha.TabIndex = 3;
             this.tbsenha.UseSystemPasswordChar = true;
-            // 
-            // btversenha
-            // 
-            this.btversenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btversenha.BackColor = System.Drawing.Color.Transparent;
-            this.btversenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btversenha.FlatAppearance.BorderSize = 0;
-            this.btversenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
-            this.btversenha.Location = new System.Drawing.Point(355, 311);
-            this.btversenha.Name = "btversenha";
-            this.btversenha.Size = new System.Drawing.Size(38, 30);
-            this.btversenha.TabIndex = 4;
-            this.btversenha.UseVisualStyleBackColor = false;
-            this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
             // 
             // btlogin
             // 
@@ -160,6 +146,20 @@
             this.lbprimeiroacesso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbprimeiroacesso.Click += new System.EventHandler(this.lbcadastrese_Click);
             // 
+            // btversenha
+            // 
+            this.btversenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btversenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btversenha.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btversenha.ForeColor = System.Drawing.SystemColors.Control;
+            this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
+            this.btversenha.Location = new System.Drawing.Point(359, 313);
+            this.btversenha.Name = "btversenha";
+            this.btversenha.Size = new System.Drawing.Size(33, 28);
+            this.btversenha.TabIndex = 4;
+            this.btversenha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btversenha.MouseCaptureChanged += new System.EventHandler(this.btversenha_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -189,7 +189,6 @@
         #endregion
 
         private TextBox tbsenha;
-        private Button btversenha;
         private Button btlogin;
         private Label lbsenha;
         private Label lbmatricula;
@@ -197,5 +196,6 @@
         private MaskedTextBox mtbmatricula;
         private Label lbinfo;
         private Label lbprimeiroacesso;
+        private Label btversenha;
     }
 }

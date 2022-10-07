@@ -69,7 +69,7 @@
             this.lbsair.Location = new System.Drawing.Point(1144, 572);
             this.lbsair.Name = "lbsair";
             this.lbsair.Size = new System.Drawing.Size(32, 36);
-            this.lbsair.TabIndex = 42;
+            this.lbsair.TabIndex = 11;
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
             // 
@@ -110,7 +110,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgacg.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgacg.Location = new System.Drawing.Point(542, 170);
-            this.dgacg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgacg.Margin = new System.Windows.Forms.Padding(4);
             this.dgacg.MultiSelect = false;
             this.dgacg.Name = "dgacg";
             this.dgacg.ReadOnly = true;
@@ -127,7 +127,7 @@
             this.dgacg.RowTemplate.Height = 29;
             this.dgacg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgacg.Size = new System.Drawing.Size(634, 393);
-            this.dgacg.TabIndex = 40;
+            this.dgacg.TabIndex = 10;
             this.dgacg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgacg_CellClick);
             // 
             // bteditar
@@ -142,7 +142,7 @@
             this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditar.Name = "bteditar";
             this.bteditar.Size = new System.Drawing.Size(199, 36);
-            this.bteditar.TabIndex = 39;
+            this.bteditar.TabIndex = 4;
             this.bteditar.Text = "EDITAR";
             this.bteditar.UseVisualStyleBackColor = false;
             this.bteditar.Click += new System.EventHandler(this.bteditar_Click);
@@ -159,7 +159,7 @@
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(406, 36);
-            this.btcancelar.TabIndex = 35;
+            this.btcancelar.TabIndex = 6;
             this.btcancelar.Text = "CANCELAR";
             this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
@@ -188,7 +188,7 @@
             this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btexcluir.Name = "btexcluir";
             this.btexcluir.Size = new System.Drawing.Size(201, 36);
-            this.btexcluir.TabIndex = 36;
+            this.btexcluir.TabIndex = 5;
             this.btexcluir.Text = "EXCLUIR";
             this.btexcluir.UseVisualStyleBackColor = false;
             this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
@@ -205,7 +205,7 @@
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(406, 36);
-            this.btsalvar.TabIndex = 37;
+            this.btsalvar.TabIndex = 7;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -216,9 +216,10 @@
             this.tbtipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbtipo.Location = new System.Drawing.Point(51, 273);
             this.tbtipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbtipo.MaxLength = 50;
             this.tbtipo.Name = "tbtipo";
             this.tbtipo.Size = new System.Drawing.Size(300, 29);
-            this.tbtipo.TabIndex = 50;
+            this.tbtipo.TabIndex = 3;
             // 
             // lbtipo
             // 
@@ -240,7 +241,7 @@
             this.mtbhoras.Mask = "00";
             this.mtbhoras.Name = "mtbhoras";
             this.mtbhoras.Size = new System.Drawing.Size(52, 29);
-            this.mtbhoras.TabIndex = 48;
+            this.mtbhoras.TabIndex = 1;
             this.mtbhoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbhoras.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -271,7 +272,7 @@
             this.cbmodalidade.Location = new System.Drawing.Point(51, 216);
             this.cbmodalidade.Name = "cbmodalidade";
             this.cbmodalidade.Size = new System.Drawing.Size(300, 29);
-            this.cbmodalidade.TabIndex = 46;
+            this.cbmodalidade.TabIndex = 2;
             // 
             // lbmodalidade
             // 
@@ -294,7 +295,7 @@
             this.tbnome.MaxLength = 100;
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(300, 29);
-            this.tbnome.TabIndex = 43;
+            this.tbnome.TabIndex = 0;
             // 
             // lbnome
             // 
@@ -316,7 +317,7 @@
             this.tbbusca.MaxLength = 100;
             this.tbbusca.Name = "tbbusca";
             this.tbbusca.Size = new System.Drawing.Size(597, 29);
-            this.tbbusca.TabIndex = 51;
+            this.tbbusca.TabIndex = 8;
             this.tbbusca.TextChanged += new System.EventHandler(this.lbbusca_Click);
             this.tbbusca.Enter += new System.EventHandler(this.tbbusca_Enter);
             this.tbbusca.Leave += new System.EventHandler(this.tbbusca_Leave);
@@ -331,7 +332,7 @@
             this.lbbusca.Location = new System.Drawing.Point(1146, 122);
             this.lbbusca.Name = "lbbusca";
             this.lbbusca.Size = new System.Drawing.Size(32, 29);
-            this.lbbusca.TabIndex = 52;
+            this.lbbusca.TabIndex = 9;
             this.lbbusca.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbbusca.Click += new System.EventHandler(this.lbbusca_Click);
             // 
@@ -369,7 +370,7 @@
             this.tabControl1.Padding = new System.Drawing.Point(15, 3);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(414, 357);
-            this.tabControl1.TabIndex = 56;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
