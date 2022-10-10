@@ -13,6 +13,9 @@ namespace projeto_acg
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+            btlogin.Enabled = false;
+            btlogin.BackColor = Color.LightGray;
+
             mtbmatricula.Mask = "";
         }
 
@@ -82,5 +85,18 @@ namespace projeto_acg
 
         #endregion
 
+        private void tbsenha_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsenha.Text != "")
+            {
+                btlogin.Enabled = true;
+                btlogin.BackColor = Color.SteelBlue;
+            }
+            else
+            {
+                btlogin.Enabled = false;
+                btlogin.BackColor = Color.LightGray;
+            }
+        }
     }
 }

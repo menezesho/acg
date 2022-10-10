@@ -51,6 +51,7 @@
             this.tbsenha.Size = new System.Drawing.Size(236, 29);
             this.tbsenha.TabIndex = 3;
             this.tbsenha.UseSystemPasswordChar = true;
+            this.tbsenha.TextChanged += new System.EventHandler(this.tbsenha_TextChanged);
             // 
             // btlogin
             // 
