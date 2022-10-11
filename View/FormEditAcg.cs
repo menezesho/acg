@@ -24,8 +24,6 @@ namespace projeto_acg
 
         private void FormEditAcg_Load(object sender, EventArgs e)
         {
-            tbbusca.Text = "Busca...";
-
             AcgDAO acgDAO = new AcgDAO();
             dgacg.DataSource = acgDAO.listarAcg();
             dgacg.Columns["ID"].Width = 40;
@@ -223,7 +221,7 @@ namespace projeto_acg
         {//lbbuscar
 
             SqlConnection conexao = new SqlConnection(conec.conexaoBD());
-            string sql = @"SELECT id AS ID, nome as Nome, modalidade as Modalidade, tipo as Tipo, horas as Horas FROM acg WHERE nome LIKE @nome ORDER BY nome";
+            string sql = @"SELECT id AS ID, nome as Nome, horas as Horas, modalidade as Modalidade, tipo as Tipo FROM acg WHERE nome LIKE @nome ORDER BY nome";
             SqlCommand comando = new SqlCommand(sql, conexao);
 
             comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
@@ -235,22 +233,5 @@ namespace projeto_acg
             dgacg.DataSource = tabela.Tables[0];
             conexao.Close();
         }
-
-        #region Máscaras
-
-        private void tbbusca_Enter(object sender, EventArgs e)
-        {
-            if (tbbusca.Text == "Busca...")
-                tbbusca.Text = "";
-        }
-
-        private void tbbusca_Leave(object sender, EventArgs e)
-        {
-            if (tbbusca.Text == "")
-                tbbusca.Text = "Busca...";
-        }
-
-        #endregion
-
     }
 }

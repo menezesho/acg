@@ -6,6 +6,8 @@ namespace projeto_acg
 {
     public partial class FormLogin : Form
     {
+        public string matriculaAtual = "";
+
         public FormLogin()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace projeto_acg
                 Fp.btenviaracg.BackColor = Color.LightGray;
                 Fp.btverificarsituacao.Enabled = false;
                 Fp.btverificarsituacao.BackColor = Color.LightGray;
+                matriculaAtual = mtbmatricula.Text;
                 Fp.ShowDialog();
             }
             else
@@ -39,6 +42,7 @@ namespace projeto_acg
                 matricula = mtbmatricula.Text;
                 senha = tbsenha.Text;
                 LoginDAO loginDAO = new LoginDAO();
+                matriculaAtual = mtbmatricula.Text;
                 loginDAO.realizarLogin(matricula, senha);
             }
         }
@@ -83,8 +87,6 @@ namespace projeto_acg
                 mtbmatricula.Mask = "";
         }
 
-        #endregion
-
         private void tbsenha_TextChanged(object sender, EventArgs e)
         {
             if (tbsenha.Text != "")
@@ -98,5 +100,8 @@ namespace projeto_acg
                 btlogin.BackColor = Color.LightGray;
             }
         }
+
+        #endregion
+
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projeto_acg.Class;
 using projeto_acg.DAO;
 
 namespace projeto_acg
@@ -33,10 +34,13 @@ namespace projeto_acg
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            cbnome.Text = "Selecione";
-            mtbhoras.Clear();
-            tbmodalidade.Clear();
-            tbtipo.Clear();
+            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                cbnome.Text = "Selecione";
+                mtbhoras.Clear();
+                tbmodalidade.Clear();
+                tbtipo.Clear();
+            }
         }
 
         private void btcancelar_Click(object sender, EventArgs e)
@@ -85,7 +89,12 @@ namespace projeto_acg
 
         private void btenviar_Click(object sender, EventArgs e)
         {//btenviar
-           
+            if (cbnome.Text == "Selecione" || mtbhoras.Text == "" || tbmodalidade.Text == "")
+                MessageBox.Show("Escolha uma ACG para enviar!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                
+            }
         }
     }
 }

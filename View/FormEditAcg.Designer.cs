@@ -54,6 +54,7 @@
             this.lbid = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbbuscar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgacg)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -66,7 +67,7 @@
             this.lbsair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbsair.ForeColor = System.Drawing.SystemColors.Control;
             this.lbsair.Image = ((System.Drawing.Image)(resources.GetObject("lbsair.Image")));
-            this.lbsair.Location = new System.Drawing.Point(1144, 572);
+            this.lbsair.Location = new System.Drawing.Point(1144, 580);
             this.lbsair.Name = "lbsair";
             this.lbsair.Size = new System.Drawing.Size(32, 36);
             this.lbsair.TabIndex = 11;
@@ -78,7 +79,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(546, 61);
+            this.label2.Location = new System.Drawing.Point(546, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(630, 38);
             this.label2.TabIndex = 41;
@@ -109,7 +110,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgacg.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgacg.Location = new System.Drawing.Point(542, 170);
+            this.dgacg.Location = new System.Drawing.Point(542, 178);
             this.dgacg.Margin = new System.Windows.Forms.Padding(4);
             this.dgacg.MultiSelect = false;
             this.dgacg.Name = "dgacg";
@@ -138,7 +139,7 @@
             this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.bteditar.Location = new System.Drawing.Point(85, 483);
+            this.bteditar.Location = new System.Drawing.Point(85, 491);
             this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditar.Name = "bteditar";
             this.bteditar.Size = new System.Drawing.Size(199, 36);
@@ -155,7 +156,7 @@
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcancelar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btcancelar.Location = new System.Drawing.Point(85, 527);
+            this.btcancelar.Location = new System.Drawing.Point(85, 535);
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(406, 36);
@@ -169,7 +170,7 @@
             this.lbeditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbeditar.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbeditar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbeditar.Location = new System.Drawing.Point(138, 61);
+            this.lbeditar.Location = new System.Drawing.Point(138, 69);
             this.lbeditar.Name = "lbeditar";
             this.lbeditar.Size = new System.Drawing.Size(300, 38);
             this.lbeditar.TabIndex = 38;
@@ -184,7 +185,7 @@
             this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btexcluir.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btexcluir.Location = new System.Drawing.Point(291, 483);
+            this.btexcluir.Location = new System.Drawing.Point(291, 491);
             this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btexcluir.Name = "btexcluir";
             this.btexcluir.Size = new System.Drawing.Size(201, 36);
@@ -201,7 +202,7 @@
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.ForeColor = System.Drawing.Color.White;
-            this.btsalvar.Location = new System.Drawing.Point(85, 572);
+            this.btsalvar.Location = new System.Drawing.Point(85, 580);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(406, 36);
@@ -312,15 +313,13 @@
             // 
             this.tbbusca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbbusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbbusca.Location = new System.Drawing.Point(542, 122);
+            this.tbbusca.Location = new System.Drawing.Point(599, 130);
             this.tbbusca.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tbbusca.MaxLength = 100;
             this.tbbusca.Name = "tbbusca";
-            this.tbbusca.Size = new System.Drawing.Size(597, 29);
+            this.tbbusca.Size = new System.Drawing.Size(540, 29);
             this.tbbusca.TabIndex = 8;
             this.tbbusca.TextChanged += new System.EventHandler(this.lbbusca_Click);
-            this.tbbusca.Enter += new System.EventHandler(this.tbbusca_Enter);
-            this.tbbusca.Leave += new System.EventHandler(this.tbbusca_Leave);
             // 
             // lbbusca
             // 
@@ -329,7 +328,7 @@
             this.lbbusca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbbusca.ForeColor = System.Drawing.SystemColors.Control;
             this.lbbusca.Image = ((System.Drawing.Image)(resources.GetObject("lbbusca.Image")));
-            this.lbbusca.Location = new System.Drawing.Point(1146, 122);
+            this.lbbusca.Location = new System.Drawing.Point(1146, 130);
             this.lbbusca.Name = "lbbusca";
             this.lbbusca.Size = new System.Drawing.Size(32, 29);
             this.lbbusca.TabIndex = 9;
@@ -364,7 +363,7 @@
             this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.Location = new System.Drawing.Point(81, 122);
+            this.tabControl1.Location = new System.Drawing.Point(81, 130);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(15, 3);
@@ -393,11 +392,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informações";
             // 
+            // lbbuscar
+            // 
+            this.lbbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbbuscar.AutoSize = true;
+            this.lbbuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbbuscar.Location = new System.Drawing.Point(542, 133);
+            this.lbbuscar.Name = "lbbuscar";
+            this.lbbuscar.Size = new System.Drawing.Size(50, 21);
+            this.lbbuscar.TabIndex = 56;
+            this.lbbuscar.Text = "Busca";
+            // 
             // FormEditAcg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 678);
+            this.Controls.Add(this.lbbuscar);
             this.Controls.Add(this.lbbusca);
             this.Controls.Add(this.tbbusca);
             this.Controls.Add(this.lbsair);
@@ -449,5 +460,6 @@
         private Label lbid;
         private TabControl tabControl1;
         private TabPage tabPage1;
+        private Label lbbuscar;
     }
 }

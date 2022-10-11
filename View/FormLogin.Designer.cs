@@ -49,7 +49,7 @@
             this.tbsenha.MaxLength = 30;
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(236, 29);
-            this.tbsenha.TabIndex = 3;
+            this.tbsenha.TabIndex = 1;
             this.tbsenha.UseSystemPasswordChar = true;
             this.tbsenha.TextChanged += new System.EventHandler(this.tbsenha_TextChanged);
             // 
@@ -65,7 +65,7 @@
             this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlogin.Name = "btlogin";
             this.btlogin.Size = new System.Drawing.Size(236, 37);
-            this.btlogin.TabIndex = 0;
+            this.btlogin.TabIndex = 2;
             this.btlogin.Text = "LOGIN";
             this.btlogin.UseVisualStyleBackColor = false;
             this.btlogin.Click += new System.EventHandler(this.btlogin_Click);
@@ -115,7 +115,7 @@
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
             this.mtbmatricula.Size = new System.Drawing.Size(236, 29);
-            this.mtbmatricula.TabIndex = 2;
+            this.mtbmatricula.TabIndex = 0;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mtbmatricula.Enter += new System.EventHandler(this.mtbmatricula_Enter);
@@ -157,7 +157,7 @@
             this.btversenha.Location = new System.Drawing.Point(359, 313);
             this.btversenha.Name = "btversenha";
             this.btversenha.Size = new System.Drawing.Size(33, 28);
-            this.btversenha.TabIndex = 4;
+            this.btversenha.TabIndex = 0;
             this.btversenha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btversenha.MouseCaptureChanged += new System.EventHandler(this.btversenha_Click);
             // 

@@ -28,12 +28,15 @@ namespace projeto_acg.View
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            tbnome.Clear();
-            mtbhoras.Clear();
-            cbmodalidade.SelectedIndex = 0;
-            tbtipo.Clear();
-            tbtipo.Text = "Curso, palestra, estágio...";
-            tbtipo.TextAlign = HorizontalAlignment.Center;
+            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                tbnome.Clear();
+                mtbhoras.Clear();
+                cbmodalidade.SelectedIndex = 0;
+                tbtipo.Clear();
+                tbtipo.Text = "Curso, palestra, estágio...";
+                tbtipo.TextAlign = HorizontalAlignment.Center;
+            }
         }
 
         private void btcancelar_Click(object sender, EventArgs e)

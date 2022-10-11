@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +17,8 @@ namespace projeto_acg
 {
     public partial class FormEditAluno : Form
     {
+        Conexao conec = new Conexao();
+
         public FormEditAluno()
         {
             InitializeComponent();
@@ -79,14 +84,6 @@ namespace projeto_acg
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
             //btbuscar.Enabled = true;
-        }
-
-        private void btversenha_Click(object sender, EventArgs e)
-        {//btversenha
-            if (tbsenha.UseSystemPasswordChar.Equals(true))
-                tbsenha.UseSystemPasswordChar = false;
-            else
-                tbsenha.UseSystemPasswordChar = true;
         }
 
         private void btbuscar_Click(object sender, EventArgs e)
@@ -287,5 +284,22 @@ namespace projeto_acg
 
         #endregion
 
+        private void tbbusca_TextChanged(object sender, EventArgs e)
+        {//lbbuscar
+
+            SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+            string sql = @"SELECT id AS ID, nome as Nome, email as 'E-mail', matricula as Matrícula, senha as Senha FROM aluno WHERE nome LIKE @nome ORDER BY nome";
+            SqlCommand comando = new SqlCommand(sql, conexao);
+
+            comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
+
+            conexao.Open();
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            DataSet tabela = new DataSet();
+            da.Fill(tabela);
+            dgalunos.DataSource = tabela.Tables[0];
+            conexao.Close();
+
+        }
     }
 }

@@ -52,11 +52,13 @@ namespace projeto_acg.View
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            tbnome.Clear();
-            tbemail.Clear();
-            mtbmatricula.Clear();
-            tbsenha.Clear();
-            MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                tbnome.Clear();
+                tbemail.Clear();
+                mtbmatricula.Clear();
+                tbsenha.Clear();
+            }
         }
 
         private void btsalvar_Click(object sender, EventArgs e)

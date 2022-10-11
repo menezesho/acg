@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAluno));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAluno));
             this.btcancelar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -42,7 +42,6 @@
             this.tbnome = new System.Windows.Forms.TextBox();
             this.lbnome = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btversenha = new System.Windows.Forms.Label();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.lbsenha = new System.Windows.Forms.Label();
             this.mtbmatricula = new System.Windows.Forms.MaskedTextBox();
@@ -54,6 +53,9 @@
             this.dgalunos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lbsair = new System.Windows.Forms.Label();
+            this.lbbuscar = new System.Windows.Forms.Label();
+            this.lbbusca = new System.Windows.Forms.Label();
+            this.tbbusca = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -68,7 +70,7 @@
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcancelar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btcancelar.Location = new System.Drawing.Point(97, 454);
+            this.btcancelar.Location = new System.Drawing.Point(79, 446);
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(405, 37);
@@ -83,7 +85,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.Location = new System.Drawing.Point(92, 135);
+            this.tabControl1.Location = new System.Drawing.Point(74, 127);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(15, 3);
@@ -178,7 +180,6 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage2.Controls.Add(this.btversenha);
             this.tabPage2.Controls.Add(this.tbsenha);
             this.tabPage2.Controls.Add(this.lbsenha);
             this.tabPage2.Controls.Add(this.mtbmatricula);
@@ -191,25 +192,11 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Institucional";
             // 
-            // btversenha
-            // 
-            this.btversenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btversenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btversenha.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btversenha.ForeColor = System.Drawing.SystemColors.Control;
-            this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
-            this.btversenha.Location = new System.Drawing.Point(328, 146);
-            this.btversenha.Name = "btversenha";
-            this.btversenha.Size = new System.Drawing.Size(33, 28);
-            this.btversenha.TabIndex = 5;
-            this.btversenha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btversenha.MouseCaptureChanged += new System.EventHandler(this.btversenha_Click);
-            // 
             // tbsenha
             // 
             this.tbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbsenha.Location = new System.Drawing.Point(52, 146);
+            this.tbsenha.Location = new System.Drawing.Point(70, 149);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.MaxLength = 30;
             this.tbsenha.Name = "tbsenha";
@@ -222,7 +209,7 @@
             this.lbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbsenha.AutoSize = true;
             this.lbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbsenha.Location = new System.Drawing.Point(52, 121);
+            this.lbsenha.Location = new System.Drawing.Point(70, 124);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(53, 21);
             this.lbsenha.TabIndex = 8;
@@ -232,7 +219,7 @@
             // 
             this.mtbmatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbmatricula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtbmatricula.Location = new System.Drawing.Point(52, 88);
+            this.mtbmatricula.Location = new System.Drawing.Point(70, 91);
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
@@ -248,7 +235,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(52, 63);
+            this.label1.Location = new System.Drawing.Point(70, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 5;
@@ -259,7 +246,7 @@
             this.lbcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcadastro.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbcadastro.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbcadastro.Location = new System.Drawing.Point(97, 74);
+            this.lbcadastro.Location = new System.Drawing.Point(79, 66);
             this.lbcadastro.Name = "lbcadastro";
             this.lbcadastro.Size = new System.Drawing.Size(405, 38);
             this.lbcadastro.TabIndex = 24;
@@ -274,7 +261,7 @@
             this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btexcluir.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btexcluir.Location = new System.Drawing.Point(303, 410);
+            this.btexcluir.Location = new System.Drawing.Point(285, 402);
             this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btexcluir.Name = "btexcluir";
             this.btexcluir.Size = new System.Drawing.Size(199, 37);
@@ -291,7 +278,7 @@
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.ForeColor = System.Drawing.Color.White;
-            this.btsalvar.Location = new System.Drawing.Point(97, 499);
+            this.btsalvar.Location = new System.Drawing.Point(79, 491);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(405, 37);
@@ -308,7 +295,7 @@
             this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.bteditar.Location = new System.Drawing.Point(97, 410);
+            this.bteditar.Location = new System.Drawing.Point(79, 402);
             this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditar.Name = "bteditar";
             this.bteditar.Size = new System.Drawing.Size(199, 37);
@@ -341,7 +328,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgalunos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgalunos.Location = new System.Drawing.Point(555, 135);
+            this.dgalunos.Location = new System.Drawing.Point(537, 162);
             this.dgalunos.MultiSelect = false;
             this.dgalunos.Name = "dgalunos";
             this.dgalunos.ReadOnly = true;
@@ -357,7 +344,7 @@
             this.dgalunos.RowHeadersWidth = 51;
             this.dgalunos.RowTemplate.Height = 29;
             this.dgalunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgalunos.Size = new System.Drawing.Size(634, 356);
+            this.dgalunos.Size = new System.Drawing.Size(636, 321);
             this.dgalunos.TabIndex = 8;
             this.dgalunos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgalunos_CellClick);
             // 
@@ -366,7 +353,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(559, 74);
+            this.label2.Location = new System.Drawing.Point(541, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(630, 38);
             this.label2.TabIndex = 27;
@@ -380,18 +367,57 @@
             this.lbsair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbsair.ForeColor = System.Drawing.SystemColors.Control;
             this.lbsair.Image = ((System.Drawing.Image)(resources.GetObject("lbsair.Image")));
-            this.lbsair.Location = new System.Drawing.Point(1157, 499);
+            this.lbsair.Location = new System.Drawing.Point(1141, 491);
             this.lbsair.Name = "lbsair";
             this.lbsair.Size = new System.Drawing.Size(32, 37);
             this.lbsair.TabIndex = 9;
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
             // 
+            // lbbuscar
+            // 
+            this.lbbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbbuscar.AutoSize = true;
+            this.lbbuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbbuscar.Location = new System.Drawing.Point(537, 127);
+            this.lbbuscar.Name = "lbbuscar";
+            this.lbbuscar.Size = new System.Drawing.Size(50, 21);
+            this.lbbuscar.TabIndex = 59;
+            this.lbbuscar.Text = "Busca";
+            // 
+            // lbbusca
+            // 
+            this.lbbusca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbbusca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbbusca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbbusca.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbbusca.Image = ((System.Drawing.Image)(resources.GetObject("lbbusca.Image")));
+            this.lbbusca.Location = new System.Drawing.Point(1141, 124);
+            this.lbbusca.Name = "lbbusca";
+            this.lbbusca.Size = new System.Drawing.Size(32, 29);
+            this.lbbusca.TabIndex = 58;
+            this.lbbusca.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // tbbusca
+            // 
+            this.tbbusca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbbusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbbusca.Location = new System.Drawing.Point(594, 124);
+            this.tbbusca.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tbbusca.MaxLength = 100;
+            this.tbbusca.Name = "tbbusca";
+            this.tbbusca.Size = new System.Drawing.Size(540, 29);
+            this.tbbusca.TabIndex = 57;
+            this.tbbusca.TextChanged += new System.EventHandler(this.tbbusca_TextChanged);
+            // 
             // FormEditAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 605);
+            this.ClientSize = new System.Drawing.Size(1251, 605);
+            this.Controls.Add(this.lbbuscar);
+            this.Controls.Add(this.lbbusca);
+            this.Controls.Add(this.tbbusca);
             this.Controls.Add(this.lbsair);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgalunos);
@@ -402,7 +428,6 @@
             this.Controls.Add(this.btexcluir);
             this.Controls.Add(this.btsalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1301, 652);
             this.Name = "FormEditAluno";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -415,6 +440,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgalunos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -440,6 +466,8 @@
         private TextBox tbemail;
         private Label label3;
         private Label lbsair;
-        private Label btversenha;
+        private Label lbbuscar;
+        private Label lbbusca;
+        private TextBox tbbusca;
     }
 }

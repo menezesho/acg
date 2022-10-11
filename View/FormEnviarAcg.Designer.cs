@@ -46,6 +46,7 @@
             // tbtipo
             // 
             this.tbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbtipo.BackColor = System.Drawing.Color.White;
             this.tbtipo.Enabled = false;
             this.tbtipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbtipo.Location = new System.Drawing.Point(84, 320);
@@ -69,6 +70,7 @@
             // mtbhoras
             // 
             this.mtbhoras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbhoras.BackColor = System.Drawing.Color.White;
             this.mtbhoras.Enabled = false;
             this.mtbhoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mtbhoras.HidePromptOnLeave = true;
@@ -135,6 +137,7 @@
             // tbmodalidade
             // 
             this.tbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbmodalidade.BackColor = System.Drawing.Color.White;
             this.tbmodalidade.Enabled = false;
             this.tbmodalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbmodalidade.Location = new System.Drawing.Point(84, 262);
