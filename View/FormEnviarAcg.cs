@@ -40,6 +40,7 @@ namespace projeto_acg
                 mtbhoras.Clear();
                 tbmodalidade.Clear();
                 tbtipo.Clear();
+                mtbmatricula.Clear();
             }
         }
 
@@ -89,11 +90,20 @@ namespace projeto_acg
 
         private void btenviar_Click(object sender, EventArgs e)
         {//btenviar
-            if (cbnome.Text == "Selecione" || mtbhoras.Text == "" || tbmodalidade.Text == "")
-                MessageBox.Show("Escolha uma ACG para enviar!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (cbnome.Text == "Selecione" || mtbhoras.Text == "" || tbmodalidade.Text == "" || mtbmatricula.Text == "_______")
+                MessageBox.Show("Preencha os campos vazios!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                
+                var matriculaValida = AlunoDAO.verificarMatricula(mtbmatricula.Text);
+                if (matriculaValida)
+                {
+                    AcgDAO acgDAO = new AcgDAO();
+                    string nome = cbnome.Text;
+                    string matricula = mtbmatricula.Text;
+                    acgDAO.enviarAcg(nome, matricula);
+                }
+                else
+                    MessageBox.Show("Insira a mátrícula corretamente!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
