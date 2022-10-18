@@ -66,7 +66,7 @@
             this.tbnome.MaxLength = 50;
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(422, 29);
-            this.tbnome.TabIndex = 26;
+            this.tbnome.TabIndex = 3;
             // 
             // lbmatricula
             // 
@@ -137,7 +137,7 @@
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
             this.mtbmatricula.Size = new System.Drawing.Size(125, 29);
-            this.mtbmatricula.TabIndex = 37;
+            this.mtbmatricula.TabIndex = 0;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -153,7 +153,7 @@
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(208, 37);
-            this.btcancelar.TabIndex = 39;
+            this.btcancelar.TabIndex = 5;
             this.btcancelar.Text = "CANCELAR";
             this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
@@ -170,7 +170,7 @@
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(208, 37);
-            this.btlimpar.TabIndex = 38;
+            this.btlimpar.TabIndex = 4;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
@@ -187,7 +187,7 @@
             this.btenviar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btenviar.Name = "btenviar";
             this.btenviar.Size = new System.Drawing.Size(422, 37);
-            this.btenviar.TabIndex = 40;
+            this.btenviar.TabIndex = 6;
             this.btenviar.Text = "VERIFICAR";
             this.btenviar.UseVisualStyleBackColor = false;
             this.btenviar.Click += new System.EventHandler(this.btverificar_Click);
@@ -201,7 +201,7 @@
             this.tbhorastotais.Location = new System.Drawing.Point(292, 195);
             this.tbhorastotais.Name = "tbhorastotais";
             this.tbhorastotais.Size = new System.Drawing.Size(105, 29);
-            this.tbhorastotais.TabIndex = 41;
+            this.tbhorastotais.TabIndex = 1;
             this.tbhorastotais.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbhorasfaltantes
@@ -213,7 +213,7 @@
             this.tbhorasfaltantes.Location = new System.Drawing.Point(403, 195);
             this.tbhorasfaltantes.Name = "tbhorasfaltantes";
             this.tbhorasfaltantes.Size = new System.Drawing.Size(105, 29);
-            this.tbhorasfaltantes.TabIndex = 42;
+            this.tbhorasfaltantes.TabIndex = 2;
             this.tbhorasfaltantes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormVerificar
