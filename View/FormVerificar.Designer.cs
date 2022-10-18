@@ -235,6 +235,7 @@
             this.Controls.Add(this.tbnome);
             this.Controls.Add(this.lbcadastro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(616, 552);
             this.Name = "FormVerificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Situação";
