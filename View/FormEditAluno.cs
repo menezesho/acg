@@ -25,7 +25,7 @@ namespace projeto_acg
         }
 
         private void FormEditAluno_Load(object sender, EventArgs e)
-        {//load
+        {
             mtbmatricula.Mask = "";
 
             AlunoDAO alunoDAO = new AlunoDAO();
@@ -56,8 +56,6 @@ namespace projeto_acg
             btcancelar.ForeColor = Color.GhostWhite;
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
-            //btbuscar.Enabled = true;
-            //tbbusca.Clear();
         }
 
         public void dgalunos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -83,26 +81,6 @@ namespace projeto_acg
             btcancelar.ForeColor = Color.GhostWhite;
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
-            //btbuscar.Enabled = true;
-        }
-
-        private void btbuscar_Click(object sender, EventArgs e)
-        {//btbuscar
-            /*
-            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-            SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno WHERE nome LIKE @nome ORDER BY nome";
-            SqlCommand comando = new SqlCommand(sql, conexao);
-
-            comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
-
-            conexao.Open();
-            SqlDataAdapter da = new SqlDataAdapter(comando);
-            DataSet tabela = new DataSet();
-            da.Fill(tabela);
-            dgalunos.DataSource = tabela.Tables[0];
-            conexao.Close();
-            */
         }
 
         private void bteditar_Click_1(object sender, EventArgs e)
@@ -123,7 +101,6 @@ namespace projeto_acg
                 btcancelar.ForeColor = Color.SteelBlue;
                 btsalvar.BackColor = Color.SteelBlue;
                 btsalvar.ForeColor = Color.White;
-                //btbuscar.Enabled = false;
             }
             else
                 MessageBox.Show("Nenhum cadastro foi selecionado, tente novamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -148,7 +125,6 @@ namespace projeto_acg
             btsalvar.ForeColor = Color.GhostWhite;
 
             tabControl1.SelectedTab = tabPage1;
-            //btbuscar.Enabled = true;
 
             tbid.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
             tbnome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
@@ -193,7 +169,6 @@ namespace projeto_acg
                     btsalvar.ForeColor = Color.GhostWhite;
 
                     tabControl1.SelectedTab = tabPage1;
-                    //btbuscar.Enabled = true;
                 }
             }
             else
@@ -251,7 +226,6 @@ namespace projeto_acg
                 btsalvar.ForeColor = Color.GhostWhite;
 
                 tabControl1.SelectedTab = tabPage1;
-                //btbuscar.Enabled = true;
             }
         }
 

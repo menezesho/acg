@@ -14,7 +14,7 @@ namespace projeto_acg.Class
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogin());
-            //Application.Run(new FormPrincipal()); //teste
+            //Application.Run(new FormVerificar()); //teste
         }
     }
 }

@@ -397,6 +397,7 @@
             this.lbbusca.Size = new System.Drawing.Size(32, 29);
             this.lbbusca.TabIndex = 58;
             this.lbbusca.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbbusca.Click += new System.EventHandler(this.tbbusca_TextChanged);
             // 
             // tbbusca
             // 

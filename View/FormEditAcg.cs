@@ -107,8 +107,6 @@ namespace projeto_acg
                     btcancelar.ForeColor = Color.GhostWhite;
                     btsalvar.BackColor = Color.Gainsboro;
                     btsalvar.ForeColor = Color.GhostWhite;
-
-                    //btbuscar.Enabled = true;
                 }
             }
             else
@@ -175,8 +173,6 @@ namespace projeto_acg
                 btcancelar.ForeColor = Color.GhostWhite;
                 btsalvar.BackColor = Color.Gainsboro;
                 btsalvar.ForeColor = Color.GhostWhite;
-
-                //btbuscar.Enabled = true;
             }
         }
 

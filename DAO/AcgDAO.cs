@@ -59,7 +59,7 @@ namespace projeto_acg.DAO
         }
 
         public void enviarAcg(string nome, string matricula)
-        {//EM ANDAMENTO
+        {
             try
             {
                 Conexao conec = new Conexao();
@@ -80,7 +80,9 @@ namespace projeto_acg.DAO
 
                     string sqlSelect2 = @"SELECT id FROM aluno WHERE matricula=@matricula";
                     SqlCommand comandoSelect2 = new SqlCommand(sqlSelect2, conexao);
+
                     comandoSelect2.Parameters.AddWithValue("@matricula", matricula);
+
                     conexao.Open();
                     comandoSelect2.CommandText = sqlSelect2;
                     comandoSelect2.ExecuteNonQuery();
@@ -92,8 +94,10 @@ namespace projeto_acg.DAO
 
                         string sqlSelect3 = @"SELECT * FROM envio WHERE fk_acg=@idacg AND fk_aluno=@idaluno";
                         SqlCommand comandoSelect3 = new SqlCommand(sqlSelect3, conexao);
+
                         comandoSelect3.Parameters.AddWithValue("@idacg", idacg);
                         comandoSelect3.Parameters.AddWithValue("@idaluno", idaluno);
+
                         conexao.Open();
                         comandoSelect3.CommandText = sqlSelect3;
                         comandoSelect3.ExecuteNonQuery();
@@ -105,8 +109,10 @@ namespace projeto_acg.DAO
                             conexao.Close();
                             string sqlInsert = @"INSERT INTO envio VALUES (@idacg, @idaluno)";
                             SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao);
+
                             comandoInsert.Parameters.AddWithValue("@idacg", idacg);
                             comandoInsert.Parameters.AddWithValue("@idaluno", idaluno);
+
                             conexao.Open();
                             comandoInsert.CommandText = sqlInsert;
                             comandoInsert.ExecuteNonQuery();

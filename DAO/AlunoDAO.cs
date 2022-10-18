@@ -135,6 +135,50 @@ namespace projeto_acg.DAO
             }
         }
 
+        public void verificarSituacao(string matricula)
+        {
+            try
+            {
+                Conexao conec = new Conexao();
+                SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                string sqlSelect1 = @"SELECT id FROM aluno WHERE matricula=@matricula";
+                SqlCommand comandoSelect1 = new SqlCommand(sqlSelect1, conexao);
+
+                comandoSelect1.Parameters.AddWithValue("@matricula", matricula);
+
+                conexao.Open();
+                comandoSelect1.CommandText = sqlSelect1;
+                comandoSelect1.ExecuteNonQuery();
+                SqlDataReader dados1 = comandoSelect1.ExecuteReader();
+                if (dados1.Read())
+                {
+                    int idaluno = (int)dados1["id"];
+                    conexao.Close();
+
+                    string sqlSelect2 = @"SELECT SUM(HORAS) AS 'HORA TOTAL' FROM ENVIO JOIN ACG ON ACG.ID = ENVIO.FK_ACG WHERE ENVIO.FK_ALUNO = @id";
+                    SqlCommand comandoSelect2 = new SqlCommand(sqlSelect2, conexao);
+
+                    comandoSelect2.Parameters.AddWithValue("@id", idaluno);
+
+                    conexao.Open();
+                    comandoSelect2.CommandText = sqlSelect2;
+                    comandoSelect2.ExecuteNonQuery();
+                    SqlDataReader dados2 = comandoSelect2.ExecuteReader();
+                    if (dados2.Read())
+                    {
+                        int horasTotais = (int)dados2["sum(horas)"];
+                        conexao.Close();
+                    }
+                    else
+                        MessageBox.Show("Matrícula não encontrada!\nInsira a mátrícula corretamente!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static bool verificarMatricula(string matricula)
         {
             var regExp = new Regex(@"^\d{7}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"

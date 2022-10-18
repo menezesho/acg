@@ -30,7 +30,8 @@ namespace projeto_acg.View
 
         private void btverificarsituacao_Click(object sender, EventArgs e)
         {//btverificarsituacao
-
+            FormVerificar Fv = new FormVerificar();
+            Fv.ShowDialog();
         }
 
         private void btcadastraracg_Click(object sender, EventArgs e)
