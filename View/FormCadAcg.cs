@@ -39,20 +39,6 @@ namespace projeto_acg.View
             }
         }
 
-        private void btcancelar_Click(object sender, EventArgs e)
-        {//btcancelar
-            if (tbnome.Text == "" && mtbhoras.Text == "" && cbmodalidade.Text == "Selecione" && tbtipo.Text == "Curso, palestra, estágio...")
-            {
-                Close();
-            }
-
-            else
-            {
-                if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Close();
-            }
-        }
-
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
             if (tbnome.Text == "" || mtbhoras.Text == "" || cbmodalidade.Text == "Selecione" || tbtipo.Text == "Curso, palestra, estágio...")
@@ -68,6 +54,19 @@ namespace projeto_acg.View
 
                 AcgDAO acgDAO = new AcgDAO();
                 acgDAO.validarAcg(acg.nome, acg);
+            }
+        }
+
+        private void btcancelar_Click(object sender, EventArgs e)
+        {//btcancelar
+            if (tbnome.Text == "" || cbmodalidade.Text == "" || mtbhoras.Text == "" || tbtipo.Text == "")
+            {
+                Close();
+            }
+            else
+            {
+                if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
             }
         }
 
@@ -97,5 +96,6 @@ namespace projeto_acg.View
         }
 
         #endregion
+
     }
 }

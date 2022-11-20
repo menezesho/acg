@@ -229,5 +229,37 @@ namespace projeto_acg
             dgacg.DataSource = tabela.Tables[0];
             conexao.Close();
         }
+
+        private void btrelatorio_Click(object sender, EventArgs e)
+        {//btrelatorio
+            SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+
+            string endereco = "C:\\Users\\henry\\OneDrive\\03. UEMG S.I\\Matérias\\Semestre 04\\Programação II\\projeto-acg\\Relatório\\relatorio-acg.csv";
+
+            using (StreamWriter writer = new StreamWriter(endereco, false, Encoding.GetEncoding("iso-8859-15")))
+            {
+                writer.WriteLine("ID;Nome;Modalidade;Tipo;Horas");
+
+                using (SqlConnection conn = new SqlConnection(conec.conexaoBD()))
+                {
+                    string query = "SELECT * FROM acg";
+
+                    SqlCommand sqlComand = new SqlCommand(query, conn);
+
+                    conn.Open();
+
+
+                    using (IDataReader reader = sqlComand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            writer.WriteLine(Convert.ToString(reader["Id"]) + ";" + Convert.ToString(reader["Nome"]) + ";" + Convert.ToString(reader["Modalidade"]) + ";" + Convert.ToString(reader["Tipo"]) + ";" + Convert.ToString(reader["Horas"]));
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            MessageBox.Show("Relatório gerado com sucesso!", "Gerar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

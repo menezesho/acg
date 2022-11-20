@@ -59,75 +59,58 @@ namespace projeto_acg.DAO
         }
 
         public void enviarAcg(string nome, string matricula)
-        {
+        {/*
             try
             {
                 Conexao conec = new Conexao();
                 SqlConnection conexao = new SqlConnection(conec.conexaoBD());
-                string sqlSelect1 = @"SELECT id FROM acg WHERE nome=@nome";
-                SqlCommand comandoSelect1 = new SqlCommand(sqlSelect1, conexao);
+                    string sqlSelectMatricula = @"SELECT id FROM aluno WHERE matricula=@matricula";
+                    SqlCommand comandoSelectMatricula = new SqlCommand(sqlSelectMatricula, conexao);
 
-                comandoSelect1.Parameters.AddWithValue("@nome", nome);
-
-                conexao.Open();
-                comandoSelect1.CommandText = sqlSelect1;
-                comandoSelect1.ExecuteNonQuery();
-                SqlDataReader dados1 = comandoSelect1.ExecuteReader();
-                if (dados1.Read())
-                {
-                    int idacg = (int)dados1["id"];
-                    conexao.Close();
-
-                    string sqlSelect2 = @"SELECT id FROM aluno WHERE matricula=@matricula";
-                    SqlCommand comandoSelect2 = new SqlCommand(sqlSelect2, conexao);
-
-                    comandoSelect2.Parameters.AddWithValue("@matricula", matricula);
+                comandoSelectMatricula.Parameters.AddWithValue("@matricula", matricula);
 
                     conexao.Open();
-                    comandoSelect2.CommandText = sqlSelect2;
-                    comandoSelect2.ExecuteNonQuery();
-                    SqlDataReader dados2 = comandoSelect2.ExecuteReader();
+                comandoSelectMatricula.CommandText = sqlSelectMatricula;
+                comandoSelectMatricula.ExecuteNonQuery();
+                    SqlDataReader dados = comandoSelectMatricula.ExecuteReader();
+                if (dados.Read())
+                {
+                    int idaluno = (int)dados["id"];
+                    conexao.Close();
+
+                    string sqlSelectEnvioDuplicado = @"SELECT * FROM envio WHERE id_acg=@idacg AND id_aluno=@idaluno";
+                    SqlCommand comandoSelectEnvioDuplicado = new SqlCommand(sqlSelectEnvioDuplicado, conexao);
+
+                    comandoSelectEnvioDuplicado.Parameters.AddWithValue("@idacg", idacg);
+                    comandoSelectEnvioDuplicado.Parameters.AddWithValue("@idaluno", idaluno);
+
+                    conexao.Open();
+                    comandoSelectEnvioDuplicado.CommandText = sqlSelectEnvioDuplicado;
+                    comandoSelectEnvioDuplicado.ExecuteNonQuery();
+                    SqlDataReader dados2 = comandoSelectEnvioDuplicado.ExecuteReader();
                     if (dados2.Read())
+                        MessageBox.Show("ACG já enviada!\nEnvie uma nova ACG!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
                     {
-                        int idaluno = (int)dados2["id"];
                         conexao.Close();
+                        string sqlInsert = @"INSERT INTO envio VALUES (@idacg, @idaluno)";
+                        SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao);
 
-                        string sqlSelect3 = @"SELECT * FROM envio WHERE fk_acg=@idacg AND fk_aluno=@idaluno";
-                        SqlCommand comandoSelect3 = new SqlCommand(sqlSelect3, conexao);
-
-                        comandoSelect3.Parameters.AddWithValue("@idacg", idacg);
-                        comandoSelect3.Parameters.AddWithValue("@idaluno", idaluno);
+                        comandoInsert.Parameters.AddWithValue("@idacg", idacg);
+                        comandoInsert.Parameters.AddWithValue("@idaluno", idaluno);
 
                         conexao.Open();
-                        comandoSelect3.CommandText = sqlSelect3;
-                        comandoSelect3.ExecuteNonQuery();
-                        SqlDataReader dados3 = comandoSelect3.ExecuteReader();
-                        if (dados3.Read())
-                            MessageBox.Show("ACG já enviada!\nEnvie uma nova ACG!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        else
-                        {
-                            conexao.Close();
-                            string sqlInsert = @"INSERT INTO envio VALUES (@idacg, @idaluno)";
-                            SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao);
-
-                            comandoInsert.Parameters.AddWithValue("@idacg", idacg);
-                            comandoInsert.Parameters.AddWithValue("@idaluno", idaluno);
-
-                            conexao.Open();
-                            comandoInsert.CommandText = sqlInsert;
-                            comandoInsert.ExecuteNonQuery();
-                            MessageBox.Show("Envio efetuado com sucesso!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            conexao.Close();
-                        }
+                        comandoInsert.CommandText = sqlInsert;
+                        comandoInsert.ExecuteNonQuery();
+                        MessageBox.Show("Envio efetuado com sucesso!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conexao.Close();
                     }
-                    else
-                        MessageBox.Show("Matrícula não encontrada!\nInsira a mátrícula corretamente!", "Enviar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception erro)
             {
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         public void validarAcg(string nome, Acg acg)

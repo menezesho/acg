@@ -12,9 +12,17 @@ namespace projeto_acg.View
 {
     public partial class FormPrincipal : Form
     {
+        string matriculaAtual = "";
+
         public FormPrincipal()
         {
             InitializeComponent();
+        }
+
+        public FormPrincipal(string matricula)
+        {
+            InitializeComponent();
+            matriculaAtual = matricula;
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -24,13 +32,13 @@ namespace projeto_acg.View
 
         private void btenviaracg_Click(object sender, EventArgs e)
         {//btenviaracg
-            FormEnviarAcg Feacg = new FormEnviarAcg();
+            FormEnviarAcg Feacg = new FormEnviarAcg(matriculaAtual);
             Feacg.ShowDialog();
         }
 
         private void btverificarsituacao_Click(object sender, EventArgs e)
         {//btverificarsituacao
-            FormVerificar Fv = new FormVerificar();
+            FormVerificar Fv = new FormVerificar(matriculaAtual);
             Fv.ShowDialog();
         }
 
