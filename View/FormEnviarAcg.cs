@@ -31,6 +31,8 @@ namespace projeto_acg
 
         private void FormEnviarAcg_Load(object sender, EventArgs e)
         {
+            mtbhoras.Mask = "";
+
             AcgDAO acgDAO = new AcgDAO();
             cbnome.DataSource = acgDAO.listarAcg();
             cbnome.DisplayMember = "Nome";
@@ -40,27 +42,6 @@ namespace projeto_acg
             mtbhoras.Clear();
             carregou = true;
             cbnome.Text = "Selecione";
-        }
-
-        private void btlimpar_Click(object sender, EventArgs e)
-        {//btlimpar
-            cbnome.Text = "Selecione";
-            mtbhoras.Clear();
-            tbmodalidade.Clear();
-            tbtipo.Clear();
-        }
-
-        private void btcancelar_Click(object sender, EventArgs e)
-        {//btcancelar
-            if (cbnome.Text == "Selecione" && mtbhoras.Text == "" && tbmodalidade.Text == "" && tbtipo.Text == "")
-            {
-                Close();
-            }
-            else
-            {
-                if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Close();
-            }
         }
 
         private void cbnome_SelectedIndexChanged(object sender, EventArgs e)
@@ -154,5 +135,26 @@ namespace projeto_acg
                 }
             }
         }
+
+        private void lbsair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #region Máscara
+
+        private void mtbhoras_Enter(object sender, EventArgs e)
+        {
+            mtbhoras.Mask = "00";
+        }
+
+        private void mtbhoras_Leave(object sender, EventArgs e)
+        {
+            if (mtbhoras.Text == "")
+                mtbhoras.Mask = "";
+        }
+
+        #endregion
+
     }
 }

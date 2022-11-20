@@ -64,7 +64,7 @@
             // 
             // btcancelar
             // 
-            this.btcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btcancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btcancelar.BackColor = System.Drawing.Color.GhostWhite;
             this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,7 +81,7 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -129,7 +129,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(53, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 31);
@@ -155,7 +155,7 @@
             this.lbid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbid.AutoSize = true;
             this.lbid.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbid.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbid.ForeColor = System.Drawing.Color.DimGray;
             this.lbid.Location = new System.Drawing.Point(206, 25);
             this.lbid.Name = "lbid";
             this.lbid.Size = new System.Drawing.Size(38, 31);
@@ -180,7 +180,7 @@
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
             this.lbnome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbnome.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbnome.ForeColor = System.Drawing.Color.DimGray;
             this.lbnome.Location = new System.Drawing.Point(53, 108);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(78, 31);
@@ -220,7 +220,7 @@
             this.lbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbsenha.AutoSize = true;
             this.lbsenha.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbsenha.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbsenha.ForeColor = System.Drawing.Color.DimGray;
             this.lbsenha.Location = new System.Drawing.Point(93, 154);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(77, 31);
@@ -236,7 +236,7 @@
             this.mtbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbmatricula.Mask = "00-00000";
             this.mtbmatricula.Name = "mtbmatricula";
-            this.mtbmatricula.Size = new System.Drawing.Size(109, 34);
+            this.mtbmatricula.Size = new System.Drawing.Size(143, 34);
             this.mtbmatricula.TabIndex = 3;
             this.mtbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbmatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -248,7 +248,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(93, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 31);
@@ -257,7 +257,7 @@
             // 
             // lbEditar
             // 
-            this.lbEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbEditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbEditar.AutoSize = true;
             this.lbEditar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbEditar.ForeColor = System.Drawing.Color.SteelBlue;
@@ -270,7 +270,7 @@
             // 
             // btexcluir
             // 
-            this.btexcluir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btexcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btexcluir.BackColor = System.Drawing.Color.GhostWhite;
             this.btexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -287,7 +287,7 @@
             // 
             // btsalvar
             // 
-            this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btsalvar.BackColor = System.Drawing.Color.SteelBlue;
             this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -304,7 +304,7 @@
             // 
             // bteditar
             // 
-            this.bteditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bteditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bteditar.BackColor = System.Drawing.Color.GhostWhite;
             this.bteditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bteditar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -324,7 +324,9 @@
             // 
             this.dgalunos.AllowUserToAddRows = false;
             this.dgalunos.AllowUserToDeleteRows = false;
-            this.dgalunos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgalunos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgalunos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgalunos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -366,7 +368,7 @@
             // 
             // lbtodos
             // 
-            this.lbtodos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbtodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbtodos.AutoSize = true;
             this.lbtodos.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbtodos.ForeColor = System.Drawing.Color.SteelBlue;
@@ -379,24 +381,25 @@
             // 
             // lbsair
             // 
-            this.lbsair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbsair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbsair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbsair.ForeColor = System.Drawing.SystemColors.Control;
             this.lbsair.Image = ((System.Drawing.Image)(resources.GetObject("lbsair.Image")));
-            this.lbsair.Location = new System.Drawing.Point(1242, 692);
+            this.lbsair.Location = new System.Drawing.Point(1218, 675);
             this.lbsair.Name = "lbsair";
-            this.lbsair.Size = new System.Drawing.Size(32, 37);
+            this.lbsair.Size = new System.Drawing.Size(56, 54);
             this.lbsair.TabIndex = 9;
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
             // 
             // lbbuscar
             // 
-            this.lbbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbbuscar.AutoSize = true;
             this.lbbuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbbuscar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbbuscar.ForeColor = System.Drawing.Color.DimGray;
             this.lbbuscar.Location = new System.Drawing.Point(564, 159);
             this.lbbuscar.Name = "lbbuscar";
             this.lbbuscar.Size = new System.Drawing.Size(74, 31);
@@ -405,7 +408,8 @@
             // 
             // tbbusca
             // 
-            this.tbbusca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbbusca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbbusca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbbusca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbbusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -419,7 +423,7 @@
             // 
             // btrelatorio
             // 
-            this.btrelatorio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btrelatorio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btrelatorio.BackColor = System.Drawing.Color.GhostWhite;
             this.btrelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btrelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

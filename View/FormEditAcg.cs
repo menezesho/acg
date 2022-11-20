@@ -17,6 +17,8 @@ namespace projeto_acg
     public partial class FormEditAcg : Form
     {
         Conexao conec = new Conexao();
+        AcgDAO acgDAO = new AcgDAO();
+
         public FormEditAcg()
         {
             InitializeComponent();
@@ -24,7 +26,8 @@ namespace projeto_acg
 
         private void FormEditAcg_Load(object sender, EventArgs e)
         {
-            AcgDAO acgDAO = new AcgDAO();
+            mtbhoras.Mask = "";
+
             dgacg.DataSource = acgDAO.listarAcg();
             dgacg.Columns["ID"].Width = 40;
             dgacg.Columns["Nome"].Width = 240;
@@ -34,6 +37,7 @@ namespace projeto_acg
 
             tbnome.Clear();
             mtbhoras.Clear();
+            mtbhoras.Mask = "";
             cbmodalidade.SelectedIndex = 0;
             tbtipo.Clear();
 
@@ -42,13 +46,31 @@ namespace projeto_acg
             tbtipo.Enabled = false;
 
             bteditar.Enabled = true;
-            btcancelar.Enabled = false;
             btsalvar.Enabled = false;
 
             bteditar.BackColor = Color.GhostWhite;
             bteditar.ForeColor = Color.SteelBlue;
-            btcancelar.BackColor = Color.Gainsboro;
-            btcancelar.ForeColor = Color.GhostWhite;
+            btsalvar.BackColor = Color.Gainsboro;
+            btsalvar.ForeColor = Color.GhostWhite;
+        }
+
+        private void dgacg_CellClick(object sender, DataGridViewCellEventArgs e)
+        {//cellclick datagrid
+            tbid.Text = dgacg.CurrentRow.Cells[0].Value.ToString();
+            tbnome.Text = dgacg.CurrentRow.Cells[1].Value.ToString();
+            mtbhoras.Text = dgacg.CurrentRow.Cells[2].Value.ToString();
+            cbmodalidade.Text = dgacg.CurrentRow.Cells[3].Value.ToString();
+            tbtipo.Text = dgacg.CurrentRow.Cells[4].Value.ToString();
+
+            cbmodalidade.Enabled = false;
+            mtbhoras.Enabled = false;
+            tbtipo.Enabled = false;
+
+            bteditar.Enabled = true;
+            btsalvar.Enabled = false;
+
+            bteditar.BackColor = Color.GhostWhite;
+            bteditar.ForeColor = Color.SteelBlue;
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
         }
@@ -62,13 +84,10 @@ namespace projeto_acg
                 tbtipo.Enabled = true;
 
                 bteditar.Enabled = false;
-                btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
 
                 bteditar.BackColor = Color.Gainsboro;
                 bteditar.ForeColor = Color.GhostWhite;
-                btcancelar.BackColor = Color.GhostWhite;
-                btcancelar.ForeColor = Color.SteelBlue;
                 btsalvar.BackColor = Color.SteelBlue;
                 btsalvar.ForeColor = Color.White;
             }
@@ -82,14 +101,31 @@ namespace projeto_acg
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    int id = int.Parse(tbid.Text);
-                    Acg acg = new Acg();
-                    AcgDAO acgDAO = new AcgDAO();
-                    acgDAO.excluirAcg(acg, id);
+                    try
+                    {
+                        SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                        string sql = @"DELETE FROM acg WHERE id=@id";
+                        SqlCommand comando = new SqlCommand(sql, conexao);
+
+                        comando.Parameters.AddWithValue("@id", tbid.Text);
+
+                        conexao.Open();
+                        comando.CommandText = sql;
+                        comando.ExecuteNonQuery();
+                        conexao.Close();
+
+                        MessageBox.Show("ACG excluida com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                     dgacg.DataSource = acgDAO.listarAcg();
 
                     tbnome.Clear();
                     mtbhoras.Clear();
+                    mtbhoras.Mask = "";
                     cbmodalidade.SelectedIndex = 0;
                     tbtipo.Clear();
 
@@ -99,14 +135,12 @@ namespace projeto_acg
 
                     bteditar.Enabled = true;
                     btsalvar.Enabled = false;
-                    btcancelar.Enabled = false;
 
                     bteditar.BackColor = Color.GhostWhite;
                     bteditar.ForeColor = Color.SteelBlue;
-                    btcancelar.BackColor = Color.Gainsboro;
-                    btcancelar.ForeColor = Color.GhostWhite;
                     btsalvar.BackColor = Color.Gainsboro;
                     btsalvar.ForeColor = Color.GhostWhite;
+                    tabControl1.SelectedTab = tabPage1;
                 }
             }
             else
@@ -115,25 +149,20 @@ namespace projeto_acg
 
         private void btcancelar_Click(object sender, EventArgs e)
         {//btcancelar
-            if (tbid.Text != "")
-            {
-                mtbhoras.Enabled = false;
-                cbmodalidade.Enabled = false;
-                tbtipo.Enabled = false;
 
-                bteditar.Enabled = true;
-                btcancelar.Enabled = false;
-                btsalvar.Enabled = false;
+            mtbhoras.Enabled = false;
+            cbmodalidade.Enabled = false;
+            tbtipo.Enabled = false;
 
-                bteditar.BackColor = Color.GhostWhite;
-                bteditar.ForeColor = Color.SteelBlue;
-                btcancelar.BackColor = Color.Gainsboro;
-                btcancelar.ForeColor = Color.GhostWhite;
-                btsalvar.BackColor = Color.Gainsboro;
-                btsalvar.ForeColor = Color.GhostWhite;
-            }
-            else
-                MessageBox.Show("Os dados registrados não seram salvos!", "Retornar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            bteditar.Enabled = true;
+            btsalvar.Enabled = false;
+
+            bteditar.BackColor = Color.GhostWhite;
+            bteditar.ForeColor = Color.SteelBlue;
+            btsalvar.BackColor = Color.Gainsboro;
+            btsalvar.ForeColor = Color.GhostWhite;
+
+            tabControl1.SelectedTab = tabPage1;
         }
 
         private void btsalvar_Click(object sender, EventArgs e)
@@ -142,19 +171,34 @@ namespace projeto_acg
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                int id = int.Parse(tbid.Text);
-                Acg acg = new Acg();
+                try
+                {
+                    SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                    string sql = @"UPDATE acg SET modalidade=@modalidade, tipo=@tipo, horas=@horas WHERE id=@id";
+                    SqlCommand comando = new SqlCommand(sql, conexao);
 
-                acg.modalidade = cbmodalidade.Text;
-                acg.horas = int.Parse(mtbhoras.Text);
-                acg.tipo = tbtipo.Text;
+                    comando.Parameters.AddWithValue("@modalidade", cbmodalidade.Text);
+                    comando.Parameters.AddWithValue("@tipo", tbtipo.Text);
+                    comando.Parameters.AddWithValue("@horas", mtbhoras.Text);
+                    comando.Parameters.AddWithValue("@id", tbid.Text);
 
-                AcgDAO acgDAO = new AcgDAO();
-                acgDAO.editarAcg(acg, id);
+                    conexao.Open();
+                    comando.CommandText = sql;
+                    comando.ExecuteNonQuery();
+                    conexao.Close();
+
+                    MessageBox.Show("Dados alterados com sucesso!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 dgacg.DataSource = acgDAO.listarAcg();
 
                 tbid.Clear();
                 tbnome.Clear();
+                mtbhoras.Mask = "";
                 cbmodalidade.SelectedIndex = 0;
                 tbtipo.Clear();
                 mtbhoras.Clear();
@@ -164,21 +208,20 @@ namespace projeto_acg
                 mtbhoras.Enabled = false;
 
                 bteditar.Enabled = true;
-                btcancelar.Enabled = false;
                 btsalvar.Enabled = false;
 
                 bteditar.BackColor = Color.GhostWhite;
                 bteditar.ForeColor = Color.SteelBlue;
-                btcancelar.BackColor = Color.Gainsboro;
-                btcancelar.ForeColor = Color.GhostWhite;
                 btsalvar.BackColor = Color.Gainsboro;
                 btsalvar.ForeColor = Color.GhostWhite;
+
+                tabControl1.SelectedTab = tabPage1;
             }
         }
 
         private void lbsair_Click(object sender, EventArgs e)
         {//lbsair
-            if (tbnome.Text == "" || cbmodalidade.Text == "" || mtbhoras.Text == "" || tbtipo.Text == "")
+            if (tbnome.Text == "" && cbmodalidade.SelectedIndex == 0 && mtbhoras.Text == "" && tbtipo.Text == "")
             {
                 Close();
             }
@@ -187,30 +230,6 @@ namespace projeto_acg
                 if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
             }
-        }
-
-        private void dgacg_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            tbid.Text = dgacg.CurrentRow.Cells[0].Value.ToString();
-            tbnome.Text = dgacg.CurrentRow.Cells[1].Value.ToString();
-            mtbhoras.Text = dgacg.CurrentRow.Cells[2].Value.ToString();
-            cbmodalidade.Text = dgacg.CurrentRow.Cells[3].Value.ToString();
-            tbtipo.Text = dgacg.CurrentRow.Cells[4].Value.ToString();
-
-            cbmodalidade.Enabled = false;
-            mtbhoras.Enabled = false;
-            tbtipo.Enabled = false;
-
-            bteditar.Enabled = true;
-            btcancelar.Enabled = false;
-            btsalvar.Enabled = false;
-
-            bteditar.BackColor = Color.GhostWhite;
-            bteditar.ForeColor = Color.SteelBlue;
-            btcancelar.BackColor = Color.Gainsboro;
-            btcancelar.ForeColor = Color.GhostWhite;
-            btsalvar.BackColor = Color.Gainsboro;
-            btsalvar.ForeColor = Color.GhostWhite;
         }
 
         private void lbbusca_Click(object sender, EventArgs e)
@@ -232,34 +251,45 @@ namespace projeto_acg
 
         private void btrelatorio_Click(object sender, EventArgs e)
         {//btrelatorio
-            SqlConnection conexao = new SqlConnection(conec.conexaoBD());
-
-            string endereco = "C:\\Users\\henry\\OneDrive\\03. UEMG S.I\\Matérias\\Semestre 04\\Programação II\\projeto-acg\\Relatório\\relatorio-acg.csv";
-
-            using (StreamWriter writer = new StreamWriter(endereco, false, Encoding.GetEncoding("iso-8859-15")))
+            if (MessageBox.Show("Deseja gerar um relatório de todas as ACGs?", "Relatório", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                writer.WriteLine("ID;Nome;Modalidade;Tipo;Horas");
-
-                using (SqlConnection conn = new SqlConnection(conec.conexaoBD()))
+                SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                string endereco = "C:\\Users\\henry\\OneDrive\\03. UEMG S.I\\Matérias\\Semestre 04\\Programação II\\projeto-acg\\Relatório\\relatorio-acg.csv";
+                using (StreamWriter writer = new StreamWriter(endereco, false, Encoding.GetEncoding("iso-8859-15")))
                 {
-                    string query = "SELECT * FROM acg";
-
-                    SqlCommand sqlComand = new SqlCommand(query, conn);
-
-                    conn.Open();
-
-
-                    using (IDataReader reader = sqlComand.ExecuteReader())
+                    writer.WriteLine("ID;Nome;Modalidade;Tipo;Horas");
+                    using (SqlConnection conn = new SqlConnection(conec.conexaoBD()))
                     {
-                        while (reader.Read())
+                        string query = "SELECT * FROM acg";
+                        SqlCommand sqlComand = new SqlCommand(query, conn);
+                        conn.Open();
+                        using (IDataReader reader = sqlComand.ExecuteReader())
                         {
-                            writer.WriteLine(Convert.ToString(reader["Id"]) + ";" + Convert.ToString(reader["Nome"]) + ";" + Convert.ToString(reader["Modalidade"]) + ";" + Convert.ToString(reader["Tipo"]) + ";" + Convert.ToString(reader["Horas"]));
+                            while (reader.Read())
+                            {
+                                writer.WriteLine(Convert.ToString(reader["Id"]) + ";" + Convert.ToString(reader["Nome"]) + ";" + Convert.ToString(reader["Modalidade"]) + ";" + Convert.ToString(reader["Tipo"]) + ";" + Convert.ToString(reader["Horas"]));
+                            }
                         }
+                        conn.Close();
                     }
-                    conn.Close();
                 }
+                MessageBox.Show("Relatório gerado com sucesso!", "Gerar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            MessageBox.Show("Relatório gerado com sucesso!", "Gerar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        #region Máscara
+
+        private void mtbhoras_Enter(object sender, EventArgs e)
+        {
+            mtbhoras.Mask = "00";
+        }
+
+        private void mtbhoras_Leave(object sender, EventArgs e)
+        {
+            if (mtbhoras.Text == "")
+                mtbhoras.Mask = "";
+        }
+
+        #endregion
     }
 }

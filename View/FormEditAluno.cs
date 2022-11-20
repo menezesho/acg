@@ -18,6 +18,7 @@ namespace projeto_acg
     public partial class FormEditAluno : Form
     {
         Conexao conec = new Conexao();
+        AlunoDAO alunoDAO = new AlunoDAO();
 
         public FormEditAluno()
         {
@@ -40,6 +41,7 @@ namespace projeto_acg
             tbnome.Clear();
             tbemail.Clear();
             mtbmatricula.Clear();
+            mtbmatricula.Mask = "";
             tbsenha.Clear();
                
             tbnome.Enabled = false;
@@ -47,13 +49,10 @@ namespace projeto_acg
             mtbmatricula.Enabled = false;
             
             bteditar.Enabled = true;
-            btcancelar.Enabled = false;
             btsalvar.Enabled = false;
 
             bteditar.BackColor = Color.GhostWhite;
             bteditar.ForeColor = Color.SteelBlue;
-            btcancelar.BackColor = Color.Gainsboro;
-            btcancelar.ForeColor = Color.GhostWhite;
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
         }
@@ -72,13 +71,10 @@ namespace projeto_acg
             tbsenha.Enabled = false;
             
             bteditar.Enabled = true;
-            btcancelar.Enabled = false;
             btsalvar.Enabled = false;
 
             bteditar.BackColor = Color.GhostWhite;
             bteditar.ForeColor = Color.SteelBlue;
-            btcancelar.BackColor = Color.Gainsboro;
-            btcancelar.ForeColor = Color.GhostWhite;
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
         }
@@ -92,13 +88,10 @@ namespace projeto_acg
                 tbsenha.Enabled = true;
                 
                 bteditar.Enabled = false;
-                btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
 
                 bteditar.BackColor = Color.Gainsboro;
                 bteditar.ForeColor = Color.GhostWhite;
-                btcancelar.BackColor = Color.GhostWhite;
-                btcancelar.ForeColor = Color.SteelBlue;
                 btsalvar.BackColor = Color.SteelBlue;
                 btsalvar.ForeColor = Color.White;
             }
@@ -114,23 +107,14 @@ namespace projeto_acg
             tbsenha.Enabled = false;
 
             bteditar.Enabled = true;
-            btcancelar.Enabled = false;
             btsalvar.Enabled = false;
 
             bteditar.BackColor = Color.GhostWhite;
             bteditar.ForeColor = Color.SteelBlue;
-            btcancelar.BackColor = Color.Gainsboro;
-            btcancelar.ForeColor = Color.GhostWhite;
             btsalvar.BackColor = Color.Gainsboro;
             btsalvar.ForeColor = Color.GhostWhite;
 
             tabControl1.SelectedTab = tabPage1;
-
-            tbid.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
-            tbnome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
-            tbemail.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
-            mtbmatricula.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
-            tbsenha.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void btexcluir_Click(object sender, EventArgs e)
@@ -139,17 +123,33 @@ namespace projeto_acg
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    Aluno alunos = new Aluno();
-                    alunos.id = int.Parse(tbid.Text);
+                    try
+                    {
+                        SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                        string sql = @"DELETE FROM aluno WHERE id=@id";
+                        SqlCommand comando = new SqlCommand(sql, conexao);
 
-                    AlunoDAO alunoDAO = new AlunoDAO();
-                    alunoDAO.excluirAluno(alunos);
+                        comando.Parameters.AddWithValue("@id", tbid.Text);
+
+                        conexao.Open();
+                        comando.CommandText = sql;
+                        comando.ExecuteNonQuery();
+                        conexao.Close();
+
+                        MessageBox.Show("Cadastro excluido com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                     dgalunos.DataSource = alunoDAO.listarAlunos();
 
                     tbid.Clear();
                     tbnome.Clear();
                     tbemail.Clear();
                     mtbmatricula.Clear();
+                    mtbmatricula.Mask = "";
                     tbsenha.Clear();
 
                     tbnome.Enabled = false;
@@ -159,12 +159,9 @@ namespace projeto_acg
 
                     bteditar.Enabled = true;
                     btsalvar.Enabled = false;
-                    btcancelar.Enabled = false;
 
                     bteditar.BackColor = Color.GhostWhite;
                     bteditar.ForeColor = Color.SteelBlue;
-                    btcancelar.BackColor = Color.Gainsboro;
-                    btcancelar.ForeColor = Color.GhostWhite;
                     btsalvar.BackColor = Color.Gainsboro;
                     btsalvar.ForeColor = Color.GhostWhite;
 
@@ -184,19 +181,31 @@ namespace projeto_acg
                 var matriculaValida = AlunoDAO.verificarMatricula(mtbmatricula.Text);
                 if (matriculaValida)
                 {
-                    Aluno alunos = new Aluno();
+                    try
+                    {
+                        SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                        string sql = @"UPDATE aluno SET nome=@nome, email=@email, matricula=@matricula, senha=@senha WHERE id=@id";
+                        SqlCommand comando = new SqlCommand(sql, conexao);
 
-                    alunos.id = int.Parse(tbid.Text);
-                    alunos.nome = tbnome.Text;
-                    alunos.email = tbemail.Text;
-                    alunos.matricula = mtbmatricula.Text;
-                    alunos.senha = tbsenha.Text;
+                        comando.Parameters.AddWithValue("@nome", tbnome.Text);
+                        comando.Parameters.AddWithValue("@email", tbemail.Text);
+                        comando.Parameters.AddWithValue("@matricula", mtbmatricula.Text);
+                        comando.Parameters.AddWithValue("@senha", tbsenha.Text);
+                        comando.Parameters.AddWithValue("@id", tbid.Text);
 
-                    AlunoDAO alunoDAO = new AlunoDAO();
-                    alunoDAO.editarAluno(alunos);
+                        conexao.Open();
+                        comando.CommandText = sql;
+                        comando.ExecuteNonQuery();
+                        conexao.Close();
+
+                        MessageBox.Show("Cadastro alterado com sucesso!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                     dgalunos.DataSource = alunoDAO.listarAlunos();
-
-                    tabControl1.SelectedTab = tabPage1;
                 }
                 else
                     MessageBox.Show("Insira a mátrícula corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -206,6 +215,7 @@ namespace projeto_acg
                 tbnome.Clear();
                 tbemail.Clear();
                 mtbmatricula.Clear();
+                mtbmatricula.Mask = "";
                 tbsenha.Clear();
                 tbemail.Clear();
 
@@ -215,13 +225,10 @@ namespace projeto_acg
                 tbsenha.Enabled = false;
 
                 bteditar.Enabled = true;
-                btcancelar.Enabled = false;
                 btsalvar.Enabled = false;
 
                 bteditar.BackColor = Color.GhostWhite;
                 bteditar.ForeColor = Color.SteelBlue;
-                btcancelar.BackColor = Color.Gainsboro;
-                btcancelar.ForeColor = Color.GhostWhite;
                 btsalvar.BackColor = Color.Gainsboro;
                 btsalvar.ForeColor = Color.GhostWhite;
 
@@ -232,7 +239,7 @@ namespace projeto_acg
         private void lbsair_Click(object sender, EventArgs e)
         {//lbsair
 
-            if (tbnome.Text == "" || tbemail.Text == "" || mtbmatricula.Text == "_______" || tbsenha.Text == "")
+            if (tbnome.Text == "" && tbemail.Text == "" && mtbmatricula.Text == "" && tbsenha.Text == "")
             {
                 Close();
             }
@@ -242,21 +249,6 @@ namespace projeto_acg
                     Close();
             }
         }
-
-        #region Máscara
-
-        private void mtbmatricula_Enter(object sender, EventArgs e)
-        {
-            mtbmatricula.Mask = "00-00000";
-        }
-
-        private void mtbmatricula_Leave(object sender, EventArgs e)
-        {
-            if (mtbmatricula.Text == "")
-                mtbmatricula.Mask = "";
-        }
-
-        #endregion
 
         private void tbbusca_TextChanged(object sender, EventArgs e)
         {//lbbuscar
@@ -278,34 +270,46 @@ namespace projeto_acg
 
         private void btRelatorio_Click(object sender, EventArgs e)
         {//btRelatorio
-            SqlConnection conexao = new SqlConnection(conec.conexaoBD());
-
-            string endereco = "C:\\Users\\henry\\OneDrive\\03. UEMG S.I\\Matérias\\Semestre 04\\Programação II\\projeto-acg\\Relatório\\relatorio-cadastros.csv";
-
-            using (StreamWriter writer = new StreamWriter(endereco, false, Encoding.GetEncoding("iso-8859-15")))
+            if (MessageBox.Show("Deseja gerar um relatório de todos os cadastros?", "Relatório", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                writer.WriteLine("ID;Nome;E-mail;Matrícula");
-
-                using (SqlConnection conn = new SqlConnection(conec.conexaoBD()))
+                SqlConnection conexao = new SqlConnection(conec.conexaoBD());
+                string endereco = "C:\\Users\\henry\\OneDrive\\03. UEMG S.I\\Matérias\\Semestre 04\\Programação II\\projeto-acg\\Relatório\\relatorio-cadastros.csv";
+                using (StreamWriter writer = new StreamWriter(endereco, false, Encoding.GetEncoding("iso-8859-15")))
                 {
-                    string query = "SELECT * FROM aluno";
-
-                    SqlCommand sqlComand = new SqlCommand(query, conn);
-
-                    conn.Open();
-
-
-                    using (IDataReader reader = sqlComand.ExecuteReader())
+                    writer.WriteLine("ID;Nome;E-mail;Matrícula");
+                    using (SqlConnection conn = new SqlConnection(conec.conexaoBD()))
                     {
-                        while (reader.Read())
+                        string query = "SELECT * FROM aluno";
+                        SqlCommand sqlComand = new SqlCommand(query, conn);
+                        conn.Open();
+                        using (IDataReader reader = sqlComand.ExecuteReader())
                         {
-                            writer.WriteLine(Convert.ToString(reader["Id"]) + ";" + Convert.ToString(reader["Nome"]) + ";" + Convert.ToString(reader["email"]) + ";" + Convert.ToString(reader["matricula"]));
+                            while (reader.Read())
+                            {
+                                writer.WriteLine(Convert.ToString(reader["Id"]) + ";" + Convert.ToString(reader["Nome"]) + ";" + Convert.ToString(reader["email"]) + ";" + Convert.ToString(reader["matricula"]));
+                            }
                         }
+                        conn.Close();
                     }
-                    conn.Close();
                 }
+                MessageBox.Show("Relatório gerado com sucesso!", "Gerar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            MessageBox.Show("Relatório gerado com sucesso!", "Gerar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        #region Máscara
+
+        private void mtbmatricula_Enter(object sender, EventArgs e)
+        {
+            mtbmatricula.Mask = "00-00000";
+        }
+
+        private void mtbmatricula_Leave(object sender, EventArgs e)
+        {
+            if (mtbmatricula.Text == "")
+                mtbmatricula.Mask = "";
+        }
+
+        #endregion
+
     }
 }

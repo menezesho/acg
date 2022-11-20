@@ -43,7 +43,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(670, 122);
+            this.pictureBox1.Location = new System.Drawing.Point(671, 122);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(591, 513);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -58,7 +58,7 @@
             this.btenviaracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btenviaracg.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btenviaracg.ForeColor = System.Drawing.Color.White;
-            this.btenviaracg.Location = new System.Drawing.Point(190, 122);
+            this.btenviaracg.Location = new System.Drawing.Point(191, 122);
             this.btenviaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btenviaracg.Name = "btenviaracg";
             this.btenviaracg.Size = new System.Drawing.Size(386, 85);
@@ -75,7 +75,7 @@
             this.bteditaraluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditaraluno.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditaraluno.ForeColor = System.Drawing.Color.White;
-            this.bteditaraluno.Location = new System.Drawing.Point(190, 550);
+            this.bteditaraluno.Location = new System.Drawing.Point(191, 550);
             this.bteditaraluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditaraluno.Name = "bteditaraluno";
             this.bteditaraluno.Size = new System.Drawing.Size(386, 85);
@@ -92,7 +92,7 @@
             this.bteditaracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditaracg.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditaracg.ForeColor = System.Drawing.Color.White;
-            this.bteditaracg.Location = new System.Drawing.Point(190, 443);
+            this.bteditaracg.Location = new System.Drawing.Point(191, 443);
             this.bteditaracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditaracg.Name = "bteditaracg";
             this.bteditaracg.Size = new System.Drawing.Size(386, 85);
@@ -109,7 +109,7 @@
             this.btcadastraracg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcadastraracg.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcadastraracg.ForeColor = System.Drawing.Color.White;
-            this.btcadastraracg.Location = new System.Drawing.Point(190, 336);
+            this.btcadastraracg.Location = new System.Drawing.Point(191, 336);
             this.btcadastraracg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcadastraracg.Name = "btcadastraracg";
             this.btcadastraracg.Size = new System.Drawing.Size(386, 85);
@@ -126,7 +126,7 @@
             this.btverificarsituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btverificarsituacao.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btverificarsituacao.ForeColor = System.Drawing.Color.White;
-            this.btverificarsituacao.Location = new System.Drawing.Point(190, 229);
+            this.btverificarsituacao.Location = new System.Drawing.Point(191, 229);
             this.btverificarsituacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btverificarsituacao.Name = "btverificarsituacao";
             this.btverificarsituacao.Size = new System.Drawing.Size(386, 85);
@@ -142,9 +142,9 @@
             this.lbsair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbsair.ForeColor = System.Drawing.SystemColors.Control;
             this.lbsair.Image = ((System.Drawing.Image)(resources.GetObject("lbsair.Image")));
-            this.lbsair.Location = new System.Drawing.Point(1347, 703);
+            this.lbsair.Location = new System.Drawing.Point(1324, 685);
             this.lbsair.Name = "lbsair";
-            this.lbsair.Size = new System.Drawing.Size(32, 36);
+            this.lbsair.Size = new System.Drawing.Size(56, 54);
             this.lbsair.TabIndex = 6;
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1391, 748);
+            this.ClientSize = new System.Drawing.Size(1392, 748);
             this.Controls.Add(this.lbsair);
             this.Controls.Add(this.btverificarsituacao);
             this.Controls.Add(this.btcadastraracg);
@@ -162,11 +162,13 @@
             this.Controls.Add(this.btenviaracg);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1154, 795);
+            this.MinimumSize = new System.Drawing.Size(1410, 795);
             this.Name = "FormPrincipal";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

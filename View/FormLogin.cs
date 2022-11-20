@@ -18,7 +18,7 @@ namespace projeto_acg
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            
+            mtbmatricula.Mask = "";
         }
 
         private void btlogin_Click(object sender, EventArgs e)
@@ -34,6 +34,7 @@ namespace projeto_acg
                 Fp.btverificarsituacao.BackColor = Color.LightGray;
                 Fp.btenviaracg.ForeColor = Color.GhostWhite;
                 Fp.btverificarsituacao.ForeColor = Color.GhostWhite;
+                this.Hide();
                 Fp.ShowDialog();
             }
             else
@@ -65,6 +66,7 @@ namespace projeto_acg
 
                         MessageBox.Show("Login de aluno efetuado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conexao.Close();
+                        this.Hide();
                         Fp.ShowDialog();
                     }
                     else

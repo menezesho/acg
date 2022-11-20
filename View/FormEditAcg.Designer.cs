@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAcg));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btrelatorio = new System.Windows.Forms.Button();
             this.lbbuscar = new System.Windows.Forms.Label();
             this.tbbusca = new System.Windows.Forms.TextBox();
@@ -64,7 +64,7 @@
             // 
             // btrelatorio
             // 
-            this.btrelatorio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btrelatorio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btrelatorio.BackColor = System.Drawing.Color.GhostWhite;
             this.btrelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btrelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,10 +81,11 @@
             // 
             // lbbuscar
             // 
-            this.lbbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbbuscar.AutoSize = true;
             this.lbbuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbbuscar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbbuscar.ForeColor = System.Drawing.Color.DimGray;
             this.lbbuscar.Location = new System.Drawing.Point(564, 158);
             this.lbbuscar.Name = "lbbuscar";
             this.lbbuscar.Size = new System.Drawing.Size(74, 31);
@@ -93,7 +94,8 @@
             // 
             // tbbusca
             // 
-            this.tbbusca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbbusca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbbusca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbbusca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbbusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -107,21 +109,21 @@
             // 
             // lbsair
             // 
-            this.lbsair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbsair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbsair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbsair.ForeColor = System.Drawing.SystemColors.Control;
             this.lbsair.Image = ((System.Drawing.Image)(resources.GetObject("lbsair.Image")));
-            this.lbsair.Location = new System.Drawing.Point(1242, 692);
+            this.lbsair.Location = new System.Drawing.Point(1218, 675);
             this.lbsair.Name = "lbsair";
-            this.lbsair.Size = new System.Drawing.Size(32, 37);
+            this.lbsair.Size = new System.Drawing.Size(56, 54);
             this.lbsair.TabIndex = 67;
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
             // 
             // lbtodos
             // 
-            this.lbtodos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbtodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbtodos.AutoSize = true;
             this.lbtodos.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbtodos.ForeColor = System.Drawing.Color.SteelBlue;
@@ -136,48 +138,51 @@
             // 
             this.dgacg.AllowUserToAddRows = false;
             this.dgacg.AllowUserToDeleteRows = false;
-            this.dgacg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgacg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgacg.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgacg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgacg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgacg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgacg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgacg.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgacg.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgacg.Location = new System.Drawing.Point(570, 210);
             this.dgacg.MultiSelect = false;
             this.dgacg.Name = "dgacg";
             this.dgacg.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgacg.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgacg.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgacg.RowHeadersVisible = false;
             this.dgacg.RowHeadersWidth = 51;
             this.dgacg.RowTemplate.Height = 29;
             this.dgacg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgacg.Size = new System.Drawing.Size(636, 441);
             this.dgacg.TabIndex = 11;
+            this.dgacg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgacg_CellClick);
             // 
             // bteditar
             // 
-            this.bteditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bteditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bteditar.BackColor = System.Drawing.Color.GhostWhite;
             this.bteditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bteditar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -195,7 +200,7 @@
             // 
             // btcancelar
             // 
-            this.btcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btcancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btcancelar.BackColor = System.Drawing.Color.GhostWhite;
             this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,7 +217,7 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -256,13 +261,15 @@
             this.mtbhoras.TabIndex = 2;
             this.mtbhoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbhoras.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbhoras.Enter += new System.EventHandler(this.mtbhoras_Enter);
+            this.mtbhoras.Leave += new System.EventHandler(this.mtbhoras_Leave);
             // 
             // lbhoras
             // 
             this.lbhoras.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbhoras.AutoSize = true;
             this.lbhoras.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbhoras.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbhoras.ForeColor = System.Drawing.Color.DimGray;
             this.lbhoras.Location = new System.Drawing.Point(56, 193);
             this.lbhoras.Name = "lbhoras";
             this.lbhoras.Size = new System.Drawing.Size(76, 31);
@@ -288,7 +295,7 @@
             this.lbid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbid.AutoSize = true;
             this.lbid.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbid.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbid.ForeColor = System.Drawing.Color.DimGray;
             this.lbid.Location = new System.Drawing.Point(209, 27);
             this.lbid.Name = "lbid";
             this.lbid.Size = new System.Drawing.Size(38, 31);
@@ -299,6 +306,7 @@
             // 
             this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbnome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbnome.Enabled = false;
             this.tbnome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbnome.Location = new System.Drawing.Point(56, 145);
@@ -313,7 +321,7 @@
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
             this.lbnome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbnome.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbnome.ForeColor = System.Drawing.Color.DimGray;
             this.lbnome.Location = new System.Drawing.Point(56, 110);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(78, 31);
@@ -374,7 +382,7 @@
             this.lbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbtipo.AutoSize = true;
             this.lbtipo.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbtipo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbtipo.ForeColor = System.Drawing.Color.DimGray;
             this.lbtipo.Location = new System.Drawing.Point(92, 153);
             this.lbtipo.Name = "lbtipo";
             this.lbtipo.Size = new System.Drawing.Size(61, 31);
@@ -386,7 +394,7 @@
             this.lbmodalidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbmodalidade.AutoSize = true;
             this.lbmodalidade.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbmodalidade.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbmodalidade.ForeColor = System.Drawing.Color.DimGray;
             this.lbmodalidade.Location = new System.Drawing.Point(92, 70);
             this.lbmodalidade.Name = "lbmodalidade";
             this.lbmodalidade.Size = new System.Drawing.Size(139, 31);
@@ -395,7 +403,7 @@
             // 
             // lbEditar
             // 
-            this.lbEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbEditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbEditar.AutoSize = true;
             this.lbEditar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbEditar.ForeColor = System.Drawing.Color.SteelBlue;
@@ -408,7 +416,7 @@
             // 
             // btexcluir
             // 
-            this.btexcluir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btexcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btexcluir.BackColor = System.Drawing.Color.GhostWhite;
             this.btexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -425,7 +433,7 @@
             // 
             // btsalvar
             // 
-            this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btsalvar.BackColor = System.Drawing.Color.SteelBlue;
             this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
