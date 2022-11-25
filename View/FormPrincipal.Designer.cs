@@ -36,7 +36,6 @@
             this.btcadastraracg = new System.Windows.Forms.Button();
             this.btverificarsituacao = new System.Windows.Forms.Button();
             this.lbsair = new System.Windows.Forms.Label();
-            this.btGerarRelatorio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,29 +149,11 @@
             this.lbsair.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbsair.Click += new System.EventHandler(this.lbsair_Click);
             // 
-            // btGerarRelatorio
-            // 
-            this.btGerarRelatorio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btGerarRelatorio.BackColor = System.Drawing.Color.SteelBlue;
-            this.btGerarRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btGerarRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGerarRelatorio.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btGerarRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btGerarRelatorio.Location = new System.Drawing.Point(660, 30);
-            this.btGerarRelatorio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btGerarRelatorio.Name = "btGerarRelatorio";
-            this.btGerarRelatorio.Size = new System.Drawing.Size(386, 85);
-            this.btGerarRelatorio.TabIndex = 19;
-            this.btGerarRelatorio.Text = "GERAR RELATÓRIO";
-            this.btGerarRelatorio.UseVisualStyleBackColor = false;
-            this.btGerarRelatorio.Click += new System.EventHandler(this.btGerarRelatorio_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1392, 748);
-            this.Controls.Add(this.btGerarRelatorio);
             this.Controls.Add(this.lbsair);
             this.Controls.Add(this.btverificarsituacao);
             this.Controls.Add(this.btcadastraracg);
@@ -202,6 +183,5 @@
         internal Button btcadastraracg;
         internal Button btverificarsituacao;
         private Label lbsair;
-        internal Button btGerarRelatorio;
     }
 }
