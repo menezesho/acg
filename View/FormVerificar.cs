@@ -28,6 +28,11 @@ namespace projeto_acg
             matriculaAtual = matricula;
         }
 
+        private void btGerarRelatorio_Click(object sender, EventArgs e)
+        {//btGerarRelatorio
+            FormRelatorio Fr = new FormRelatorio();
+        }
+
         private void btFechar_Click(object sender, EventArgs e)
         {
             Close();
